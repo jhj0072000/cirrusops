@@ -83,16 +83,10 @@ jQuery(function($){
     var text = $(this).text();
     if($('#toggle-selector').hasClass("open")){
       $(this).text(text.replace('MORE +', 'LESS -'));
+      $('body').css("overflow", "hidden");
     } else {
       $(this).text(text.replace('LESS -', 'MORE +')); 
-    }
-  });
-  // IF SCROLLED
-  $(document).scroll(function () {
-    if ($(document).scrollTop() >= 70) {
-      $('.side-collapse').css("top","70px");
-    } else {
-      $('.side-collapse').css("top","97px");
+      $('body').css("overflow", "visible");
     }
   });
   
@@ -108,34 +102,21 @@ jQuery(function($){
     $("#sticker").sticky({topSpacing:0});
   });
 
-  // HOVER MENU
-  // $(document).ready(function(){
-  //   $(".dropdown").hover(            
-  //     function() {
-  //       $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("400");
-  //       $(this).toggleClass('open');        
-  //     },
-  //     function() {
-  //       $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp("400");
-  //       $(this).toggleClass('open');       
-  //       }
-  //   );
-  // });
-$.fn.responsiveTabs = function() {
-  this.addClass('responsive-tabs');
-  this.append($('<span class="glyphicon glyphicon-triangle-bottom"></span>'));
-  this.append($('<span class="glyphicon glyphicon-triangle-top"></span>'));
+  $.fn.responsiveTabs = function() {
+    this.addClass('responsive-tabs');
+    this.append($('<span class="glyphicon glyphicon-triangle-bottom"></span>'));
+    this.append($('<span class="glyphicon glyphicon-triangle-top"></span>'));
 
-  this.on('click', 'li.active > a, span.glyphicon', function() {
-    this.toggleClass('open');
-  }.bind(this));
+    this.on('click', 'li.active > a, span.glyphicon', function() {
+      this.toggleClass('open');
+    }.bind(this));
 
-  this.on('click', 'li:not(.active) > a', function() {
-    this.removeClass('open');
-  }.bind(this));
-};
+    this.on('click', 'li:not(.active) > a', function() {
+      this.removeClass('open');
+    }.bind(this));
+  };
 
-$('.nav.nav-tabs').responsiveTabs();
+  $('.nav.nav-tabs').responsiveTabs();
 
 
 

@@ -1,22 +1,20 @@
 /* ----------------------------------------------------------- */
-/*  COLORS & FONTS
+/*  COLORS
 /* ----------------------------------------------------------- */
-$gray: #838282;
-$color_2: #fffefe;
-$gray77: #777777;
+$cirrus-blue: #00BAF7;
+$cirrus-blue-dark: #009cd0;
+$cirrus-green: #79BE37;
+$red-pale: #fffefe;
+$pink-light: #fff7f7;
 $white: #fff;
 $blackish: #303442;
-$color_1: #b8b8b8;
-$pink-light: #fff7f7;
-$cirrus-blue: #00BAF7;
-$cirrus-green: #79BE37;
-$color_4: #3a3a3a;
-$color_5: #525252;
-$color_6: #7d7d7d;
-$cirrus-blue-dark: #174566;
-$color_8: #535353;
-$color_9: inherit;
-$gray0: #3f51b5;
+$gray-light: #b8b8b8;
+$gray-medium: #7d7d7d;
+$gray-dark: #525252;
+
+/* ----------------------------------------------------------- */
+/*  FONTS
+/* ----------------------------------------------------------- */
 $opensans: 'Open Sans', sans-serif;
 $raleway: 'Raleway', sans-serif;
 $mainfont: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -74,7 +72,7 @@ body {
 	font-family: $opensans;
 	font-size: 16px;
 	overflow-x: hidden !important;
-	color: $gray;
+	color: $gray-medium;
 }
 .fa {
 	width: 20px;
@@ -124,181 +122,6 @@ ul {
 	float: left;
 	display: inline;
 	width: 100%;
-	/*@include galaxy {
-		margin-top: 20px;
-	}*/
-}
-.header-inner {
-	display: inline;
-	position: relative;
-	float: left;
-	width: 100%;
-	max-height: 500px;
-	>img {
-		max-height: 500px;
-	}
-	@include galaxy {
-		> img {
-			height: 250px;
-			width: 100%;
-		}
-	}
-}
-.header-overlay {
-	background-color: rgba(0, 0, 0, 0.6);
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
-}
-.header-content {
-	float: left;
-	height: 100%;
-	padding: 12% 140px 140px;
-	text-align: center;
-	width: 100%;
-	h2 {
-		font-size: 80px;
-		font-weight: bold;
-		line-height: 80px;
-		color: $white;
-		span {
-			font-weight: normal;
-			line-height: 93px;
-			color: $cirrus-blue;
-		}
-	}
-	@include desktop {
-		padding: 70px;
-		h2 {
-			font-size: 60px;
-			line-height: 58px;
-		}
-	}
-	@include laptop {
-		padding: 50px;
-		h2 {
-			font-size: 50px;
-			line-height: 50px;
-		}
-	}
-	@include ipad {
-		h2 {
-			font-size: 35px;
-			line-height: 35px;
-			span {
-				font-weight: normal;
-				line-height: 55px;
-			}
-		}
-	}
-	@include note {
-		padding: 45px;
-		h2 {
-			font-size: 25px;
-			line-height: 25px;
-			span {
-				font-weight: normal;
-				line-height: 43px;
-			}
-		}
-	}
-	@include galaxy {
-		padding: 50px;
-		h2 {
-			font-size: 20px;
-			line-height: 18px;
-			margin-bottom: 10px;
-			span {
-				font-weight: normal;
-				line-height: 35px;
-			}
-		}
-	}
-}
-.header-btn-field {
-	margin-top: 90px;
-	float: left;
-	display: inline;
-	width: 100%;
-	text-align: center;
-	a {
-		margin: 0px 15px;
-	}
-	@include desktop {
-		margin-top: 65px;
-	}
-	@include laptop {
-		margin-top: 20px;
-	}
-	@include note {
-		margin-top: 5px;
-	}
-	@include galaxy {
-		margin-top: 00px;
-		a {
-			display: block;
-			margin: 10px 15px;
-		}
-	}
-}
-.getstarted-btn {
-	border: 2px solid #fff;
-	border-radius: 2px;
-	color: $white;
-	font-size: 20px;
-	font-weight: bold;
-	font-family: $raleway;
-	text-transform: uppercase;
-	padding: 25px 28px;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	-o-transition: all 0.5s;
-	transition: all 0.5s;
-	&:hover {
-		color: $white;
-		text-decoration: none;
-		outline: none;
-		background: $cirrus-blue;
-	}
-	&:focus {
-		color: $white;
-		text-decoration: none;
-		outline: none;
-	}
-	@include laptop {
-		padding: 10px 20px;
-		font-size: 15px;
-	}
-	@include note {
-		font-size: 10px;
-	}
-	@include galaxy {
-		padding: 5px 10px;
-	}
-}
-#page-content-wrapper {
-	>a {
-		>img {
-			position: fixed;
-		}
-	}
-	@include galaxy {
-		>a {
-			>img {
-				display: none;
-			}
-		}
-	}
-}
-#wrapper.toggled {
-	@include galaxy {
-		#sidebar-wrapper {
-			width: 230px;
-		}
-	}
 }
 #home-banner {
 	height: 500px;
@@ -324,9 +147,6 @@ ul {
 	margin: 0 auto;
 	max-width: 80rem;
 	width: 100%;
-	/*.banner-floater-inner {
-		background: rgba(0, 0, 0, 0.2);
-	}*/
 }
 .banner-content {
 	font-size: 1.0625rem;
@@ -386,7 +206,7 @@ ul {
 		color: $white;
 		font-size: 1.25rem;
 		margin: 0;
-		padding: 1rem 0.9375rem;
+		padding: 0 10px 10px 10px;
 		@include note {
 			margin-bottom: 0.625rem;
 			padding: 0;
@@ -405,11 +225,11 @@ ul {
 	color: $white;
 }
 /*--------------------*/
-/* NAV BAR */
+/* NAVIGATION */
 /*--------------------*/
 .home-header {
 	background: #eee;
-	color: $gray77;
+	color: $gray-medium;
 	text-align: right;
 	ul {
 		margin-bottom: 5px;
@@ -420,7 +240,7 @@ ul {
 			margin-left: 15px;
 			a {
 				text-decoration: none;
-				color: $gray77;
+				color: $gray-medium;
 				&:hover {
 					transition: 0.5s all;
 					color: $cirrus-blue;
@@ -515,7 +335,6 @@ ul {
 		border: none;
 	}
 }
-
 .nav-tabs {
 	li.active > a {
 		border: none;
@@ -542,7 +361,6 @@ ul {
 		}
 	}
 }
-
 
 /* PAGE TABS */
 .tab-pane {
@@ -581,7 +399,7 @@ ul {
 	@include ipad {
 		margin-right: 0;
 		background: #fff;
-		color: $gray77;
+		color: $gray-medium;
 		border: 1px solid #DDDDDD;
 		&:hover {
 			@include ipad {
@@ -591,7 +409,6 @@ ul {
 		}
 	}
 }
-
 .responsive-tabs.nav-tabs > li.active {
   display: block;
 }
@@ -599,7 +416,7 @@ ul {
 	border: none;
 	@include ipad {
 		border: 1px solid #DDDDDD;
-			border-radius: 2px;
+		border-radius: 2px;
 	}
 }
 .responsive-tabs.nav-tabs > li {
@@ -632,8 +449,6 @@ ul {
 .responsive-tabs.nav-tabs.open > li:last-of-type a {
   border-radius: 0 0 2px 2px;
 }
-
-
 
 
 /*--------------------*/
@@ -679,7 +494,7 @@ ul {
 	}
 }
 .about-title {
-	color: $color_4;
+	color: $blackish;
 	font-size: 40px;
 	margin-bottom: 0;
 	padding-bottom: 18px;
@@ -755,7 +570,7 @@ ul {
 		}
 	}
 	.wc-about-title {
-		color: $color_5;
+		color: $gray-dark;
 		text-transform: uppercase;
 		font-size: 18px;
 		border-bottom: 1px solid #bbbbbb;
@@ -767,7 +582,7 @@ ul {
 	}
 	p {
 		text-align: left;
-		color: $color_6;
+		color: $gray-medium;
 		font-size: 15px;
 		padding: 12px;
 	}
@@ -802,7 +617,7 @@ ul {
 		width: 100px;
 	}
 	p {
-		color: $color_8;
+		color: $gray-dark;
 		font-family: $raleway;
 		margin-bottom: 32px;
 	}
@@ -887,7 +702,6 @@ ul {
 		top: 0;
 		left: 0;
 		opacity: 0;
-		color: $gray0;
 		-webkit-transform: translate3d(0, 25%, 0);
 		transform: translate3d(0, 25%, 0);
 		padding: 12px 21px;
@@ -923,7 +737,8 @@ ul {
 		}
 	}
 	&:focus {
-		color: $cirrus-blue !important;
+		text-decoration: none;
+		color: $cirrus-green;
 	}
 	@include ipad {
 		&::after {
@@ -1262,7 +1077,7 @@ ul {
 	a {
 		border: 1px solid #fffefe;
 		border-radius: 50%;
-		color: $color_2;
+		color: $red-pale;
 		display: inline-block;
 		font-size: 16px;
 		opacity: 0.8;
@@ -1323,7 +1138,7 @@ ul {
 	text-align: center;
 	width: 100%;
 	p {
-		color: $color_5;
+		color: $gray-dark;
 		margin-bottom: 0px;
 		font-size: 22px;
 		font-weight: 600;
@@ -1336,7 +1151,7 @@ ul {
 		transition: all 0.5s;
 	}
 	span {
-		color: $gray77;
+		color: $gray-medium;
 		font-size: 17px;
 		font-style: italic;
 		font-family: $raleway;
@@ -1383,7 +1198,7 @@ ul {
 	a {
 		border: 1px solid #505050;
 		border-radius: 50%;
-		color: $color_1;
+		color: $gray-light;
 		display: inline-block;
 		font-size: 18px;
 		height: 48px;
