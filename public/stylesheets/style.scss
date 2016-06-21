@@ -2,12 +2,15 @@
 /*  COLORS
 /* ----------------------------------------------------------- */
 $cirrus-blue: #00BAF7;
-$cirrus-blue-dark: #009cd0;
+$cirrus-blue-light: #d0f3ff;
+$cirrus-blue-dark: #007095;
 $cirrus-green: #79BE37;
+$cirrus-green-light: #dcf0ca;
 $red-pale: #fffefe;
 $pink-light: #fff7f7;
 $white: #fff;
 $blackish: #303442;
+$gray-pale: #f6f6f6;
 $gray-light: #b8b8b8;
 $gray-medium: #7d7d7d;
 $gray-dark: #525252;
@@ -113,6 +116,24 @@ ul {
 		text-decoration: none;
 		outline: none;
 	}
+}
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
 }
 
 /*--------------------*/
@@ -396,7 +417,11 @@ ul {
 .responsive-tabs.nav-tabs > li > a {
 	margin-right: 4px;
 	font-size: 14px;
+	@include laptop {
+		font-size: 12px;
+	}
 	@include ipad {
+		font-size: 14px;
 		margin-right: 0;
 		background: #fff;
 		color: $gray-medium;
@@ -449,6 +474,68 @@ ul {
 .responsive-tabs.nav-tabs.open > li:last-of-type a {
   border-radius: 0 0 2px 2px;
 }
+
+/*--------------------*/
+/* PAGES */
+/*--------------------*/
+.tab-pane {
+	margin-bottom: 100px;
+}
+/* SPREADSHEETS */
+#spreadsheet {
+	h2, h3 {
+		text-align: center;
+	}
+	.panel-default {
+		border-color: $gray-pale;
+	}
+	.panel-heading {
+		text-align: center;
+		font-weight: bold;
+		background: $white;
+		color: $gray-medium;
+		border-color: $gray-pale;
+	}
+	.spreadsheet-graphic {
+		text-align: center;
+		i {
+			font-size: 150px;
+		}
+		.fa {
+			width: 100%;
+			color: $cirrus-green;
+		}
+	}
+	blockquote {
+		p {
+			font-size: 25px;
+			font-style: italic;
+			@include note {
+				font-size: 18px;
+			}
+		}
+		padding: 50px;
+		@include note {
+			padding: 30px;
+		}
+	}
+}
+#underline {
+	border-bottom: 5px solid $cirrus-green-light;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 30%;
+}
+.spreadsheet-content {
+	margin-top: 25px;
+}
+.spreadsheet-footer {
+	text-align: center;
+}
+
+
 
 
 /*--------------------*/
@@ -665,8 +752,8 @@ ul {
 	}
 }
 .button {
-	float: left;
-	display: block;
+/*	float: left;
+*/	display: inline-block;
 	margin: 1em;
 	border: 2px solid $cirrus-green;
 	background: $white;

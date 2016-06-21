@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ----------------------------------------------------------- */
 /*  COLORS
 /* ----------------------------------------------------------- */
@@ -54,6 +55,24 @@ ul {
     color: #fff;
     text-decoration: none;
     outline: none; }
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "“" "”" "‘" "’"; }
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em; }
+
+blockquote p {
+  display: inline; }
 
 /*--------------------*/
 /* HOME HEADER */
@@ -253,10 +272,10 @@ ul {
 
 .nav-tabs li.active > a {
   border: none;
-  background: #009cd0;
+  background: #007095;
   color: white; }
   .nav-tabs li.active > a:hover {
-    background: #009cd0;
+    background: #007095;
     color: #fff;
     cursor: pointer; }
     @media (max-width: 767px) {
@@ -271,7 +290,7 @@ ul {
     transition: 0.5s all;
     background: #00BAF7;
     border: none;
-    color: #009cd0; }
+    color: #007095; }
 
 /* PAGE TABS */
 .tab-pane {
@@ -299,7 +318,7 @@ ul {
       top: 14px;
       right: 22px;
       display: block;
-      color: #009cd0; } }
+      color: #007095; } }
 
 .responsive-tabs.nav-tabs > li:last-of-type > a {
   margin-right: 0; }
@@ -307,8 +326,12 @@ ul {
 .responsive-tabs.nav-tabs > li > a {
   margin-right: 4px;
   font-size: 14px; }
+  @media (max-width: 991px) {
+    .responsive-tabs.nav-tabs > li > a {
+      font-size: 12px; } }
   @media (max-width: 767px) {
     .responsive-tabs.nav-tabs > li > a {
+      font-size: 14px;
       margin-right: 0;
       background: #fff;
       color: #7d7d7d;
@@ -357,6 +380,60 @@ ul {
 
 .responsive-tabs.nav-tabs.open > li:last-of-type a {
   border-radius: 0 0 2px 2px; }
+
+/*--------------------*/
+/* PAGES */
+/*--------------------*/
+.tab-pane {
+  margin-bottom: 100px; }
+
+/* SPREADSHEETS */
+#spreadsheet h2, #spreadsheet h3 {
+  text-align: center; }
+
+#spreadsheet .panel-default {
+  border-color: #f6f6f6; }
+
+#spreadsheet .panel-heading {
+  text-align: center;
+  font-weight: bold;
+  background: #fff;
+  color: #7d7d7d;
+  border-color: #f6f6f6; }
+
+#spreadsheet .spreadsheet-graphic {
+  text-align: center; }
+  #spreadsheet .spreadsheet-graphic i {
+    font-size: 150px; }
+  #spreadsheet .spreadsheet-graphic .fa {
+    width: 100%;
+    color: #79BE37; }
+
+#spreadsheet blockquote {
+  padding: 50px; }
+  #spreadsheet blockquote p {
+    font-size: 25px;
+    font-style: italic; }
+    @media (max-width: 480px) {
+      #spreadsheet blockquote p {
+        font-size: 18px; } }
+  @media (max-width: 480px) {
+    #spreadsheet blockquote {
+      padding: 30px; } }
+
+#underline {
+  border-bottom: 5px solid #dcf0ca;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 30%; }
+
+.spreadsheet-content {
+  margin-top: 25px; }
+
+.spreadsheet-footer {
+  text-align: center; }
 
 /*--------------------*/
 /* ABOUT */
@@ -544,8 +621,9 @@ ul {
       margin: 0px; } }
 
 .button {
-  float: left;
-  display: block;
+  /*	float: left;
+*/
+  display: inline-block;
   margin: 1em;
   border: 2px solid #79BE37;
   background: #fff;

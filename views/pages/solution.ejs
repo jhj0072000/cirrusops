@@ -6,22 +6,105 @@
 	<div class='container-fluid'>
 		<div class='row page-navbar'>
 			<div class='container'>
-				<ul class="nav nav-tabs" role="tablist">
-					<li role="presentation" class="active"><a data-target="#quickbase" aria-controls="quickbase" role="tab" data-toggle="tab">QUICKBASE</a></li>
-					<li role="presentation"><a data-target="#spreadsheet" aria-controls="spreadsheet" role="tab" data-toggle="tab">SPREADSHEET</a></li>
-					<li role="presentation"><a data-target="#consulting" aria-controls="consulting" role="tab" data-toggle="tab">APP SOFTWARE CONSULTING</a></li>
-					<li role="presentation"><a data-target="#custom" aria-controls="custom" role="tab" data-toggle="tab">CUSTOM SOLUTIONS</a></li>
-					<li role="presentation"><a data-target="#integration" aria-controls="integration" role="tab" data-toggle="tab">INTEGRATIONS</a></li>
+				<ul class="nav nav-tabs" role="tablist" id="solutionTab">
+					<li class="active"><a data-target="#quickbase" data-toggle="tab">QUICKBASE</a></li>
+					<li><a data-target="#spreadsheet" data-toggle="tab">SPREADSHEET</a></li>
+					<li><a data-target="#consulting" data-toggle="tab">APP SOFTWARE CONSULTING</a></li>
+					<li><a data-target="#custom" data-toggle="tab">CUSTOM SOLUTIONS</a></li>
+					<li><a data-target="#integration" data-toggle="tab">INTEGRATIONS</a></li>
 				</ul>
 			</div>
 		</div>
 		<div class="page-content">
 			<div class="tab-content">
-				<div role="tabpanel" class="tab-pane active" id="quickbase">Home ContentHome ContentHome ContentHome ContentHome ContentHome ContentHome ContentHome ContentHome ContentHome ContentHome ContentHome ContentHome ContentHome Content</div>
-				<div role="tabpanel" class="tab-pane" id="spreadsheet">Profile Content</div>
-				<div role="tabpanel" class="tab-pane" id="consulting">Messages Content</div>
-				<div role="tabpanel" class="tab-pane" id="custom">Settings Content</div>
-				<div role="tabpanel" class="tab-pane" id="integration">Integration Content</div>
+
+				<!-- Start quickbase content -->
+				<div class="tab-pane active" id="quickbase">
+					<div class="container">
+						<h2>QuickBase® Development</h2>
+						<p>We are QuickBase experts. We've developed over 300 QuickBase Applications and have over 20 years of combined experience consulting, customizing, developing, and training for QuickBase customers.</p>
+						<p><a href="http://quickbase.intuit.com/product-tour">Click Here to learn more about the benefits of QuickBase.</a></p>
+						<p><a href="http://quickbase.intuit.com/plans-and-pricing">Click Here to view QuickBase plans and pricing.</a></p>
+					</div>
+				</div>
+				<!-- End quickbase content -->
+
+				<!-- Start quickbase content -->
+				<div class="tab-pane" id="spreadsheet">
+					<div class="container">
+						<h2>Spreadsheets might just be the most dangerous tool on the planet.</h2>
+						<h3>Consider these three critical factors:</h3>
+						<div class="row spreadsheet-content">
+							<div class="col-sm-4 col-md-4">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										COLLABORATION
+									</div>
+									<div class="panel-body">
+										<div class="row spreadsheet-graphic">
+											<i class="fa fa-users" aria-hidden="true"></i>
+										</div>
+										<div id="underline"></div>
+										<p>The crushing limitation of spreadsheets is the inability for teams to collaborate. When people are faced with: "Brad is in charge of the spreadsheet, so nobody go into the shared drive!”, productivity and team engagement suffer.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										SCALABILITY
+									</div>
+									<div class="panel-body">
+										<div class="row spreadsheet-graphic">
+											<i class="fa fa-cogs" aria-hidden="true"></i>
+										</div>
+										<div id="underline"></div>
+										<p>Spreadsheets are famous for lulling professionals into a false sense of limitless options. Leaders in growth business realize that spreadsheets are actually bottlenecks to success and not dynamic, all-in-one solutions as they are often used.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										VISIBILITY
+									</div>
+									<div class="panel-body">
+										<div class="row spreadsheet-graphic">
+											<i class="fa fa-globe" aria-hidden="true"></i>
+										</div>
+										<div id="underline"></div>
+										<p>Without a single source of truth, leaders find it difficult to make data driven decisions. Reporting is nearly impossible because rogue spreadsheets sprout up from dubious sources and data integrity is questionable throughout the organization.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<blockquote>
+							<p>"When an operations analyst encounters a problem, he opens a spreadsheet. Now he has two problems..."  - Abe Lincoln</p>
+						</blockquote>
+						<hr>
+						<div class="row spreadsheet-footer">
+							<h2>Your Spreadsheet Intervention is a click away.</h2>
+							<a href="#" class="button button-default" data-text= "START MY SPREADSHEET INTERVENTION">
+								<span>START MY SPREADSHEET INTERVENTION</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- End spreadsheet content -->
+
+				<!-- Start consulting content -->
+				<div class="tab-pane" id="consulting">Messages Content</div>
+				<!-- End consulting content -->
+
+				<!-- Start custom content -->
+				<div class="tab-pane" id="custom">Settings Content</div>
+				<!-- End custom content -->
+
+				<!-- Start integration content -->
+				<div class="tab-pane" id="integration">Integration Content</div>
+				<!-- End integration content -->
+
 			</div>
 			
 		</div>

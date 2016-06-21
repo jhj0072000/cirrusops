@@ -28,18 +28,18 @@ jQuery(function($){
   /* ----------------------------------------------------------- */
   /*  SMOOTH SCROLL [credit to: https://css-tricks.com/snippets/jquery/smooth-scrolling]
   /* ----------------------------------------------------------- */
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
+  // $('a[href*="#"]:not([href="#"])').click(function() {
+  //   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+  //     var target = $(this.hash);
+  //     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+  //     if (target.length) {
+  //       $('html, body').animate({
+  //         scrollTop: target.offset().top
+  //       }, 1000);
+  //       return false;
+  //     }
+  //   }
+  // });
 
 
   /* ----------------------------------------------------------- */
@@ -57,18 +57,18 @@ jQuery(function($){
   /* ----------------------------------------------------------- */
   /*  HEADER CONTENT SLIDE (SLICK SLIDER)
   /* ----------------------------------------------------------- */
-  jQuery('.header-slide').slick({
-    dots: false,
-    infinite: true,
-    speed: 100,
-    arrows:false, 
-    autoplay: true,    
-    autoplaySpeed: 1500, 
-    slidesToShow: 1,
-    slide: 'span',
-    fade: false,
-    cssEase: 'linear'
-  });
+  // jQuery('.header-slide').slick({
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 100,
+  //   arrows:false, 
+  //   autoplay: true,    
+  //   autoplaySpeed: 1500, 
+  //   slidesToShow: 1,
+  //   slide: 'span',
+  //   fade: false,
+  //   cssEase: 'linear'
+  // });
 
   /* ----------------------------------------------------------- */
   /*  NAVIGATION
@@ -102,6 +102,7 @@ jQuery(function($){
     $("#sticker").sticky({topSpacing:0});
   });
 
+  // PAGE TABS
   $.fn.responsiveTabs = function() {
     this.addClass('responsive-tabs');
     this.append($('<span class="glyphicon glyphicon-triangle-bottom"></span>'));
@@ -117,7 +118,6 @@ jQuery(function($){
   };
 
   $('.nav.nav-tabs').responsiveTabs();
-
 
 
 });
