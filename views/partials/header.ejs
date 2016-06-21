@@ -11,44 +11,39 @@
 <!-- Start scroll top button -->
 <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
 <!-- End scroll top button -->
-
-<!-- Start sidebar wrapper -->
-<div id="wrapper">
-  <div class="overlay" style="display: none;"></div>
-  <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
-    <ul class="nav sidebar-nav">
-      <li class="sidebar-brand">
-        <a href="/"><img src="images/logo.png"></a>
-      </li>
-      <li>
-        <a href="#"><i class="fa fa-globe"></i> CONQUER YOUR WORLD</a>
-      </li>
-      <li>
-        <a href="#"><i class="fa fa-wrench"></i> SOLUTIONS</a>
-      </li>
-      <li>
-        <a href="#about"><i class="fa fa-users"></i> ABOUT</a>
-      </li>
-      <li>
-        <a href="#"><i class="fa fa-heart"></i> CONNECT</a>
-      </li>
+<div class="home-header">
+  <div class="container">
+    <ul>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Chat</a></li>
+      <li>123-123-1234</li>
     </ul>
-  </nav>
-  <!-- Start page content [index.ejs] -->
-  <!-- Start page content wrapper -->
-  <div id="page-content-wrapper">
-    <div class="fixed-nav">
-      <div id="fixed-nav-logo">
-        <a href="/">
-          <img src="images/logosimple1.png" id="logosimple1">
-          <img src="images/logosimple2.png" id="logosimple2">
-        </a>
+  </div>
+</div>
+<!-- Start navbar -->
+<section class="navbar-primary">
+  <nav class="navbar navbar-default navbar-side" id="sticker">
+    <div class="container">
+      <div class="navbar-header">
+        <button data-toggle="collapse-side" data-target=".side-collapse" type="button" class="navbar-toggle">
+          <span class="sr-only"></span>
+          <span class="toggle-btn">MORE +</span>
+        </button> <a class="navbar-brand" href="/"><img src="images/logo_edit.png"></a> 
       </div>
-      <div id="fixed-nav-hamburger">
-        <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
-          <span class="hamb-top"></span>
-          <span class="hamb-middle"></span>
-          <span class="hamb-bottom"></span>
-        </button>
+      <div class="navbar-default side-collapse open" id="toggle-selector">
+        <div class="navbar-collapse">
+          <ul class="nav navbar-nav navbar-right home-navbar">
+            <li>
+              <a href="/">CONQUER YOUR WORLD</a> 
+            </li>
+            <li><a href="solution">SOLUTION</a></li>
+            <li><a href="about">ABOUT</a></li>
+            <li><a href="connect">CONNECT</a></li>
+          </ul>
+        </div>
       </div>
     </div>
+  </nav>
+</section>
+<!-- Start page content [index.ejs] -->
+  

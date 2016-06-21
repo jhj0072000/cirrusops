@@ -5,9 +5,11 @@ $gray: #838282;
 $color_2: #fffefe;
 $gray77: #777777;
 $white: #fff;
+$blackish: #303442;
 $color_1: #b8b8b8;
 $pink-light: #fff7f7;
-$cirrus-blue: #54A2D9;
+$cirrus-blue: #00BAF7;
+$cirrus-green: #79BE37;
 $color_4: #3a3a3a;
 $color_5: #525252;
 $color_6: #7d7d7d;
@@ -17,6 +19,7 @@ $color_9: inherit;
 $gray0: #3f51b5;
 $opensans: 'Open Sans', sans-serif;
 $raleway: 'Raleway', sans-serif;
+$mainfont: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
 
 /* ----------------------------------------------------------- */
 /*  MEDIA QUERIES SETTINGS
@@ -64,6 +67,9 @@ $iphone-width: 320px;
 /* ----------------------------------------------------------- */
 /*  GLOBAL 
 /* ----------------------------------------------------------- */
+html {
+	font-size: 100%;
+}
 body {
 	font-family: $opensans;
 	font-size: 16px;
@@ -118,18 +124,18 @@ ul {
 	float: left;
 	display: inline;
 	width: 100%;
-	margin-top: 50px;
-	@include galaxy {
+	/*@include galaxy {
 		margin-top: 20px;
-	}
+	}*/
 }
 .header-inner {
 	display: inline;
 	position: relative;
 	float: left;
 	width: 100%;
+	max-height: 500px;
 	>img {
-		width: 100%;
+		max-height: 500px;
 	}
 	@include galaxy {
 		> img {
@@ -145,7 +151,6 @@ ul {
 	position: absolute;
 	top: 0;
 	width: 100%;
-	z-index: 10;
 }
 .header-content {
 	float: left;
@@ -295,72 +300,339 @@ ul {
 		}
 	}
 }
-.scrolled {
-	background-color: #54A2D9;
+#home-banner {
+	height: 500px;
+	background: url("../images/banner_test.jpg") no-repeat left 45% bottom;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding: 5.625rem 0;
+	@include laptop {
+		height: 450px;
+		padding: 2.8125rem;
+		background-position: top center;
+	}
+	@include ipad {
+		padding: 2.2125rem;
+	}
+	@include note {
+		padding: 1.5125rem;
+	}
 }
-#logosimple1 {
-	height: 70px;
+.banner-floater {
+	margin: 0 auto;
+	max-width: 80rem;
+	width: 100%;
+	/*.banner-floater-inner {
+		background: rgba(0, 0, 0, 0.2);
+	}*/
 }
-#logosimple2 {
+.banner-content {
+	font-size: 1.0625rem;
+	line-height: 1.6875rem;
+	color: $blackish;
+}
+.banner-h1 {
+	margin-bottom: 20px;
+	font-size: 2.9rem;
+	line-height: 2.9rem;
+	text-transform: none;
+	font-weight: 300;
+	color: $blackish;
+	@include laptop {
+		font-size: 2.8125rem;
+		line-height: 3rem;
+	}
+	@include ipad {
+		font-size: 2.5rem;
+		line-height: 3rem;
+	}
+	@include note {
+		font-size: 1.8rem;
+		line-height: 2rem;
+	}
+	@include galaxy {
+		font-size: 1rem;
+		line-height: 1.3rem;
+	}
+}
+.banner-h3 {
+	text-transform: none;
+	font-size: 1.625rem;
+	line-height: 2rem;
+	font-weight: 700;
+	color: $blackish;
+	@include ipad {
+		font-size: 1.375rem;
+		line-height: 1.75rem;
+	}
+	@include note {
+		font-size: 1rem;
+		line-height: 1.25rem;
+	}
+}
+.home-cta {
+	.row {
+		margin: 0;
+	}
+}
+.home-cta-content {
+	text-align: center;
+	padding: 10px 0;
+	background: $cirrus-blue;
+	p {
+		display: inline-block;
+		color: $white;
+		font-size: 1.25rem;
+		margin: 0;
+		padding: 1rem 0.9375rem;
+		@include note {
+			margin-bottom: 0.625rem;
+			padding: 0;
+			font-size: 0.925rem;
+		}
+	}
+	button {
+		display: inline-block;
+		float: none;
+		margin: 0px;
+	}
+}
+#home-cta-btn {
+	border: 1px solid $white;
+	background: transparent;
+	color: $white;
+}
+/*--------------------*/
+/* NAV BAR */
+/*--------------------*/
+.home-header {
+	background: #eee;
+	color: $gray77;
+	text-align: right;
+	ul {
+		margin-bottom: 5px;
+		li {
+			font-size: 12px;
+			font-weight: bold;
+			display: inline-block;
+			margin-left: 15px;
+			a {
+				text-decoration: none;
+				color: $gray77;
+				&:hover {
+					transition: 0.5s all;
+					color: $cirrus-blue;
+				}
+			}
+		}
+	} 
+}
+.home-navbar {
+	@include laptop {
+		font-size: 12px;
+	}
+}
+.navbar {
+	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+	z-index: 999;
+}
+.navbar-default {
+	background: $white;
+	border: none;
+	.navbar-header > a {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	.navbar-nav {
+		.active a {
+			background: $white;
+			color: $cirrus-green;
+			&:hover {
+				background: $white;
+				color: $cirrus-green;
+			}
+		}
+		li a {
+			line-height: 70px;
+			padding-top: 0px;
+			padding-bottom: 0px;
+			letter-spacing: 1.8px;
+			&:hover {
+				transition: 0.5s all;
+				background: $white;
+				color: $cirrus-green;
+			}
+		}
+	}
+}
+.navbar-side { 
+	@include ipad {
+		.side-collapse {
+			top: 97px;
+			bottom: 0;
+			left: 0;
+			width: 400px;
+			position: fixed;
+			overflow: auto;
+			transition: all 0.5s;
+			&:-webkit-scrollbar {
+				display: none;
+			}		
+		}
+		.side-collapse.open {
+			width: 0;
+		}
+	}
+	@include note {
+		.side-collapse {
+			width: 100%;
+		}
+	}
+}
+.navbar-brand {
 	height: 70px;
+	display: flex;
+	align-items: center;
+}
+.navbar-toggle {
+	margin-bottom: 0px;
+	margin-top: 15px;
+}
+
+/*--------------------*/
+/* CONTENT SECTION */
+/*--------------------*/
+.page-navbar {
+	background: $cirrus-blue;
+	border-bottom: 1px solid $cirrus-blue;
+	@include ipad {
+		background: $white;
+		border: none;
+	}
+}
+
+.nav-tabs {
+	li.active > a {
+		border: none;
+		background: $cirrus-blue-dark;
+		color: white;
+		&:hover {
+			background: $cirrus-blue-dark;
+			color: $white;
+			cursor: pointer;
+			@include ipad {
+				background: $cirrus-blue;
+			}
+		}
+	}
+	li a {
+		color: $white;
+		border: none;
+		&:hover {
+			cursor: pointer;
+			transition: 0.5s all;
+			background: $cirrus-blue;
+			border: none;
+			color: $cirrus-blue-dark;
+		}
+	}
+}
+
+
+/* PAGE TABS */
+.tab-pane {
+  padding: 15px 5px;
+}
+.responsive-tabs.nav-tabs {
+	border: none;
+	@include ipad {
+		position: relative;
+		z-index: 10;
+		height: 42px;
+		overflow: visible;
+		border-bottom: none;
+		top: 10px;
+	}
+}
+.responsive-tabs.nav-tabs span.glyphicon.glyphicon-triangle-top {
 	display: none;
 }
-.fixed-nav {
-	background: #1a1a1a;
-	position: fixed;
-	width: 100%;
-	z-index: 999;
-	height: 70px;
-	#fixed-nav-hamburger, #fixed-nav-logo {
-		display: inline-block;
-	}
-	@include galaxy {
-		height: 45px;
-		#fixed-nav-logo {
-			display: none;
-		}
+.responsive-tabs.nav-tabs span.glyphicon {
+	display: none;
+	@include ipad {
+		position: absolute;
+		top: 14px;
+		right: 22px;
+		display: block;
+		color: $cirrus-blue-dark;
 	}
 }
-.sidebar-nav {
-	@include galaxy {
-		li {
-			a {
-				font-size: 12px;
-			}
-		}
-		width: 230px;
-	}
-	@include iphone {
-		li {
-			a {
-				font-size: 10px;
+.responsive-tabs.nav-tabs > li:last-of-type > a {
+  margin-right: 0;
+}
+.responsive-tabs.nav-tabs > li > a {
+	margin-right: 4px;
+	font-size: 14px;
+	@include ipad {
+		margin-right: 0;
+		background: #fff;
+		color: $gray77;
+		border: 1px solid #DDDDDD;
+		&:hover {
+			@include ipad {
+				background: $cirrus-blue;
+				color: $white;
 			}
 		}
 	}
 }
-.hamburger {
-	@include note {
-		margin-left: 10px;
-	}
-	@include galaxy {
-		height: 25px;
-		width: 20px;
-		margin-left: 20px;
-		top: 10px;
-		&.is-closed span {
-			&.hamb-top{
-				height: 2px;
-			}
-			&.hamb-middle{
-				height: 2px;
-			}
-			&.hamb-bottom{
-				height: 2px;
-				bottom: 6px;
-			}
-		}
+
+.responsive-tabs.nav-tabs > li.active {
+  display: block;
+}
+.responsive-tabs.nav-tabs > li.active a {
+	border: none;
+	@include ipad {
+		border: 1px solid #DDDDDD;
+			border-radius: 2px;
 	}
 }
+.responsive-tabs.nav-tabs > li {
+	display: block;
+	float: left;
+	@include ipad {
+		display: none;
+		float: none;
+		text-align: center;
+	}
+}
+.responsive-tabs.nav-tabs.open span.glyphicon.glyphicon-triangle-top {
+	display: none;
+	@include ipad {
+		display: block;
+	}
+}
+.responsive-tabs.nav-tabs.open span.glyphicon.glyphicon-triangle-bottom {
+  display: none;
+}
+.responsive-tabs.nav-tabs.open > li {
+  display: block;
+}
+.responsive-tabs.nav-tabs.open > li a {
+  border-radius: 0;
+}
+.responsive-tabs.nav-tabs.open > li:first-of-type a {
+  border-radius: 2px 2px 0 0;
+}
+.responsive-tabs.nav-tabs.open > li:last-of-type a {
+  border-radius: 0 0 2px 2px;
+}
+
+
+
+
 /*--------------------*/
 /* ABOUT */
 /*--------------------*/
@@ -454,7 +726,7 @@ ul {
 	display: inline;
 	width: 100%;
 	span {
-		border: 1px solid #54A2D9;
+		border: 1px solid $cirrus-blue;
 		border-radius: 100%;
 		display: inline-block;
 		color: $cirrus-blue;
@@ -471,12 +743,12 @@ ul {
 	}
 	&:hover {
 		.wc-icon {
-			background-color: #54A2D9;
+			background-color: $cirrus-blue;
 			color: $white;
 		}
 		.wc-about-title {
 			padding-bottom: 16px;
-			border-bottom: 2px solid #54A2D9;
+			border-bottom: 2px solid $cirrus-blue;
 		}
 	}
 	.wc-about-title {
@@ -578,9 +850,9 @@ ul {
 	float: left;
 	display: block;
 	margin: 1em;
-	border: 2px solid $cirrus-blue;
+	border: 2px solid $cirrus-green;
 	background: $white;
-	color: $cirrus-blue;
+	color: $cirrus-green;
 	vertical-align: middle;
 	position: relative;
 	z-index: 1;
@@ -633,7 +905,7 @@ ul {
 		color: $white;
 	}
 	&:hover {
-		background-color: $cirrus-blue;
+		background-color: $cirrus-green;
 		text-decoration: none;
 		color: $white !important;
 		&::after {
@@ -794,7 +1066,7 @@ ul {
   padding: 20px;
 }
 .clients b {
-  color: #54A2D9;
+  color: $cirrus-blue;
 }
 .clients i {
   font-size: 20px;
@@ -1084,7 +1356,6 @@ ul {
 	background-color: #242424;
 	display: inline;
 	float: left;
-	margin-top: -6px;
 	width: 100%;
 }
 .footer-top {
@@ -1137,13 +1408,6 @@ ul {
 			border-color: #00aced;
 		}
 	}
-	a.google-plus {
-		&:hover {
-			color: $white;
-			background-color: #dd4b39;
-			border-color: #dd4b39;
-		}
-	}
 	a.youtube {
 		&:hover {
 			color: $white;
@@ -1156,13 +1420,6 @@ ul {
 			color: $white;
 			background-color: #007bb5;
 			border-color: #007bb5;
-		}
-	}
-	a.dribbble {
-		&:hover {
-			color: $white;
-			background-color: #ea4c89;
-			border-color: #ea4c89;
 		}
 	}
 	@include galaxy {
