@@ -380,6 +380,8 @@ ul {
   height: 70px;
   display: flex;
   align-items: center; }
+  .navbar-brand img {
+    height: 50px; }
 
 .navbar-toggle {
   margin-bottom: 0px;
