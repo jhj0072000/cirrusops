@@ -228,11 +228,13 @@ blockquote p {
           transition: 0.5s all;
           color: #46AAD9; }
 
-.home-navbar {
-  width: 400px; }
-  @media (max-width: 991px) {
-    .home-navbar {
-      font-size: 12px; } }
+@media (max-width: 991px) {
+  .home-navbar {
+    font-size: 12px; } }
+
+@media (max-width: 767px) {
+  .home-navbar {
+    width: 400px; } }
 
 .navbar {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
