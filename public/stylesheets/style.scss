@@ -6,6 +6,7 @@ $cirrus-blue-light: #d0f3ff;
 $cirrus-blue-dark: #007095;
 $cirrus-green: #79BE37;
 $cirrus-green-light: #dcf0ca;
+$cirrus-purple: #8464CA;
 $red-pale: #fffefe;
 $pink-light: #fff7f7;
 $white: #fff;
@@ -84,6 +85,9 @@ body {
 ul {
 	list-style: none;
 	padding-left: 0px;
+}
+.txt-white {
+	color: $white;
 }
 
 /* Scroll to top */
@@ -396,7 +400,6 @@ blockquote p {
 		height: 42px;
 		overflow: visible;
 		border-bottom: none;
-		top: 10px;
 	}
 }
 .responsive-tabs.nav-tabs span.glyphicon.glyphicon-triangle-top {
@@ -424,13 +427,13 @@ blockquote p {
 	@include ipad {
 		font-size: 14px;
 		margin-right: 0;
-		background: #fff;
-		color: $gray-medium;
-		border: 1px solid #DDDDDD;
+		background: $cirrus-blue;
+		color: $white;
+		border: none;
 		&:hover {
 			@include ipad {
 				background: $cirrus-blue;
-				color: $white;
+				color: $cirrus-blue-dark;
 			}
 		}
 	}
@@ -441,7 +444,7 @@ blockquote p {
 .responsive-tabs.nav-tabs > li.active a {
 	border: none;
 	@include ipad {
-		border: 1px solid #DDDDDD;
+		border: 1px solid $cirrus-blue;
 		border-radius: 2px;
 	}
 }
@@ -482,6 +485,92 @@ blockquote p {
 .tab-pane {
 	margin-bottom: 100px;
 }
+.page-wrapper {
+	.container-fluid {
+		padding: 0px;
+	}
+	.tab-pane {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
+/* QUICKBASE */
+#quickbase {
+	padding-top: 0px;
+}
+.quickbase-banner {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 80rem;
+}
+.popout-banner {
+	position: relative;
+	width: 100%;
+	height: auto;
+	display: block;
+	margin-bottom: 100px;
+}
+.popout-banner-image {
+	margin-left: -20px;
+	margin-right: -20px;
+	background: url('../images/quickbase-banner.jpg') no-repeat top right;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 500px;
+	@include ipad {
+		height: 250px;
+	}
+
+}
+.popout-box {
+	position: absolute;
+	width: 100%;
+	max-width: 31.25rem;
+	margin-top: 50px;
+	margin-bottom: -50px;
+	padding: 50px;
+	box-shadow: 0 20px 40px 0 rgba(0,0,0,0.22);
+	border-radius: 3px;
+	display: flex;
+	align-items: center;
+	max-height: 31.25rem;
+	background-color: $cirrus-purple;
+	transition: all 0.3s ease-in;
+	transition-property: margin, left;
+
+	.popout-box-content {
+		p:before {
+			background-color: $white;
+			left: 0;
+			margin-left: 0;
+			transform: translateX(0);
+			content: '';
+			position: relative;
+			display: block;
+			width: 200px;
+			height: 1px;
+			margin: 20px 0px;
+		}
+		.button {
+			background-color: transparent;
+			border: solid 1px $white;
+			color: $white;
+		}
+	}
+
+	@include laptop {
+		width: 50%;
+		margin: 0px;
+	}
+	@include ipad {
+		width: 100%;
+		max-width: none;
+		position: relative;
+	}
+}
+
 /* SPREADSHEETS */
 #spreadsheet {
 	h2, h3 {

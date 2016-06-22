@@ -28,6 +28,9 @@ ul {
   list-style: none;
   padding-left: 0px; }
 
+.txt-white {
+  color: #fff; }
+
 /* Scroll to top */
 .scrollToTop {
   background: #f9f9f9 none repeat scroll 0 0;
@@ -305,8 +308,7 @@ blockquote p {
       z-index: 10;
       height: 42px;
       overflow: visible;
-      border-bottom: none;
-      top: 10px; } }
+      border-bottom: none; } }
 
 .responsive-tabs.nav-tabs span.glyphicon.glyphicon-triangle-top {
   display: none; }
@@ -334,13 +336,13 @@ blockquote p {
     .responsive-tabs.nav-tabs > li > a {
       font-size: 14px;
       margin-right: 0;
-      background: #fff;
-      color: #7d7d7d;
-      border: 1px solid #DDDDDD; } }
+      background: #00BAF7;
+      color: #fff;
+      border: none; } }
   @media (max-width: 767px) and (max-width: 767px) {
     .responsive-tabs.nav-tabs > li > a:hover {
       background: #00BAF7;
-      color: #fff; } }
+      color: #007095; } }
 
 .responsive-tabs.nav-tabs > li.active {
   display: block; }
@@ -349,7 +351,7 @@ blockquote p {
   border: none; }
   @media (max-width: 767px) {
     .responsive-tabs.nav-tabs > li.active a {
-      border: 1px solid #DDDDDD;
+      border: 1px solid #00BAF7;
       border-radius: 2px; } }
 
 .responsive-tabs.nav-tabs > li {
@@ -387,6 +389,82 @@ blockquote p {
 /*--------------------*/
 .tab-pane {
   margin-bottom: 100px; }
+
+.page-wrapper .container-fluid {
+  padding: 0px; }
+
+.page-wrapper .tab-pane {
+  padding-left: 0px;
+  padding-right: 0px; }
+
+/* QUICKBASE */
+#quickbase {
+  padding-top: 0px; }
+
+.quickbase-banner {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 80rem; }
+
+.popout-banner {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 100px; }
+
+.popout-banner-image {
+  margin-left: -20px;
+  margin-right: -20px;
+  background: url("../images/quickbase-banner.jpg") no-repeat top right;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 500px; }
+  @media (max-width: 767px) {
+    .popout-banner-image {
+      height: 250px; } }
+
+.popout-box {
+  position: absolute;
+  width: 100%;
+  max-width: 31.25rem;
+  margin-top: 50px;
+  margin-bottom: -50px;
+  padding: 50px;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.22);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  max-height: 31.25rem;
+  background-color: #8464CA;
+  transition: all 0.3s ease-in;
+  transition-property: margin, left; }
+  .popout-box .popout-box-content p:before {
+    background-color: #fff;
+    left: 0;
+    margin-left: 0;
+    transform: translateX(0);
+    content: '';
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 1px;
+    margin: 20px 0px; }
+  .popout-box .popout-box-content .button {
+    background-color: transparent;
+    border: solid 1px #fff;
+    color: #fff; }
+  @media (max-width: 991px) {
+    .popout-box {
+      width: 50%;
+      margin: 0px; } }
+  @media (max-width: 767px) {
+    .popout-box {
+      width: 100%;
+      max-width: none;
+      position: relative; } }
 
 /* SPREADSHEETS */
 #spreadsheet h2, #spreadsheet h3 {
