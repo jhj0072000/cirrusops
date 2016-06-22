@@ -335,6 +335,7 @@ blockquote p {
 	} 
 }
 .home-navbar {
+	width: 400px;
 	@include laptop {
 		font-size: 12px;
 	}
