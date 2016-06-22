@@ -229,8 +229,8 @@ blockquote p {
 		border-color: $cirrus-green;
 		color: $cirrus-green;
 		&:hover{
-			background-color: $cirrus-green-light;
-			border-color: $cirrus-green-light;
+			background-color: $cirrus-green;
+			border-color: $cirrus-green;
 		}
 	}
 }
@@ -430,6 +430,12 @@ blockquote p {
 	@include ipad {
 		background: $white;
 		border: none;
+		margin: 0;
+	}
+	.container {
+		@include ipad {
+			padding: 0;
+		}
 	}
 }
 .nav-tabs {
@@ -584,6 +590,9 @@ blockquote p {
 	height: auto;
 	display: block;
 	margin-bottom: 100px;
+	@include ipad {
+		margin-bottom: 30px;
+	}
 }
 .popout-banner-image {
 	margin-left: -20px;
@@ -596,6 +605,8 @@ blockquote p {
 	height: 500px;
 	@include ipad {
 		height: 250px;
+		margin-left: 0;
+		margin-right: 0;
 	}
 
 }
@@ -619,7 +630,7 @@ blockquote p {
 		h1 {
 			margin-top: 0px;
 			@include laptop {
-				font-size: 30px;
+				font-size: 24px;
 			}
 			@include ipad {
 				margin-top: 0px;
@@ -662,6 +673,7 @@ blockquote p {
 	@include laptop {
 		width: 50%;
 		margin: 0px;
+		height: 100%;
 	}
 	@include ipad {
 		width: 100%;
