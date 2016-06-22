@@ -313,6 +313,7 @@ blockquote p {
 /*--------------------*/
 .home-header {
 	background: #eee;
+	border-top: 5px solid $cirrus-blue;
 	color: $gray-medium;
 	text-align: right;
 	ul {
@@ -715,7 +716,7 @@ blockquote p {
 		border-bottom-left-radius: 10px;
 	}
 	.ss-collaboration {
-		border: 5px solid $cirrus-blue-light;
+		border: 5px solid $cirrus-blue;
 		border-radius: 10px;
 		.panel-heading {
 			background-color: $white;
@@ -724,12 +725,12 @@ blockquote p {
 		.panel-body {
 			background-color: $white;
 			.fa {
-				color: $cirrus-blue-light;
+				color: $cirrus-blue;
 			}
 		}
 	}
 	.ss-scalability {
-		border: 5px solid $cirrus-orange-light;
+		border: 5px solid $cirrus-orange;
 		border-radius: 10px;
 		.panel-heading {
 			background-color: $white;
@@ -738,12 +739,12 @@ blockquote p {
 		.panel-body {
 			background-color: $white;
 			.fa {
-				color: $cirrus-orange-light;
+				color: $cirrus-orange;
 			}
 		}
 	}
 	.ss-visibility {
-		border: 5px solid $cirrus-green-light;
+		border: 5px solid $cirrus-green;
 		border-radius: 10px;
 		.panel-heading {
 			background-color: $white;
@@ -752,14 +753,15 @@ blockquote p {
 		.panel-body {
 			background-color: $white;
 			.fa {
-				color: $cirrus-green-light;
+				color: $cirrus-green;
 			}
 		}
 	}
 	.panel-heading {
 		text-align: center;
 		font-weight: bold;
-		color: $gray-medium;
+		color: $blackish;
+		letter-spacing: 5px;
 	}
 	p {
 		color: $gray-medium;

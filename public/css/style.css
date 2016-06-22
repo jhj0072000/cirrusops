@@ -211,6 +211,7 @@ blockquote p {
 /*--------------------*/
 .home-header {
   background: #eee;
+  border-top: 5px solid #46AAD9;
   color: #7d7d7d;
   text-align: right; }
   .home-header ul {
@@ -558,7 +559,7 @@ blockquote p {
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px; }
   .tab-spreadsheet .ss-collaboration {
-    border: 5px solid #9CD5F1;
+    border: 5px solid #46AAD9;
     border-radius: 10px; }
     .tab-spreadsheet .ss-collaboration .panel-heading {
       background-color: #fff;
@@ -566,9 +567,9 @@ blockquote p {
     .tab-spreadsheet .ss-collaboration .panel-body {
       background-color: #fff; }
       .tab-spreadsheet .ss-collaboration .panel-body .fa {
-        color: #9CD5F1; }
+        color: #46AAD9; }
   .tab-spreadsheet .ss-scalability {
-    border: 5px solid #FFAE89;
+    border: 5px solid #FF783B;
     border-radius: 10px; }
     .tab-spreadsheet .ss-scalability .panel-heading {
       background-color: #fff;
@@ -576,9 +577,9 @@ blockquote p {
     .tab-spreadsheet .ss-scalability .panel-body {
       background-color: #fff; }
       .tab-spreadsheet .ss-scalability .panel-body .fa {
-        color: #FFAE89; }
+        color: #FF783B; }
   .tab-spreadsheet .ss-visibility {
-    border: 5px solid #67D6BA;
+    border: 5px solid #1CB891;
     border-radius: 10px; }
     .tab-spreadsheet .ss-visibility .panel-heading {
       background-color: #fff;
@@ -586,11 +587,12 @@ blockquote p {
     .tab-spreadsheet .ss-visibility .panel-body {
       background-color: #fff; }
       .tab-spreadsheet .ss-visibility .panel-body .fa {
-        color: #67D6BA; }
+        color: #1CB891; }
   .tab-spreadsheet .panel-heading {
     text-align: center;
     font-weight: bold;
-    color: #7d7d7d; }
+    color: #303442;
+    letter-spacing: 5px; }
   .tab-spreadsheet p {
     color: #7d7d7d; }
   .tab-spreadsheet .spreadsheet-graphic {
