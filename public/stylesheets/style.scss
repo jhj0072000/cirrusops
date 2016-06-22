@@ -1,12 +1,21 @@
 /* ----------------------------------------------------------- */
 /*  COLORS
 /* ----------------------------------------------------------- */
-$cirrus-blue: #00BAF7;
-$cirrus-blue-light: #d0f3ff;
-$cirrus-blue-dark: #007095;
-$cirrus-green: #79BE37;
-$cirrus-green-light: #dcf0ca;
-$cirrus-purple: #8464CA;
+$cirrus-blue: #46AAD9;
+$cirrus-blue-light: #9CD5F1;
+$cirrus-blue-dark: #0780BA;
+$cirrus-green: #1CB891;
+$cirrus-green-light: #67D6BA;
+$cirrus-green-dark: #007D5E;
+$cirrus-purple: #9974CE;
+$cirrus-purple-light: #E1D1F6;
+$cirrus-purple-dark: #5F349C;
+$cirrus-red: #FF003B;
+$cirrus-red-light: #FF6186;
+$cirrus-red-dark: #F00038;
+$cirrus-orange: #FF783B;
+$cirrus-orange-light: #FFAE89;
+$cirrus-orange-dark: #B63B03;
 $red-pale: #fffefe;
 $pink-light: #fff7f7;
 $white: #fff;
@@ -15,6 +24,24 @@ $gray-pale: #f6f6f6;
 $gray-light: #b8b8b8;
 $gray-medium: #7d7d7d;
 $gray-dark: #525252;
+
+
+/* Theme Colors */
+$theme-green: #1CB891;
+$theme-green-light: #67D6BA;
+$theme-green-dark: #007D5E;
+$theme-blue: #46A9D9;
+$theme-blue-light: #9CD5F1;
+$theme-blue-dark: #0780BA;
+$theme-purple: #9974CE;
+$theme-purple-light: #E1D1F6;
+$theme-purple-dark: #5F349C;
+$theme-red: #FF003B;
+$theme-red-light: #FF6186;
+$theme-red-dark: #F00038;
+$theme-orange: #FF783B;
+$theme-orange-light: #FFAE89;
+$theme-orange-dark: #B63B03;
 
 /* ----------------------------------------------------------- */
 /*  FONTS
@@ -78,6 +105,26 @@ body {
 	overflow-x: hidden !important;
 	color: $gray-medium;
 	position: relative;
+	@include note {
+		font-size: 14px;
+	}
+}
+h1,h2 {
+	color: $blackish;
+}
+h1 {
+	@include note {
+	}
+}
+h2 {
+	@include note {
+		font-size: 20px;
+	}
+}
+h3 {
+	@include note {
+		font-size: 16px;
+	}
 }
 .fa {
 	width: 20px;
@@ -178,6 +225,14 @@ blockquote p {
 	font-size: 1.0625rem;
 	line-height: 1.6875rem;
 	color: $blackish;
+	.button-default {
+		border-color: $cirrus-green;
+		color: $cirrus-green;
+		&:hover{
+			background-color: $cirrus-green-light;
+			border-color: $cirrus-green-light;
+		}
+	}
 }
 .banner-h1 {
 	margin-bottom: 20px;
@@ -247,8 +302,11 @@ blockquote p {
 }
 #home-cta-btn {
 	border: 1px solid $white;
-	background: transparent;
-	color: $white;
+	background: white;
+	color: $cirrus-blue;
+	&:hover {
+		background-color: $cirrus-blue-light;
+	}
 }
 /*--------------------*/
 /* NAVIGATION */
@@ -294,10 +352,10 @@ blockquote p {
 	.navbar-nav {
 		.active a {
 			background: $white;
-			color: $cirrus-green;
+			color: $cirrus-blue;
 			&:hover {
 				background: $white;
-				color: $cirrus-green;
+				color: $cirrus-blue;
 			}
 		}
 		li a {
@@ -308,19 +366,32 @@ blockquote p {
 			&:hover {
 				transition: 0.5s all;
 				background: $white;
-				color: $cirrus-green;
+				color: $cirrus-blue;
 			}
+		}
+	}
+	.navbar-toggle {
+		margin-bottom: 0px;
+		margin-top: 15px;
+		border-color: $cirrus-blue;
+		color: $cirrus-blue;
+		&:hover {
+			background-color: $cirrus-blue;
+			color: white;
+		}
+		&:focus {
+			background-color: $cirrus-blue;
+			color: $white;
 		}
 	}
 }
 .navbar-side { 
 	@include ipad {
 		.side-collapse {
-			top: 97px;
-			bottom: 0;
+			height: 100vh;
 			left: 0;
 			width: 400px;
-			position: fixed;
+			position: absolute;
 			overflow: auto;
 			transition: all 0.5s;
 			&:-webkit-scrollbar {
@@ -345,17 +416,13 @@ blockquote p {
 		height: 50px;
 	}
 }
-.navbar-toggle {
-	margin-bottom: 0px;
-	margin-top: 15px;
-}
 
 /*--------------------*/
 /* CONTENT SECTION */
 /*--------------------*/
 .page-navbar {
-	background: $cirrus-blue;
-	border-bottom: 1px solid $cirrus-blue;
+	background: $white;
+	border-bottom: 1px solid $gray-pale;
 	@include ipad {
 		background: $white;
 		border: none;
@@ -364,11 +431,13 @@ blockquote p {
 .nav-tabs {
 	li.active > a {
 		border: none;
-		background: $cirrus-blue-dark;
-		color: white;
+		border-bottom: 5px solid $cirrus-blue;
+		color: $blackish;
+		font-weight: bold;
 		&:hover {
-			background: $cirrus-blue-dark;
-			color: $white;
+			color: $cirrus-blue;
+			border: none;
+			border-bottom: 5px solid $cirrus-blue;
 			cursor: pointer;
 			@include ipad {
 				background: $cirrus-blue;
@@ -376,21 +445,21 @@ blockquote p {
 		}
 	}
 	li a {
-		color: $white;
+		color: $blackish;
+		font-weight: bold;
 		border: none;
 		&:hover {
 			cursor: pointer;
-			transition: 0.5s all;
-			background: $cirrus-blue;
+			background: transparent;
 			border: none;
-			color: $cirrus-blue-dark;
+			color: $cirrus-blue;
 		}
 	}
 }
 
 /* PAGE TABS */
 .tab-pane {
-  padding: 15px 5px;
+  padding: 0px 5px;
 }
 .responsive-tabs.nav-tabs {
 	border: none;
@@ -442,7 +511,6 @@ blockquote p {
   display: block;
 }
 .responsive-tabs.nav-tabs > li.active a {
-	border: none;
 	@include ipad {
 		border: 1px solid $cirrus-blue;
 		border-radius: 2px;
@@ -482,6 +550,9 @@ blockquote p {
 /*--------------------*/
 /* PAGES */
 /*--------------------*/
+.page-banner-thin {
+	height: 275px;
+}
 .tab-pane {
 	margin-bottom: 100px;
 }
@@ -541,22 +612,46 @@ blockquote p {
 	transition-property: margin, left;
 
 	.popout-box-content {
-		p:before {
-			background-color: $white;
-			left: 0;
-			margin-left: 0;
-			transform: translateX(0);
-			content: '';
-			position: relative;
-			display: block;
-			width: 200px;
-			height: 1px;
-			margin: 20px 0px;
+		h1 {
+			margin-top: 0px;
+			@include laptop {
+				font-size: 30px;
+			}
+			@include ipad {
+				margin-top: 0px;
+			}
+		}
+		p {
+			&:before {
+				background-color: $white;
+				left: 0;
+				margin-left: 0;
+				transform: translateX(0);
+				content: '';
+				position: relative;
+				display: block;
+				width: 200px;
+				height: 1px;
+				margin: 20px 0px;
+			}
+			@include ipad {
+				font-size: 14px;
+			}
 		}
 		.button {
 			background-color: transparent;
 			border: solid 1px $white;
 			color: $white;
+			margin: 0px;
+			margin-top: 10px;
+			&:after {
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+			span {
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
 		}
 	}
 
@@ -568,50 +663,134 @@ blockquote p {
 		width: 100%;
 		max-width: none;
 		position: relative;
+		padding: 25px;
+		border-radius: 0px;
 	}
 }
 
 /* SPREADSHEETS */
-#spreadsheet {
+#spreadsheet-banner {
+	background-color: $cirrus-purple;
+	padding: 50px;
+	text-align: center;
+	@include note {
+		padding: 30px;
+	}
+	h1 {
+		color: $white;
+		font-weight: bold;
+		font-size: 40px;
+		@include note {
+			font-size: 30px;
+		}
+	}
+	p {
+		color: $white;
+	}
+	.underline {
+		background-color: $white;
+	}
+}
+.tab-spreadsheet {
 	h2, h3 {
 		text-align: center;
 	}
-	.panel-default {
-		border-color: $gray-pale;
+	/*.container {
+		margin-top: 50px;
+	}*/
+	.panel {
+		transition: all 0.3s linear;
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.22);
+		&:hover {
+			transition: all 0.3s linear;
+			box-shadow: 0 20px 40px 0 rgba(0,0,0,0.22);
+		}
+	}
+	.panel-heading {
+		border-top-right-radius: 10px;
+		border-top-left-radius: 10px;
+	}
+	.panel-body {
+		border-bottom-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+	}
+	.ss-collaboration {
+		border: 5px solid $cirrus-blue-light;
+		border-radius: 10px;
+		.panel-heading {
+			background-color: $white;
+			border-bottom: none;
+		}
+		.panel-body {
+			background-color: $white;
+			.fa {
+				color: $cirrus-blue-light;
+			}
+		}
+	}
+	.ss-scalability {
+		border: 5px solid $cirrus-orange-light;
+		border-radius: 10px;
+		.panel-heading {
+			background-color: $white;
+			border-bottom: none;
+		}
+		.panel-body {
+			background-color: $white;
+			.fa {
+				color: $cirrus-orange-light;
+			}
+		}
+	}
+	.ss-visibility {
+		border: 5px solid $cirrus-green-light;
+		border-radius: 10px;
+		.panel-heading {
+			background-color: $white;
+			border-bottom: none;
+		}
+		.panel-body {
+			background-color: $white;
+			.fa {
+				color: $cirrus-green-light;
+			}
+		}
 	}
 	.panel-heading {
 		text-align: center;
 		font-weight: bold;
-		background: $white;
 		color: $gray-medium;
-		border-color: $gray-pale;
+	}
+	p {
+		color: $gray-medium;
 	}
 	.spreadsheet-graphic {
 		text-align: center;
 		i {
 			font-size: 150px;
+			padding: 30px;
 		}
 		.fa {
 			width: 100%;
-			color: $cirrus-green;
 		}
 	}
 	blockquote {
 		p {
+			color: $gray-medium;
 			font-size: 25px;
 			font-style: italic;
 			@include note {
-				font-size: 18px;
+				font-size: 16px;
 			}
 		}
 		padding: 50px;
 		@include note {
-			padding: 30px;
+			padding: 18px;
 		}
 	}
 }
 #underline {
-	border-bottom: 5px solid $cirrus-green-light;
+	border-bottom: 5px solid $gray-pale;
 	margin-top: 15px;
 	margin-bottom: 15px;
 	margin-right: auto;
@@ -625,6 +804,11 @@ blockquote p {
 	text-align: center;
 }
 
+/* CONSULTING */
+.consulting-banner {
+	height: 275px;
+	background-color: $cirrus-purple;
+}
 
 
 
@@ -720,11 +904,21 @@ blockquote p {
 	float: left;
 	display: inline;
 	width: 100%;
-	span {
+	#intro-1 {
 		border: 1px solid $cirrus-blue;
+		color: $cirrus-blue;
+	}
+	#intro-2 {
+		border: 1px solid $cirrus-orange;
+		color: $cirrus-orange;
+	}
+	#intro-3 {
+		border: 1px solid $cirrus-green;
+		color: $cirrus-green;
+	}
+	span {
 		border-radius: 100%;
 		display: inline-block;
-		color: $cirrus-blue;
 		font-size: 35px;
 		height: 117px;
 		line-height: 117px;
@@ -737,13 +931,32 @@ blockquote p {
 		transition: all 0.5s;
 	}
 	&:hover {
-		.wc-icon {
+		#intro-1 {
+			border-color: $cirrus-blue;
 			background-color: $cirrus-blue;
 			color: $white;
 		}
-		.wc-about-title {
+		#intro-2 {
+			border-color: $cirrus-orange;
+			background-color: $cirrus-orange;
+			color: $white;
+		}
+		#intro-3 {
+			border-color: $cirrus-green;
+			background-color: $cirrus-green;
+			color: $white;
+		}
+		#intro-1-und {
 			padding-bottom: 16px;
 			border-bottom: 2px solid $cirrus-blue;
+		}
+		#intro-2-und {
+			padding-bottom: 16px;
+			border-bottom: 2px solid $cirrus-orange;
+		}
+		#intro-3-und {
+			padding-bottom: 16px;
+			border-bottom: 2px solid $cirrus-green;
 		}
 	}
 	.wc-about-title {
@@ -764,6 +977,8 @@ blockquote p {
 		padding: 12px;
 	}
 }
+
+
 .about-field {
 	display: inline;
 	float: left;
@@ -845,9 +1060,9 @@ blockquote p {
 /*	float: left;
 */	display: inline-block;
 	margin: 1em;
-	border: 2px solid $cirrus-green;
+	border: 2px solid $cirrus-blue;
 	background: $white;
-	color: $cirrus-green;
+	color: $cirrus-blue;
 	vertical-align: middle;
 	position: relative;
 	z-index: 1;
@@ -899,9 +1114,10 @@ blockquote p {
 		color: $white;
 	}
 	&:hover {
-		background-color: $cirrus-green;
+		background-color: $cirrus-blue-light;
+		border-color: $cirrus-blue-light;
 		text-decoration: none;
-		color: $white !important;
+		color: $white;
 		&::after {
 			opacity: 1;
 			-webkit-transform: translate3d(0, 0, 0);
@@ -915,7 +1131,7 @@ blockquote p {
 	}
 	&:focus {
 		text-decoration: none;
-		color: $cirrus-green;
+		color: $cirrus-blue;
 	}
 	@include ipad {
 		&::after {
@@ -951,13 +1167,7 @@ blockquote p {
 
 .email-section {
 	display: inline;
-	background:
-	radial-gradient(black 15%, transparent 16%) 0 0,
-	radial-gradient(black 15%, transparent 16%) 8px 8px,
-	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-	background-color:#282828;
-	background-size:16px 16px;
+	background: $cirrus-purple;
 	float: left;
 	position: relative;
 	width: 100%;
@@ -969,12 +1179,18 @@ blockquote p {
 	text-align: center;
 	width: 100%;
 	h2 {
-		color: $pink-light;
-		font-size: 45px;
+		color: $white;
+		font-size: 30px;
 	}
 	a {
 		display: inline-block;
 		float: none;
+		border-color: $white;
+		background-color: transparent;
+		color: $white;
+		&:hover {
+			background-color: transparent;
+		}
 	}
 	@include laptop {
 		font-size: 30px;
