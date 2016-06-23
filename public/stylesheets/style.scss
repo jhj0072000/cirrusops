@@ -42,6 +42,8 @@ $theme-red-dark: #F00038;
 $theme-orange: #FF783B;
 $theme-orange-light: #FFAE89;
 $theme-orange-dark: #B63B03;
+$theme-yellow: #F1C40F;
+
 
 /* ----------------------------------------------------------- */
 /*  FONTS
@@ -49,6 +51,7 @@ $theme-orange-dark: #B63B03;
 $opensans: 'Open Sans', sans-serif;
 $raleway: 'Raleway', sans-serif;
 $mainfont: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+$titillium: 'Titillium Web', sans-serif;
 
 /* ----------------------------------------------------------- */
 /*  MEDIA QUERIES SETTINGS
@@ -100,7 +103,7 @@ html {
 	font-size: 100%;
 }
 body {
-	font-family: $opensans;
+	font-family: $titillium;
 	font-size: 16px;
 	overflow-x: hidden !important;
 	color: $gray-medium;
@@ -113,10 +116,13 @@ h1,h2 {
 	color: $blackish;
 }
 h1 {
+	margin-top: 10px;
 	@include note {
+		font-size: 30px;
 	}
 }
 h2 {
+	margin-top: 10px;
 	@include note {
 		font-size: 20px;
 	}
@@ -127,14 +133,93 @@ h3 {
 	}
 }
 .fa {
-	width: 20px;
+	width: 100%;
 }
 ul {
 	list-style: none;
 	padding-left: 0px;
 }
-.txt-white {
+
+/* Color Classes */
+#txt-white {
 	color: $white;
+}
+#txt-red {
+	color: $cirrus-red;
+}
+#txt-red-light {
+	color: $cirrus-red-light;
+}
+#txt-blue {
+	color: $cirrus-blue;
+}
+#txt-green {
+	color: $cirrus-green;
+}
+#txt-orange {
+	color: $cirrus-orange;
+}
+#txt-gray {
+	color: $gray-medium;
+}
+.background-orange {
+	background-color: $cirrus-orange;
+}
+.background-green {
+	background-color: $cirrus-green;
+}
+.background-blue {
+	background-color: $cirrus-blue;
+}
+.background-purple {
+	background-color: $cirrus-purple;
+}
+.background-gray-pale {
+	background-color: $gray-pale;
+}
+
+/* Position Presets */
+.no-margin {
+	margin: 0px;
+}
+.no-padding {
+	padding: 0px;
+	@include ipad {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}
+.txt-center {
+	text-align: center;
+}
+.flex-center {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+.width-100 {
+	width: 100%;
+}
+.padding-100 {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	@include ipad {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+}
+.padding-50 {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.padding-30 {
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 /* Scroll to top */
@@ -305,7 +390,7 @@ blockquote p {
 	background: white;
 	color: $cirrus-blue;
 	&:hover {
-		background-color: $cirrus-blue-light;
+		background-color: $cirrus-blue;
 	}
 }
 /*--------------------*/
@@ -443,7 +528,6 @@ blockquote p {
 		border: none;
 		border-bottom: 5px solid $cirrus-blue;
 		color: $blackish;
-		font-weight: bold;
 		&:hover {
 			color: $cirrus-blue;
 			border: none;
@@ -456,7 +540,6 @@ blockquote p {
 	}
 	li a {
 		color: $blackish;
-		font-weight: bold;
 		border: none;
 		&:hover {
 			cursor: pointer;
@@ -560,15 +643,16 @@ blockquote p {
 /*--------------------*/
 /* PAGES */
 /*--------------------*/
-.page-banner-thin {
+/*.page-banner-thin {
 	height: 275px;
-}
+}*/
 .tab-pane {
 	margin-bottom: 100px;
 }
 .page-wrapper {
 	.container-fluid {
-		padding: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
 	}
 	.tab-pane {
 		padding-left: 0px;
@@ -685,8 +769,7 @@ blockquote p {
 }
 
 /* SPREADSHEETS */
-#spreadsheet-banner {
-	background-color: $cirrus-purple;
+.page-banner {
 	padding: 50px;
 	text-align: center;
 	@include note {
@@ -696,6 +779,7 @@ blockquote p {
 		color: $white;
 		font-weight: bold;
 		font-size: 40px;
+		margin-top: 10px;
 		@include note {
 			font-size: 30px;
 		}
@@ -703,17 +787,21 @@ blockquote p {
 	p {
 		color: $white;
 	}
-	.underline {
-		background-color: $white;
-	}
 }
 .tab-spreadsheet {
-	h2, h3 {
-		text-align: center;
+	h1 {
+		margin-top: 10px;
 	}
 	/*.container {
-		margin-top: 50px;
+		padding-top: 30px;
+		@include ipad {
+			padding-top: 15px;
+		}
 	}*/
+	.fa {
+		color: $cirrus-red-light;
+		font-size: 180px;
+	}
 	.panel {
 		transition: all 0.3s linear;
 		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.22);
@@ -731,7 +819,7 @@ blockquote p {
 		border-bottom-left-radius: 10px;
 	}
 	.ss-collaboration {
-		border: 5px solid $cirrus-blue;
+		border: 2px solid $cirrus-blue;
 		border-radius: 10px;
 		.panel-heading {
 			background-color: $white;
@@ -745,7 +833,7 @@ blockquote p {
 		}
 	}
 	.ss-scalability {
-		border: 5px solid $cirrus-orange;
+		border: 2px solid $cirrus-orange;
 		border-radius: 10px;
 		.panel-heading {
 			background-color: $white;
@@ -759,7 +847,7 @@ blockquote p {
 		}
 	}
 	.ss-visibility {
-		border: 5px solid $cirrus-green;
+		border: 2px solid $cirrus-green;
 		border-radius: 10px;
 		.panel-heading {
 			background-color: $white;
@@ -774,7 +862,6 @@ blockquote p {
 	}
 	.panel-heading {
 		text-align: center;
-		font-weight: bold;
 		color: $blackish;
 		letter-spacing: 5px;
 	}
@@ -807,24 +894,99 @@ blockquote p {
 	}
 }
 #underline {
-	border-bottom: 5px solid $gray-pale;
+	border-bottom: 2px solid $gray-pale;
 	margin-top: 15px;
 	margin-bottom: 15px;
 	margin-right: auto;
 	margin-left: auto;
-	width: 30%;
+	width: 10%;
+}
+#underline-gray {
+	border-bottom: 2px solid $gray-medium;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 10%;
 }
 .spreadsheet-content {
-	margin-top: 25px;
+	padding-top: 25px;
 }
 .spreadsheet-footer {
 	text-align: center;
+}
+.header-spreadsheet {
+	&:before {
+		content: "\f0ce";
+	    position: absolute;
+	    display: block;
+	    font-size: 35px;
+	    height: 30px;
+	    width: 30px;
+	    top: 15px;
+	    left: -45px;
+	    font-family: FontAwesome;
+	    font-style: normal;
+	    /*@include laptop {
+	    	top: -4px;
+	    }*/
+	}
 }
 
 /* CONSULTING */
 .consulting-banner {
 	height: 275px;
-	background-color: $cirrus-purple;
+	background-color: $cirrus-orange;
+}
+.tab-consulting {
+	.container {
+		padding-top: 100px;
+		padding-bottom: 100px;
+		@include ipad {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+	}
+	.consulting-infographics1 {
+		background-color: $gray-pale;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		.container {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+
+	}
+	.fa {
+		font-size: 180px;
+		color: $cirrus-blue-light;
+	}
+	ul {
+		list-style: square inside;
+		line-height: 30px;
+	}
+}
+.page-icon-col {
+	@include ipad {
+		display: none;
+	}
+}
+.header-consulting {
+	&:before {
+		content: "\f20e";
+	    position: absolute;
+	    display: block;
+	    font-size: 35px;
+	    height: 30px;
+	    width: 30px;
+	    top: 15px;
+	    left: -45px;
+	    font-family: FontAwesome;
+	    font-style: normal;
+/*	    @include laptop {
+	    	top: -4px;
+	    }*/
+	}
 }
 
 
@@ -1096,7 +1258,6 @@ blockquote p {
 	text-decoration: none;
 	border-radius: 2px;
 	overflow: hidden;
-	font-weight: 600;
 	font-size: 15px;
 	padding: 0;
 	-webkit-transition: border-color 0.3s, background-color 0.3s;
@@ -1131,8 +1292,8 @@ blockquote p {
 		color: $white;
 	}
 	&:hover {
-		background-color: $cirrus-blue-light;
-		border-color: $cirrus-blue-light;
+		background-color: $cirrus-blue;
+		border-color: $cirrus-blue;
 		text-decoration: none;
 		color: $white;
 		&::after {
@@ -1207,6 +1368,7 @@ blockquote p {
 		color: $white;
 		&:hover {
 			background-color: transparent;
+			border-color: $white;
 		}
 	}
 	@include laptop {

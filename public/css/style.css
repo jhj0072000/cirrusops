@@ -16,7 +16,7 @@ html {
   font-size: 100%; }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   overflow-x: hidden !important;
   color: #7d7d7d;
@@ -28,23 +28,108 @@ body {
 h1, h2 {
   color: #303442; }
 
-@media (max-width: 480px) {
-  h2 {
-    font-size: 20px; } }
+h1 {
+  margin-top: 10px; }
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 30px; } }
+
+h2 {
+  margin-top: 10px; }
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 20px; } }
 
 @media (max-width: 480px) {
   h3 {
     font-size: 16px; } }
 
 .fa {
-  width: 20px; }
+  width: 100%; }
 
 ul {
   list-style: none;
   padding-left: 0px; }
 
-.txt-white {
+/* Color Classes */
+#txt-white {
   color: #fff; }
+
+#txt-red {
+  color: #FF003B; }
+
+#txt-red-light {
+  color: #FF6186; }
+
+#txt-blue {
+  color: #46AAD9; }
+
+#txt-green {
+  color: #1CB891; }
+
+#txt-orange {
+  color: #FF783B; }
+
+#txt-gray {
+  color: #7d7d7d; }
+
+.background-orange {
+  background-color: #FF783B; }
+
+.background-green {
+  background-color: #1CB891; }
+
+.background-blue {
+  background-color: #46AAD9; }
+
+.background-purple {
+  background-color: #9974CE; }
+
+.background-gray-pale {
+  background-color: #f6f6f6; }
+
+/* Position Presets */
+.no-margin {
+  margin: 0px; }
+
+.no-padding {
+  padding: 0px; }
+  @media (max-width: 767px) {
+    .no-padding {
+      padding-right: 15px;
+      padding-left: 15px; } }
+
+.txt-center {
+  text-align: center; }
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none; }
+
+.width-100 {
+  width: 100%; }
+
+.padding-100 {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  @media (max-width: 767px) {
+    .padding-100 {
+      padding-top: 50px;
+      padding-bottom: 50px; } }
+
+.padding-50 {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.padding-30 {
+  padding-top: 30px;
+  padding-bottom: 30px; }
 
 /* Scroll to top */
 .scrollToTop {
@@ -204,7 +289,7 @@ blockquote p {
   background: white;
   color: #46AAD9; }
   #home-cta-btn:hover {
-    background-color: #9CD5F1; }
+    background-color: #46AAD9; }
 
 /*--------------------*/
 /* NAVIGATION */
@@ -315,8 +400,7 @@ blockquote p {
 .nav-tabs li.active > a {
   border: none;
   border-bottom: 5px solid #46AAD9;
-  color: #303442;
-  font-weight: bold; }
+  color: #303442; }
   .nav-tabs li.active > a:hover {
     color: #46AAD9;
     border: none;
@@ -328,7 +412,6 @@ blockquote p {
 
 .nav-tabs li a {
   color: #303442;
-  font-weight: bold;
   border: none; }
   .nav-tabs li a:hover {
     cursor: pointer;
@@ -425,14 +508,15 @@ blockquote p {
 /*--------------------*/
 /* PAGES */
 /*--------------------*/
-.page-banner-thin {
-  height: 275px; }
-
+/*.page-banner-thin {
+	height: 275px;
+}*/
 .tab-pane {
   margin-bottom: 100px; }
 
 .page-wrapper .container-fluid {
-  padding: 0px; }
+  padding-left: 0px;
+  padding-right: 0px; }
 
 .page-wrapper .tab-pane {
   padding-left: 0px;
@@ -535,31 +619,35 @@ blockquote p {
       border-radius: 0px; } }
 
 /* SPREADSHEETS */
-#spreadsheet-banner {
-  background-color: #9974CE;
+.page-banner {
   padding: 50px;
   text-align: center; }
   @media (max-width: 480px) {
-    #spreadsheet-banner {
+    .page-banner {
       padding: 30px; } }
-  #spreadsheet-banner h1 {
+  .page-banner h1 {
     color: #fff;
     font-weight: bold;
-    font-size: 40px; }
+    font-size: 40px;
+    margin-top: 10px; }
     @media (max-width: 480px) {
-      #spreadsheet-banner h1 {
+      .page-banner h1 {
         font-size: 30px; } }
-  #spreadsheet-banner p {
+  .page-banner p {
     color: #fff; }
-  #spreadsheet-banner .underline {
-    background-color: #fff; }
 
 .tab-spreadsheet {
   /*.container {
-		margin-top: 50px;
+		padding-top: 30px;
+		@include ipad {
+			padding-top: 15px;
+		}
 	}*/ }
-  .tab-spreadsheet h2, .tab-spreadsheet h3 {
-    text-align: center; }
+  .tab-spreadsheet h1 {
+    margin-top: 10px; }
+  .tab-spreadsheet .fa {
+    color: #FF6186;
+    font-size: 180px; }
   .tab-spreadsheet .panel {
     transition: all 0.3s linear;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.22); }
@@ -573,7 +661,7 @@ blockquote p {
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px; }
   .tab-spreadsheet .ss-collaboration {
-    border: 5px solid #46AAD9;
+    border: 2px solid #46AAD9;
     border-radius: 10px; }
     .tab-spreadsheet .ss-collaboration .panel-heading {
       background-color: #fff;
@@ -583,7 +671,7 @@ blockquote p {
       .tab-spreadsheet .ss-collaboration .panel-body .fa {
         color: #46AAD9; }
   .tab-spreadsheet .ss-scalability {
-    border: 5px solid #FF783B;
+    border: 2px solid #FF783B;
     border-radius: 10px; }
     .tab-spreadsheet .ss-scalability .panel-heading {
       background-color: #fff;
@@ -593,7 +681,7 @@ blockquote p {
       .tab-spreadsheet .ss-scalability .panel-body .fa {
         color: #FF783B; }
   .tab-spreadsheet .ss-visibility {
-    border: 5px solid #1CB891;
+    border: 2px solid #1CB891;
     border-radius: 10px; }
     .tab-spreadsheet .ss-visibility .panel-heading {
       background-color: #fff;
@@ -604,7 +692,6 @@ blockquote p {
         color: #1CB891; }
   .tab-spreadsheet .panel-heading {
     text-align: center;
-    font-weight: bold;
     color: #303442;
     letter-spacing: 5px; }
   .tab-spreadsheet p {
@@ -630,23 +717,89 @@ blockquote p {
         padding: 18px; } }
 
 #underline {
-  border-bottom: 5px solid #f6f6f6;
+  border-bottom: 2px solid #f6f6f6;
   margin-top: 15px;
   margin-bottom: 15px;
   margin-right: auto;
   margin-left: auto;
-  width: 30%; }
+  width: 10%; }
+
+#underline-gray {
+  border-bottom: 2px solid #7d7d7d;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 10%; }
 
 .spreadsheet-content {
-  margin-top: 25px; }
+  padding-top: 25px; }
 
 .spreadsheet-footer {
   text-align: center; }
 
+.header-spreadsheet:before {
+  content: "\f0ce";
+  position: absolute;
+  display: block;
+  font-size: 35px;
+  height: 30px;
+  width: 30px;
+  top: 15px;
+  left: -45px;
+  font-family: FontAwesome;
+  font-style: normal;
+  /*@include laptop {
+	    	top: -4px;
+	    }*/ }
+
 /* CONSULTING */
 .consulting-banner {
   height: 275px;
-  background-color: #9974CE; }
+  background-color: #FF783B; }
+
+.tab-consulting .container {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  @media (max-width: 767px) {
+    .tab-consulting .container {
+      padding-top: 30px;
+      padding-bottom: 30px; } }
+
+.tab-consulting .consulting-infographics1 {
+  background-color: #f6f6f6;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .tab-consulting .consulting-infographics1 .container {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+
+.tab-consulting .fa {
+  font-size: 180px;
+  color: #9CD5F1; }
+
+.tab-consulting ul {
+  list-style: square inside;
+  line-height: 30px; }
+
+@media (max-width: 767px) {
+  .page-icon-col {
+    display: none; } }
+
+.header-consulting:before {
+  content: "\f20e";
+  position: absolute;
+  display: block;
+  font-size: 35px;
+  height: 30px;
+  width: 30px;
+  top: 15px;
+  left: -45px;
+  font-family: FontAwesome;
+  font-style: normal;
+  /*	    @include laptop {
+	    	top: -4px;
+	    }*/ }
 
 /*--------------------*/
 /* ABOUT */
@@ -877,7 +1030,6 @@ blockquote p {
   text-decoration: none;
   border-radius: 2px;
   overflow: hidden;
-  font-weight: 600;
   font-size: 15px;
   padding: 0;
   -webkit-transition: border-color 0.3s, background-color 0.3s;
@@ -909,8 +1061,8 @@ blockquote p {
   .button-default:after {
     color: #fff; }
   .button-default:hover {
-    background-color: #9CD5F1;
-    border-color: #9CD5F1;
+    background-color: #46AAD9;
+    border-color: #46AAD9;
     text-decoration: none;
     color: #fff; }
     .button-default:hover::after {
@@ -968,7 +1120,8 @@ blockquote p {
     background-color: transparent;
     color: #fff; }
     .email-content a:hover {
-      background-color: transparent; }
+      background-color: transparent;
+      border-color: #fff; }
   @media (max-width: 991px) {
     .email-content {
       font-size: 30px; }
