@@ -31,18 +31,20 @@ h1, h2, h3 {
   color: #303442; }
 
 h1 {
+  font-size: 3.125rem;
   margin-top: 10px; }
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     h1 {
-      font-size: 30px; } }
+      font-size: 2rem; } }
 
 h2 {
+  font-size: 2.125rem;
   margin-top: 10px; }
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     h2 {
-      font-size: 20px; } }
+      font-size: 1.75rem; } }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   h3 {
     font-size: 16px; } }
 
@@ -99,13 +101,22 @@ ul {
 .background-blackish {
   background-color: #303442; }
 
+.background-white {
+  background-color: #fff; }
+
+.border-bottom-gray {
+  border-bottom: 1px solid #f6f6f6; }
+
+.header-margin-bottom {
+  margin-bottom: 30px; }
+
 /* Position Presets */
 .no-margin {
   margin: 0px; }
 
 .no-padding {
   padding: 0px; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .no-padding {
       padding-right: 15px;
       padding-left: 15px; } }
@@ -125,6 +136,12 @@ ul {
 .txt-center {
   text-align: center; }
 
+.txt-right {
+  text-align: right; }
+
+.txt-left {
+  text-align: left; }
+
 .flex-center {
   display: flex;
   align-items: center;
@@ -138,13 +155,19 @@ ul {
 .width-100 {
   width: 100%; }
 
+.width-50 {
+  width: 50%; }
+  @media (max-width: 768px) {
+    .width-50 {
+      width: 100%; } }
+
 .width-175 {
   width: 175px; }
 
 .padding-100 {
   padding-top: 100px;
   padding-bottom: 100px; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .padding-100 {
       padding-top: 50px;
       padding-bottom: 50px; } }
@@ -165,6 +188,18 @@ ul {
 
 .begone {
   display: none; }
+
+.underconstruction {
+  top: 50%;
+  left: 50%;
+  width: 30em;
+  margin-top: -9em;
+  /*set to a negative number 1/2 of your height*/
+  margin-left: -15em;
+  /*set to a negative number 1/2 of your width*/
+  border: 1px solid #ccc;
+  background-color: #f3f3f3;
+  position: fixed; }
 
 /* Scroll to top */
 .scrollToTop {
@@ -234,7 +269,7 @@ blockquote p {
       height: 450px;
       padding: 2.8125rem;
       background-position: top center; } }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     #home-banner {
       padding: 2.2125rem; } }
   @media (max-width: 480px) {
@@ -270,7 +305,7 @@ blockquote p {
     .banner-h1 {
       font-size: 2.8125rem;
       line-height: 3rem; } }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .banner-h1 {
       font-size: 2.5rem;
       line-height: 3rem; } }
@@ -289,7 +324,7 @@ blockquote p {
   line-height: 2rem;
   font-weight: 300;
   color: #303442; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .banner-h3 {
       font-size: 1.375rem;
       line-height: 1.75rem; } }
@@ -359,13 +394,14 @@ blockquote p {
   .home-navbar {
     font-size: 12px; } }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .home-navbar {
     width: 400px;
     font-size: 17px; } }
 
 .navbar {
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0; }
 
 .navbar-default {
   background: #fff;
@@ -393,7 +429,7 @@ blockquote p {
         border-bottom: 2px solid #249AD6;
         background: #fff;
         color: #249AD6; }
-      @media (max-width: 767px) {
+      @media (max-width: 768px) {
         .navbar-default .navbar-nav li a {
           line-height: 50px; }
           .navbar-default .navbar-nav li a:hover {
@@ -410,7 +446,7 @@ blockquote p {
       background-color: #249AD6;
       color: #fff; }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .navbar-side .side-collapse {
     height: 100vh;
     left: 0;
@@ -434,7 +470,7 @@ blockquote p {
   align-items: center; }
   .navbar-brand img {
     height: 50px; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .navbar-brand {
       height: 70px; } }
 
@@ -444,12 +480,12 @@ blockquote p {
 .page-navbar {
   background: #fff;
   border-bottom: 1px solid #f6f6f6; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .page-navbar {
       background: #fff;
       border: none;
       margin: 0; } }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .page-navbar .container {
       padding: 0; } }
 
@@ -464,7 +500,7 @@ blockquote p {
     border: none;
     border-bottom: 3px solid #249AD6;
     cursor: pointer; }
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       .nav-tabs li.active > a:hover {
         background: #249AD6; } }
 
@@ -491,7 +527,7 @@ blockquote p {
 
 .responsive-tabs.nav-tabs {
   border: none; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .responsive-tabs.nav-tabs {
       background-color: #249AD6;
       position: relative;
@@ -505,7 +541,7 @@ blockquote p {
 
 .responsive-tabs.nav-tabs span.glyphicon {
   display: none; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .responsive-tabs.nav-tabs span.glyphicon {
       z-index: 101;
       position: absolute;
@@ -524,14 +560,14 @@ blockquote p {
   @media (max-width: 991px) {
     .responsive-tabs.nav-tabs > li > a {
       font-size: 12px; } }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .responsive-tabs.nav-tabs > li > a {
       font-size: 14px;
       margin-right: 0;
       background: #249AD6;
       color: #fff;
       border: none; } }
-  @media (max-width: 767px) and (max-width: 767px) {
+  @media (max-width: 768px) and (max-width: 768px) {
     .responsive-tabs.nav-tabs > li > a:hover {
       border: none;
       background: #249AD6;
@@ -540,14 +576,14 @@ blockquote p {
 .responsive-tabs.nav-tabs > li.active {
   display: block; }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .responsive-tabs.nav-tabs > li.active a {
     color: #9CD5F1; } }
 
 .responsive-tabs.nav-tabs > li {
   display: block;
   float: left; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .responsive-tabs.nav-tabs > li {
       display: none;
       float: none;
@@ -555,7 +591,7 @@ blockquote p {
 
 .responsive-tabs.nav-tabs.open span.glyphicon.glyphicon-triangle-top {
   display: none; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .responsive-tabs.nav-tabs.open span.glyphicon.glyphicon-triangle-top {
       display: block; } }
 
@@ -569,8 +605,10 @@ blockquote p {
   border-radius: 0; }
 
 .responsive-tabs.nav-tabs.open > li:first-of-type a {
-  margin-top: 40px;
   /*border-radius: 2px 2px 0 0;*/ }
+  @media (max-width: 768px) {
+    .responsive-tabs.nav-tabs.open > li:first-of-type a {
+      margin-top: 40px; } }
 
 .responsive-tabs.nav-tabs.open > li:last-of-type a {
   /*border-radius: 0 0 2px 2px;*/ }
@@ -592,7 +630,7 @@ blockquote p {
   padding-left: 0px;
   padding-right: 0px; }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .page-wrapper {
     margin-top: 0px; } }
 
@@ -611,7 +649,7 @@ blockquote p {
   height: auto;
   display: block;
   margin-bottom: 100px; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .popout-banner {
       margin-bottom: 30px; } }
 
@@ -624,7 +662,7 @@ blockquote p {
   -o-background-size: cover;
   background-size: cover;
   height: 500px; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .popout-banner-image {
       height: 250px;
       margin-left: 0;
@@ -642,7 +680,6 @@ blockquote p {
   display: flex;
   align-items: center;
   max-height: 31.25rem;
-  background-color: #7768ae;
   transition: all 0.3s ease-in;
   transition-property: margin, left; }
   .popout-box .popout-box-content h1 {
@@ -650,7 +687,7 @@ blockquote p {
     @media (max-width: 991px) {
       .popout-box .popout-box-content h1 {
         font-size: 24px; } }
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       .popout-box .popout-box-content h1 {
         margin-top: 0px; } }
   .popout-box .popout-box-content p:before {
@@ -664,7 +701,7 @@ blockquote p {
     width: 200px;
     height: 1px;
     margin: 20px 0px; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .popout-box .popout-box-content p {
       font-size: 14px; } }
   .popout-box .popout-box-content .button {
@@ -684,7 +721,7 @@ blockquote p {
       width: 50%;
       margin: 0px;
       height: 100%; } }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .popout-box {
       width: 100%;
       max-width: none;
@@ -830,7 +867,7 @@ blockquote p {
 .tab-consulting .container {
   padding-top: 100px;
   padding-bottom: 100px; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .tab-consulting .container {
       padding-top: 30px;
       padding-bottom: 30px; } }
@@ -850,7 +887,7 @@ blockquote p {
   list-style: square inside;
   line-height: 30px; }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .page-icon-col {
     display: none; } }
 
@@ -872,6 +909,67 @@ blockquote p {
 /*--------------------*/
 /* ABOUT */
 /*--------------------*/
+.about-text-box {
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.22);
+  position: absolute;
+  background-color: #fff;
+  padding: 30px;
+  z-index: 2;
+  max-width: 31.25rem;
+  margin-top: -60px; }
+  @media (max-width: 768px) {
+    .about-text-box {
+      margin-top: 0;
+      width: 100%;
+      max-width: none;
+      position: relative;
+      box-shadow: none; } }
+
+.about-banner {
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("http://placehold.it/1200x800") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 450px; }
+  @media (max-width: 768px) {
+    .about-banner {
+      height: 140px;
+      margin-left: 0;
+      margin-right: 0;
+      padding-top: 30px;
+      padding-bottom: 30px; } }
+
+.about-banner-content-container {
+  position: relative;
+  width: 100%; }
+
+.about-image-box {
+  position: relative;
+  margin-top: 250px;
+  margin-bottom: -35px; }
+  @media (max-width: 768px) {
+    .about-image-box {
+      margin-top: 0;
+      margin-bottom: 0; } }
+
+.about-panels {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 0px; }
+  .about-panels:hover {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5); }
+  .about-panels .panel-body {
+    padding: 0px; }
+  .about-panels .panel-footer {
+    color: #fff; }
+    .about-panels .panel-footer h3 {
+      font-weight: bold;
+      color: #fff; }
+
 #about {
   background-color: #fff;
   padding: 70px 0;
@@ -897,7 +995,7 @@ blockquote p {
   @media (max-width: 991px) {
     .about-title-field {
       padding: 0 100px; } }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .about-title-field {
       padding: 0 50px; } }
   @media (max-width: 480px) {
@@ -940,7 +1038,7 @@ blockquote p {
   .wc-table li {
     float: left;
     width: 33.3333%; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .wc-table li {
       margin-bottom: 20px;
       width: 100%; } }
@@ -1048,7 +1146,7 @@ blockquote p {
       .about-right p {
         font-size: 14px;
         margin-bottom: 6px; } }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .about-right {
       margin-top: 35px;
       padding-left: 0; } }
@@ -1069,7 +1167,7 @@ blockquote p {
   @media (max-width: 991px) {
     .about-btn-field {
       margin-top: 0; } }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .about-btn-field a {
       margin: 0px; } }
 
@@ -1077,7 +1175,8 @@ blockquote p {
   /*	float: left;
 */
   display: inline-block;
-  margin: 1em;
+  /*	margin: 1em;
+*/
   border: 2px solid #249AD6;
   background: #fff;
   color: #249AD6;
@@ -1142,7 +1241,7 @@ blockquote p {
   .button-default:focus {
     text-decoration: none;
     color: #249AD6; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .button-default::after {
       padding: 12px 8px;
       font-size: 12px; }
@@ -1181,6 +1280,7 @@ blockquote p {
   .email-content a {
     display: inline-block;
     float: none;
+    margin-left: 15px;
     border-color: #fff;
     background-color: transparent;
     color: #fff; }
@@ -1192,7 +1292,7 @@ blockquote p {
       font-size: 30px; }
       .email-content h2 {
         font-size: 30px; } }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .email-content h2 {
       font-size: 28px; } }
   @media (max-width: 480px) {
@@ -1214,7 +1314,7 @@ blockquote p {
   @media (max-width: 991px) {
     .section-email input {
       font-size: 15px; } }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .section-email input {
       font-size: 12px;
       height: 45px; } }
@@ -1320,7 +1420,7 @@ blockquote p {
       height: 170px;
       margin: 20px 10px;
       width: 21%; } }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .crew-grid li {
       height: 230px;
       margin: 20px 25px 70px;
@@ -1359,7 +1459,7 @@ blockquote p {
   @media (max-width: 1199px) {
     .crew-img-1 {
       background-position: center center; } }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .crew-img-1 {
       background-position: center center;
       background-size: 100% auto; } }
@@ -1369,7 +1469,7 @@ blockquote p {
   @media (max-width: 1199px) {
     .crew-img-2 {
       background-position: center center; } }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .crew-img-2 {
       background-position: center center;
       background-size: 100% auto; } }
@@ -1379,7 +1479,7 @@ blockquote p {
   @media (max-width: 1199px) {
     .crew-img-3 {
       background-position: center center; } }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .crew-img-3 {
       background-position: center center;
       background-size: 100% auto; } }
@@ -1389,7 +1489,7 @@ blockquote p {
   @media (max-width: 1199px) {
     .crew-img-4 {
       background-position: center center; } }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .crew-img-4 {
       background-position: center center;
       background-size: 100% auto; } }
@@ -1452,7 +1552,7 @@ blockquote p {
       font-size: 15px;
       height: 25px;
       width: 25px; } }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .crew-info {
       padding: 30px 18px; }
       .crew-info p {
@@ -1516,7 +1616,7 @@ blockquote p {
 
 .footer-top-container div {
   margin-bottom: 30px; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .footer-top-container div {
       text-align: center; } }
 

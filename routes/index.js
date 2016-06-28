@@ -6,10 +6,6 @@ router.get('/', function (req, res, next) {
   res.render('pages/index');
 });
 
-router.get('/about', function (req, res, next) {
-	res.render('pages/about');
-});
-
 router.get('/connect', function (req, res, next) {
 	res.render('pages/connect');
 });
