@@ -1,19 +1,19 @@
 /* ----------------------------------------------------------- */
 /*  COLORS
 /* ----------------------------------------------------------- */
-$cirrus-blue: #46AAD9;
+$cirrus-blue: #249AD6;
 $cirrus-blue-light: #9CD5F1;
 $cirrus-blue-dark: #0780BA;
-$cirrus-green: #1CB891;
+$cirrus-green: #81BE41;
 $cirrus-green-light: #67D6BA;
 $cirrus-green-dark: #007D5E;
-$cirrus-purple: #9974CE;
+$cirrus-purple: #7768ae;
 $cirrus-purple-light: #E1D1F6;
 $cirrus-purple-dark: #5F349C;
-$cirrus-red: #FF003B;
+$cirrus-red: #E51890;
 $cirrus-red-light: #FF6186;
 $cirrus-red-dark: #F00038;
-$cirrus-orange: #FF783B;
+$cirrus-orange: #F89C27;
 $cirrus-orange-light: #FFAE89;
 $cirrus-orange-dark: #B63B03;
 $red-pale: #fffefe;
@@ -24,7 +24,6 @@ $gray-pale: #f6f6f6;
 $gray-light: #b8b8b8;
 $gray-medium: #7d7d7d;
 $gray-dark: #525252;
-
 
 /* Theme Colors */
 $theme-green: #1CB891;
@@ -52,6 +51,9 @@ $opensans: 'Open Sans', sans-serif;
 $raleway: 'Raleway', sans-serif;
 $mainfont: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
 $titillium: 'Titillium Web', sans-serif;
+$sourcesans: 'Source Sans Pro',sans-serif;
+$josefinsans: 'Josefin Sans', sans-serif;
+$poppin: 'Poppins', sans-serif;
 
 /* ----------------------------------------------------------- */
 /*  MEDIA QUERIES SETTINGS
@@ -103,16 +105,18 @@ html {
 	font-size: 100%;
 }
 body {
-	font-family: $titillium;
-	font-size: 16px;
+	font-family: $poppin;
+	font-size: 17px;
+	font-weight: 300;
 	overflow-x: hidden !important;
-	color: $gray-medium;
+	color: $blackish;
 	position: relative;
 	@include note {
 		font-size: 14px;
 	}
 }
-h1,h2 {
+h1,h2,h3 {
+	font-weight: 300;
 	color: $blackish;
 }
 h1 {
@@ -162,8 +166,14 @@ ul {
 #txt-gray {
 	color: $gray-medium;
 }
+#txt-gray-pale {
+	color: $gray-pale;
+}
 .background-orange {
 	background-color: $cirrus-orange;
+}
+.background-red {
+	background-color: $cirrus-red;
 }
 .background-green {
 	background-color: $cirrus-green;
@@ -177,6 +187,9 @@ ul {
 .background-gray-pale {
 	background-color: $gray-pale;
 }
+.background-blackish {
+	background-color: $blackish;
+}
 
 /* Position Presets */
 .no-margin {
@@ -188,6 +201,18 @@ ul {
 		padding-right: 15px;
 		padding-left: 15px;
 	}
+}
+.vmid {
+	vertical-align: middle;
+}
+.fw-600 {
+	font-weight: 600;
+}
+.no-abs-padding {
+	padding: 0px;
+}
+#no-abs-margin {
+	margin: 0px;
 }
 .txt-center {
 	text-align: center;
@@ -205,6 +230,9 @@ ul {
 .width-100 {
 	width: 100%;
 }
+.width-175 {
+	width: 175px;
+}
 .padding-100 {
 	padding-top: 100px;
 	padding-bottom: 100px;
@@ -220,6 +248,15 @@ ul {
 .padding-30 {
 	padding-top: 30px;
 	padding-bottom: 30px;
+}
+.padding-all-50 {
+	padding: 50px;
+	@include note {
+		padding: 20px;
+	}
+}
+.begone {
+	display: none;
 }
 
 /* Scroll to top */
@@ -301,11 +338,11 @@ blockquote p {
 		padding: 1.5125rem;
 	}
 }
-.banner-floater {
+/*.banner-floater {
 	margin: 0 auto;
 	max-width: 80rem;
 	width: 100%;
-}
+}*/
 .banner-content {
 	font-size: 1.0625rem;
 	line-height: 1.6875rem;
@@ -313,6 +350,8 @@ blockquote p {
 	.button-default {
 		border-color: $cirrus-green;
 		color: $cirrus-green;
+		margin-left: 0;
+		margin-right: 0;
 		&:hover{
 			background-color: $cirrus-green;
 			border-color: $cirrus-green;
@@ -347,7 +386,7 @@ blockquote p {
 	text-transform: none;
 	font-size: 1.625rem;
 	line-height: 2rem;
-	font-weight: 700;
+	font-weight: 300;
 	color: $blackish;
 	@include ipad {
 		font-size: 1.375rem;
@@ -359,23 +398,22 @@ blockquote p {
 	}
 }
 .home-cta {
+	background: $cirrus-blue;
 	.row {
 		margin: 0;
 	}
 }
 .home-cta-content {
 	text-align: center;
-	padding: 10px 0;
-	background: $cirrus-blue;
+	padding: 50px 0;
 	p {
 		display: inline-block;
 		color: $white;
-		font-size: 1.25rem;
+		font-size: 30px;
 		margin: 0;
-		padding: 0 10px 10px 10px;
+		padding: 10px 20px 10px 0;
 		@include note {
-			margin-bottom: 0.625rem;
-			padding: 0;
+			padding: 10px 20px 10px 0;
 			font-size: 0.925rem;
 		}
 	}
@@ -396,20 +434,25 @@ blockquote p {
 /*--------------------*/
 /* NAVIGATION */
 /*--------------------*/
+.nav-wrapper {
+	z-index: 999;
+}
 .home-header {
-	background: #eee;
-	border-top: 5px solid $cirrus-blue;
+	background: $gray-pale;
 	color: $gray-medium;
 	text-align: right;
+	height: 40px;
 	ul {
-		margin-bottom: 5px;
+		margin: 0;
+		float: right;
 		li {
-			font-size: 12px;
+			font-size: 14px;
 			font-weight: bold;
 			display: inline-block;
-			margin-left: 15px;
+			padding: 10px;
 			a {
 				text-decoration: none;
+				font-weight: 300;
 				color: $gray-medium;
 				&:hover {
 					transition: 0.5s all;
@@ -425,20 +468,22 @@ blockquote p {
 	}
 	@include ipad {
 		width: 400px;
+		font-size: 17px;
 	}
 }
 .navbar {
 	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
-	z-index: 999;
 }
 .navbar-default {
 	background: $white;
 	border: none;
+	margin-bottom: 0;
 	.navbar-header > a {
 		padding-top: 0px;
 		padding-bottom: 0px;
 	}
 	.navbar-nav {
+		margin-top: 35px;
 		.active a {
 			background: $white;
 			color: $cirrus-blue;
@@ -448,14 +493,22 @@ blockquote p {
 			}
 		}
 		li a {
-			line-height: 70px;
+			line-height: 35px;
+			font-weight: 600;
 			padding-top: 0px;
 			padding-bottom: 0px;
 			letter-spacing: 1.8px;
+			color: $blackish;
 			&:hover {
-				transition: 0.5s all;
+				border-bottom: 2px solid $cirrus-blue;
 				background: $white;
 				color: $cirrus-blue;
+			}
+			@include ipad {
+				line-height: 50px;
+				&:hover {
+					border: none;
+				}
 			}
 		}
 	}
@@ -482,6 +535,7 @@ blockquote p {
 			width: 400px;
 			position: absolute;
 			overflow: auto;
+			z-index: 999;
 			transition: all 0.5s;
 			&:-webkit-scrollbar {
 				display: none;
@@ -498,11 +552,14 @@ blockquote p {
 	}
 }
 .navbar-brand {
-	height: 70px;
+	height: 100px;
 	display: flex;
 	align-items: center;
 	img {
 		height: 50px;
+	}
+	@include ipad {
+		height: 70px;
 	}
 }
 
@@ -526,12 +583,14 @@ blockquote p {
 .nav-tabs {
 	li.active > a {
 		border: none;
-		border-bottom: 5px solid $cirrus-blue;
+		border-bottom: 3px solid $cirrus-blue;
 		color: $blackish;
+		background: transparent;
 		&:hover {
 			color: $cirrus-blue;
+			background: transparent;
 			border: none;
-			border-bottom: 5px solid $cirrus-blue;
+			border-bottom: 3px solid $cirrus-blue;
 			cursor: pointer;
 			@include ipad {
 				background: $cirrus-blue;
@@ -554,12 +613,21 @@ blockquote p {
 .tab-pane {
   padding: 0px 5px;
 }
+#nav-hover {
+	position: absolute;
+	z-index: 100;
+	height: 42px;
+	top: 0;
+	right: 0;
+	background-color: transparent;
+}
 .responsive-tabs.nav-tabs {
 	border: none;
 	@include ipad {
+		background-color: $cirrus-blue;
 		position: relative;
 		z-index: 10;
-		height: 42px;
+		height: 40px;
 		overflow: visible;
 		border-bottom: none;
 	}
@@ -570,6 +638,7 @@ blockquote p {
 .responsive-tabs.nav-tabs span.glyphicon {
 	display: none;
 	@include ipad {
+		z-index: 101;
 		position: absolute;
 		top: 14px;
 		right: 22px;
@@ -582,7 +651,8 @@ blockquote p {
 }
 .responsive-tabs.nav-tabs > li > a {
 	margin-right: 4px;
-	font-size: 14px;
+	font-size: 16px;
+	font-weight: 300;
 	@include laptop {
 		font-size: 12px;
 	}
@@ -594,6 +664,7 @@ blockquote p {
 		border: none;
 		&:hover {
 			@include ipad {
+				border: none;
 				background: $cirrus-blue;
 				color: $cirrus-blue-dark;
 			}
@@ -605,8 +676,7 @@ blockquote p {
 }
 .responsive-tabs.nav-tabs > li.active a {
 	@include ipad {
-		border: 1px solid $cirrus-blue;
-		border-radius: 2px;
+		color: $cirrus-blue-light;
 	}
 }
 .responsive-tabs.nav-tabs > li {
@@ -634,10 +704,11 @@ blockquote p {
   border-radius: 0;
 }
 .responsive-tabs.nav-tabs.open > li:first-of-type a {
-  border-radius: 2px 2px 0 0;
+	margin-top: 40px;
+  /*border-radius: 2px 2px 0 0;*/
 }
 .responsive-tabs.nav-tabs.open > li:last-of-type a {
-  border-radius: 0 0 2px 2px;
+  /*border-radius: 0 0 2px 2px;*/
 }
 
 /*--------------------*/
@@ -646,6 +717,8 @@ blockquote p {
 /*.page-banner-thin {
 	height: 275px;
 }*/
+#first-nav {
+}
 .tab-pane {
 	margin-bottom: 100px;
 }
@@ -657,6 +730,9 @@ blockquote p {
 	.tab-pane {
 		padding-left: 0px;
 		padding-right: 0px;
+	}
+	@include ipad {
+		margin-top: 0px;
 	}
 }
 /* QUICKBASE */
@@ -777,7 +853,6 @@ blockquote p {
 	}
 	h1 {
 		color: $white;
-		font-weight: bold;
 		font-size: 40px;
 		margin-top: 10px;
 		@include note {
@@ -813,6 +888,8 @@ blockquote p {
 	.panel-heading {
 		border-top-right-radius: 10px;
 		border-top-left-radius: 10px;
+		text-align: center;
+		letter-spacing: 5px;
 	}
 	.panel-body {
 		border-bottom-right-radius: 10px;
@@ -859,14 +936,6 @@ blockquote p {
 				color: $cirrus-green;
 			}
 		}
-	}
-	.panel-heading {
-		text-align: center;
-		color: $blackish;
-		letter-spacing: 5px;
-	}
-	p {
-		color: $gray-medium;
 	}
 	.spreadsheet-graphic {
 		text-align: center;
@@ -948,7 +1017,6 @@ blockquote p {
 		}
 	}
 	.consulting-infographics1 {
-		background-color: $gray-pale;
 		padding-top: 30px;
 		padding-bottom: 30px;
 		.container {
@@ -1151,7 +1219,6 @@ blockquote p {
 	}
 	p {
 		text-align: left;
-		color: $gray-medium;
 		font-size: 15px;
 		padding: 12px;
 	}
@@ -1188,8 +1255,6 @@ blockquote p {
 		width: 100px;
 	}
 	p {
-		color: $gray-dark;
-		font-family: $raleway;
 		margin-bottom: 32px;
 	}
 	@include laptop {
@@ -1244,8 +1309,8 @@ blockquote p {
 	color: $cirrus-blue;
 	vertical-align: middle;
 	position: relative;
-	z-index: 1;
-	-webkit-backface-visibility: hidden;
+/*	z-index: 1;
+*/	-webkit-backface-visibility: hidden;
 	-moz-osx-font-smoothing: grayscale;
 	&:focus {
 		outline: none;
@@ -1347,7 +1412,6 @@ blockquote p {
 	display: inline;
 	background: $cirrus-purple;
 	float: left;
-	position: relative;
 	width: 100%;
 }
 .email-content {
@@ -1753,6 +1817,14 @@ blockquote p {
 	float: left;
 	width: 100%;
 }
+.footer-top-container {
+	div {
+		margin-bottom: 30px;
+		@include ipad {
+			text-align: center;
+		}
+	}
+}
 .footer-top-area {
 	display: inline;
 	float: left;
@@ -1828,6 +1900,17 @@ blockquote p {
 			line-height: 35px;
 			margin: 0 2px;
 			width: 35px;
+		}
+	}
+}
+.footer-socials {
+	a {
+		display: inline-block;
+		i {
+			font-size: 35px;
+			&:hover {
+				color: $gray-dark;
+			}
 		}
 	}
 }

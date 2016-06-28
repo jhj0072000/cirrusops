@@ -26,54 +26,8 @@ jQuery(function($){
   });
 
   /* ----------------------------------------------------------- */
-  /*  SMOOTH SCROLL [credit to: https://css-tricks.com/snippets/jquery/smooth-scrolling]
-  /* ----------------------------------------------------------- */
-  // $('a[href*="#"]:not([href="#"])').click(function() {
-  //   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-  //     var target = $(this.hash);
-  //     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-  //     if (target.length) {
-  //       $('html, body').animate({
-  //         scrollTop: target.offset().top
-  //       }, 1000);
-  //       return false;
-  //     }
-  //   }
-  // });
-
-
-  /* ----------------------------------------------------------- */
-  /*  SCROLL TO ANCHOR
-  /* ----------------------------------------------------------- */
-  // $(function() {
-  //   $.scrollify({
-  //     section : ".scrollify",
-  //     sectionName: "home-section",
-  //     setHeights: false,
-  //     offset: -50,
-  //   });
-  // });
-
-  /* ----------------------------------------------------------- */
-  /*  HEADER CONTENT SLIDE (SLICK SLIDER)
-  /* ----------------------------------------------------------- */
-  // jQuery('.header-slide').slick({
-  //   dots: false,
-  //   infinite: true,
-  //   speed: 100,
-  //   arrows:false, 
-  //   autoplay: true,    
-  //   autoplaySpeed: 1500, 
-  //   slidesToShow: 1,
-  //   slide: 'span',
-  //   fade: false,
-  //   cssEase: 'linear'
-  // });
-
-  /* ----------------------------------------------------------- */
   /*  NAVIGATION
   /* ----------------------------------------------------------- */
-
   $(document).ready(function() {
     $('[data-toggle=collapse-side]').click(function(e) {
       $('.side-collapse').toggleClass('open');
@@ -91,12 +45,28 @@ jQuery(function($){
   });
   
   // MENU HANDLER
-  var url = window.location;
-  
-  $('ul.nav a').filter(function() {
-      return this.href == url;
-  }).parent().addClass('active');
+  // var url = window.location;
+  // $('ul.nav a').filter(function() {
+  //     return this.href == url;
+  // }).parent().addClass('active');
 
+  var first = $(location).attr('pathname');
+  first.indexOf(1);
+  first.toLowerCase();
+  firstURL = first.split("/")[1];
+  secondURL = first.split("/")[2];
+  console.log(secondURL);
+
+  if (firstURL == "solution") {
+    $("#solutionnav").addClass("active");
+  } else if (firstURL == "") {
+    $("#homenav").addClass("active");
+  } else if (firstURL == "about") {
+    $("#aboutnav").addClass("active");
+  } else if (firstURL == "connect") {
+    $("#connectnav").addClass("active");
+  }
+  
   // STICKY
   $(document).ready(function(){
     $("#sticker").sticky({topSpacing:0});

@@ -9,9 +9,7 @@ router.get('/', function (req, res, next) {
 router.get('/about', function (req, res, next) {
 	res.render('pages/about');
 });
-router.get('/solution', function (req, res, next) {
-	res.render('pages/solution');
-});
+
 router.get('/connect', function (req, res, next) {
 	res.render('pages/connect');
 });
