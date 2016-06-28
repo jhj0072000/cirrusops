@@ -1,6 +1,9 @@
 // CONTACT US
 $('#contactTime').timepicker({
-  defaultTime: false
+  defaultTime: false,
+  template: false,
+  showInputs: false,
+  minuteStep: 5
 });
 $('#contact-form').bootstrapValidator({
   live: 'disabled',

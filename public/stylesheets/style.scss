@@ -54,6 +54,7 @@ $titillium: 'Titillium Web', sans-serif;
 $sourcesans: 'Source Sans Pro',sans-serif;
 $josefinsans: 'Josefin Sans', sans-serif;
 $poppin: 'Poppins', sans-serif;
+$muli: 'Muli', sans-serif;
 
 /* ----------------------------------------------------------- */
 /*  MEDIA QUERIES SETTINGS
@@ -105,7 +106,7 @@ html {
 	font-size: 100%;
 }
 body {
-	font-family: $poppin;
+	font-family: $muli;
 	font-size: 17px;
 	font-weight: 300;
 	overflow-x: hidden !important;
