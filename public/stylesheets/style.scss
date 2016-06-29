@@ -139,6 +139,11 @@ h3 {
 		font-size: 1.5rem;
 	}
 }
+h4 {
+	@include ipad {
+		font-size: 15px;
+	}
+}
 .fa {
 	width: 100%;
 }
@@ -265,6 +270,9 @@ ul {
 		padding-bottom: 50px;
 	}
 }
+.margin-bot {
+	margin-bottom: 50px;
+}
 .padding-50 {
 	padding-top: 50px;
 	padding-bottom: 50px;
@@ -348,9 +356,9 @@ blockquote p {
 /* HOME HEADER */
 /*--------------------*/
 #header {
-	float: left;
+	/*float: left;
 	display: inline;
-	width: 100%;
+	width: 100%;*/
 }
 #home-banner {
 	height: 500px;
@@ -786,10 +794,6 @@ blockquote p {
 	width: 100%;
 	height: auto;
 	display: block;
-	margin-bottom: 100px;
-	@include ipad {
-		margin-bottom: 30px;
-	}
 }
 .popout-banner-image {
 	margin-left: -20px;
@@ -879,6 +883,48 @@ blockquote p {
 		border-radius: 0px;
 	}
 }
+.icon-box {
+	text-align: center;
+	margin-bottom: 25px;
+}
+.icon-box-small {
+	max-width: 68px;
+	max-height: 56px;
+	text-align: center;
+	float: left;
+}
+.uses-text-box {
+	max-width: 458px;
+	padding-left: 100px;
+}
+.whyquickbase-container {
+	background-color: #fff; 
+	background-image: 
+	linear-gradient(90deg, transparent 79px, $cirrus-blue 79px, $cirrus-blue 81px, transparent 81px),
+	linear-gradient($gray-pale .1em, transparent .1em);
+	background-size: 100% 1.2em;
+	p {
+		font-weight: 500;
+	}
+	h1 {
+		margin-bottom: 60px;
+	}
+	.icon-wrapper {
+		margin-bottom: 30px;
+	}
+}
+.uses-container {
+	background-color: #fff; 
+	background-image: 
+	linear-gradient(270deg, transparent 79px, $cirrus-orange 79px, $cirrus-orange 81px, transparent 81px),
+	linear-gradient($gray-pale .1em, transparent .1em);
+	background-size: 100% 1.2em;
+	.uses-list {
+		margin-bottom: 50px;
+	}
+}
+
+
 
 /* SPREADSHEETS */
 .page-banner {
@@ -1185,14 +1231,37 @@ blockquote p {
 }
 
 
-
+.solution-row {
+	display: flex;
+	margin-bottom: 15px;
+	h4 {
+		margin: 0;
+		margin-bottom: 10px;
+		color: $cirrus-blue;
+	}
+	.fa {
+		font-size: 40px;
+		text-align: center;
+		color: $cirrus-green;
+		@include ipad {
+			font-size: 30px;
+		}
+	}
+	div {
+		display: block;
+	}
+}
 
 #about {
-	background-color: #fff;
+	/*background-color: #fff;*/
 	padding: 70px 0;
-	float: left;
+/*	float: left;
 	display: inline;
-	width: 100%;
+	width: 100%;*/
+}
+#whyCirrusOps {
+	padding-bottom: 70px;
+	background: $gray-pale;
 }
 .welcome-field {
 	float: left;
@@ -1202,7 +1271,6 @@ blockquote p {
 .about-title-field {
 	display: inline;
 	float: left;
-	padding: 0 172px;
 	position: relative;
 	text-align: center;
 	width: 100%;
