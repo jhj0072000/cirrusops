@@ -2,7 +2,7 @@
 /*  COLORS
 /* ----------------------------------------------------------- */
 $cirrus-blue: #249AD6;
-$cirrus-blue-light: #9CD5F1;
+$cirrus-blue-light: #d9eef9;
 $cirrus-blue-dark: #0780BA;
 $cirrus-green: #81BE41;
 $cirrus-green-light: #67D6BA;
@@ -173,6 +173,9 @@ ul {
 }
 #txt-gray {
 	color: $gray-medium;
+}
+#txt-purple {
+	color: $cirrus-purple;
 }
 #txt-gray-pale {
 	color: $gray-pale;
@@ -798,7 +801,12 @@ blockquote p {
 .popout-banner-image {
 	margin-left: -20px;
 	margin-right: -20px;
-	background: url('../images/quickbase-banner.jpg') no-repeat top right;
+	background: 
+		linear-gradient(
+	      rgba(0, 0, 0, 0.45), 
+	      rgba(0, 0, 0, 0.45)
+	    ), 
+	    url('../images/quickbase-banner.jpg') no-repeat center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -930,6 +938,16 @@ blockquote p {
 .page-banner {
 	padding: 50px;
 	text-align: center;
+	background: 
+		linear-gradient(
+	      rgba(0, 0, 0, 0.45), 
+	      rgba(0, 0, 0, 0.45)
+	    ), 
+	    url('http://placehold.it/1200x800') no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	@include note {
 		padding: 30px;
 	}
@@ -944,6 +962,26 @@ blockquote p {
 	p {
 		color: $white;
 	}
+}
+.spreadsheet-wrapper {
+	background: linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
+	radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0,
+	radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 55px 0 $cirrus-blue-light;
+	background-size:110px 200px;
+	background-repeat:repeat-x;
+}
+.spreadsheet-list {
+	list-style-image: url('/images/orange_bullet.png');
+	li {
+		margin-bottom: 15px;
+	}
+}
+.request-wrapper {
+	background:
+	linear-gradient(135deg, $gray-pale 22px, $white 22px, $white 24px, transparent 24px, transparent 67px, $white 67px, $white 69px, transparent 69px),
+	linear-gradient(225deg, $gray-pale 22px, $white 22px, $white 24px, transparent 24px, transparent 67px, $white 67px, $white 69px, transparent 69px)0 64px;
+	background-color:$gray-pale;
+	background-size: 64px 128px
 }
 .tab-spreadsheet {
 	h1 {

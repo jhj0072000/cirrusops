@@ -81,6 +81,9 @@ ul {
 #txt-gray {
   color: #7d7d7d; }
 
+#txt-purple {
+  color: #7768ae; }
+
 #txt-gray-pale {
   color: #f6f6f6; }
 
@@ -585,7 +588,7 @@ blockquote p {
 
 @media (max-width: 768px) {
   .responsive-tabs.nav-tabs > li.active a {
-    color: #9CD5F1; } }
+    color: #d9eef9; } }
 
 .responsive-tabs.nav-tabs > li {
   display: block;
@@ -659,7 +662,7 @@ blockquote p {
 .popout-banner-image {
   margin-left: -20px;
   margin-right: -20px;
-  background: url("../images/quickbase-banner.jpg") no-repeat top right;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../images/quickbase-banner.jpg") no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -767,7 +770,12 @@ blockquote p {
 /* SPREADSHEETS */
 .page-banner {
   padding: 50px;
-  text-align: center; }
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("http://placehold.it/1200x800") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
   @media (max-width: 480px) {
     .page-banner {
       padding: 30px; } }
@@ -780,6 +788,21 @@ blockquote p {
         font-size: 30px; } }
   .page-banner p {
     color: #fff; }
+
+.spreadsheet-wrapper {
+  background: linear-gradient(#ffffff 50%, rgba(255, 255, 255, 0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255, 255, 255, 0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255, 255, 255, 0) 0) 55px 0 #d9eef9;
+  background-size: 110px 200px;
+  background-repeat: repeat-x; }
+
+.spreadsheet-list {
+  list-style-image: url("/images/orange_bullet.png"); }
+  .spreadsheet-list li {
+    margin-bottom: 15px; }
+
+.request-wrapper {
+  background: linear-gradient(135deg, #f6f6f6 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px), linear-gradient(225deg, #f6f6f6 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px) 0 64px;
+  background-color: #f6f6f6;
+  background-size: 64px 128px; }
 
 .tab-spreadsheet {
   /*.container {
@@ -916,7 +939,7 @@ blockquote p {
 
 .tab-consulting .fa {
   font-size: 180px;
-  color: #9CD5F1; }
+  color: #d9eef9; }
 
 .tab-consulting ul {
   list-style: square inside;
