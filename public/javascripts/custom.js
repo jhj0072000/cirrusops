@@ -44,18 +44,12 @@
       }
     });
     
-    // MENU HANDLER
-    // var url = window.location;
-    // $('ul.nav a').filter(function() {
-    //     return this.href == url;
-    // }).parent().addClass('active');
-
+  // MENU HANDLER
   var first = $(location).attr('pathname');
   first.indexOf(1);
   first.toLowerCase();
   firstURL = first.split("/")[1];
   secondURL = first.split("/")[2];
-  console.log(secondURL);
 
   if (firstURL == "solution") {
     $("#solutionnav").addClass("active");
@@ -66,11 +60,37 @@
   } else if (firstURL == "connect") {
     $("#connectnav").addClass("active");
   }
+  // SUB MENU HANDLER
+  if (secondURL == "quickbase") {
+    $("#quickbasenav").addClass("active");
+  } else if (secondURL == undefined) {
+    $("#overviewnav").addClass("active");
+  } else if (secondURL == "custom-solutions") {
+    $("#customnav").addClass("active");
+  } else if (secondURL == "consulting") {
+    $("#consultingnav").addClass("active");
+  } else if (secondURL == "integrations") {
+    $("#integrationnav").addClass("active");
+  } else if (secondURL == "spreadsheet") {
+    $("#spreadsheetnav").addClass("active");
+  }
+
+  var random = Math.floor(Math.random() * 2) + 1;
+  console.log(random);
+
+
 
     // STICKY
     $(document).ready(function(){
       $("#sticker").sticky({topSpacing:0});
     });
+    // $(document).ready(function(){
+    //   if ($(window).width() < 769) {
+    //     $("#sub-sticker").sticky({topSpacing:110});
+    //   } else {
+    //     $("#sub-sticker").sticky({topSpacing:140});
+    //   }
+    // });
 
     // PAGE TABS
     $.fn.responsiveTabs = function() {

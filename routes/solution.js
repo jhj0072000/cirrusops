@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET solution page. */
 router.get('/', function (req, res, next) {
-  res.render('pages/quickbase');
+  res.render('pages/overview');
 });
 router.get('/quickbase', function (req, res, next) {
   res.render('pages/quickbase');

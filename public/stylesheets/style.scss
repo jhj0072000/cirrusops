@@ -177,6 +177,9 @@ ul {
 #txt-purple {
 	color: $cirrus-purple;
 }
+#txt-black {
+	color: $blackish;
+}
 #txt-gray-pale {
 	color: $gray-pale;
 }
@@ -222,6 +225,10 @@ ul {
 		padding-left: 15px;
 	}
 }
+.list-square {
+	list-style: square inside;
+	line-height: 30px;
+}
 .vmid {
 	vertical-align: middle;
 }
@@ -249,9 +256,8 @@ ul {
 	flex-wrap: wrap;
 }
 .vcenter {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
+	top: 50%;
+	transform: translateY(-50%);
 }
 .width-100 {
 	width: 100%;
@@ -279,6 +285,10 @@ ul {
 .padding-50 {
 	padding-top: 50px;
 	padding-bottom: 50px;
+	@include ipad {
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
 }
 .padding-30 {
 	padding-top: 30px;
@@ -799,14 +809,14 @@ blockquote p {
 	display: block;
 }
 .popout-banner-image {
-	margin-left: -20px;
-	margin-right: -20px;
+	/*margin-left: -20px;
+	margin-right: -20px;*/
 	background: 
 		linear-gradient(
 	      rgba(0, 0, 0, 0.45), 
 	      rgba(0, 0, 0, 0.45)
 	    ), 
-	    url('../images/quickbase-banner.jpg') no-repeat center;
+	    url('http://placehold.it/1600x500') no-repeat center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -938,12 +948,13 @@ blockquote p {
 .page-banner {
 	padding: 50px;
 	text-align: center;
+	height: 350px;
 	background: 
 		linear-gradient(
 	      rgba(0, 0, 0, 0.45), 
 	      rgba(0, 0, 0, 0.45)
 	    ), 
-	    url('http://placehold.it/1200x800') no-repeat center;
+	    url('http://placehold.it/1600x350') no-repeat center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -953,11 +964,6 @@ blockquote p {
 	}
 	h1 {
 		color: $white;
-		font-size: 40px;
-		margin-top: 10px;
-		@include note {
-			font-size: 30px;
-		}
 	}
 	p {
 		color: $white;
@@ -972,6 +978,7 @@ blockquote p {
 }
 .spreadsheet-list {
 	list-style-image: url('/images/orange_bullet.png');
+	list-style-position: inside;
 	li {
 		margin-bottom: 15px;
 	}
@@ -984,9 +991,6 @@ blockquote p {
 	background-size: 64px 128px
 }
 .tab-spreadsheet {
-	h1 {
-		margin-top: 10px;
-	}
 	/*.container {
 		padding-top: 30px;
 		@include ipad {
@@ -994,7 +998,6 @@ blockquote p {
 		}
 	}*/
 	.fa {
-		color: $cirrus-red-light;
 		font-size: 180px;
 	}
 	.panel {
