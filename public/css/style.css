@@ -61,6 +61,12 @@ ul {
   list-style: none;
   padding-left: 0px; }
 
+.page-wrap {
+  margin-top: 140px; }
+  @media (max-width: 768px) {
+    .page-wrap {
+      margin-top: 110px; } }
+
 /* Color Classes */
 #txt-white {
   color: #fff; }
@@ -302,7 +308,7 @@ blockquote p {
 	margin: 0 auto;
 	max-width: 80rem;
 	width: 100%;
-}*/
+	}*/
 .banner-content {
   font-size: 1.0625rem;
   line-height: 1.6875rem;
@@ -389,7 +395,11 @@ blockquote p {
 /* NAVIGATION */
 /*--------------------*/
 .nav-wrapper {
-  z-index: 999; }
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  -webkit-transform: translate3d(0, 0, 0); }
 
 .home-header {
   background: #f6f6f6;
@@ -426,9 +436,13 @@ blockquote p {
   border-radius: 0; }
 
 .navbar-default {
+  height: 100px;
   background: #fff;
   border: none;
   margin-bottom: 0; }
+  @media (max-width: 768px) {
+    .navbar-default {
+      height: 70px; } }
   .navbar-default .navbar-header > a {
     padding-top: 0px;
     padding-bottom: 0px; }
@@ -500,8 +514,11 @@ blockquote p {
 /* CONTENT SECTION */
 /*--------------------*/
 .page-navbar {
-  background: #fff;
-  border-bottom: 1px solid #f6f6f6; }
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  height: 42px;
+  background: #249AD6; }
   @media (max-width: 768px) {
     .page-navbar {
       background: #fff;
@@ -513,27 +530,30 @@ blockquote p {
 
 .nav-tabs li.active > a {
   border: none;
-  border-bottom: 3px solid #249AD6;
-  color: #303442;
-  background: transparent; }
+  color: #249AD6;
+  background: #fff;
+  border-radius: 0px; }
   .nav-tabs li.active > a:hover {
     color: #249AD6;
-    background: transparent;
+    background: #fff;
     border: none;
-    border-bottom: 3px solid #249AD6;
     cursor: pointer; }
     @media (max-width: 768px) {
       .nav-tabs li.active > a:hover {
         background: #249AD6; } }
 
 .nav-tabs li a {
-  color: #303442;
+  color: #fff;
   border: none; }
   .nav-tabs li a:hover {
+    border-radius: 0px;
     cursor: pointer;
-    background: transparent;
+    background: #fff;
     border: none;
     color: #249AD6; }
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus {
+  border: none; }
 
 /* PAGE TABS */
 .tab-pane {
@@ -553,7 +573,7 @@ blockquote p {
     .responsive-tabs.nav-tabs {
       background-color: #249AD6;
       position: relative;
-      z-index: 10;
+      /*z-index: 10;*/
       height: 40px;
       overflow: visible;
       border-bottom: none; } }
@@ -635,20 +655,27 @@ blockquote p {
 .responsive-tabs.nav-tabs.open > li:last-of-type a {
   /*border-radius: 0 0 2px 2px;*/ }
 
-.home-questions {
+.home-contact-us {
   padding: 50px;
   background: linear-gradient(135deg, #f6f6f6 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px), linear-gradient(225deg, #f6f6f6 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px) 0 64px;
   background-color: #f6f6f6;
   background-size: 64px 128px; }
 
+#solution-menu li .active {
+  background: #fff;
+  color: #249AD6;
+  border-radius: 0px;
+  border: none; }
+
 /*--------------------*/
 /* PAGES */
 /*--------------------*/
-/*.page-banner-thin {
-	height: 275px;
-}*/
+.tab-subpages .fa {
+  font-size: 180px; }
+
 .tab-pane {
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  margin-top: 42px; }
 
 .page-wrapper .container-fluid {
   padding-left: 0px;
@@ -670,6 +697,21 @@ blockquote p {
   margin: 0 auto;
   width: 100%;
   max-width: 80rem; }
+
+.header-quickbase:before {
+  content: "\f0c2";
+  position: absolute;
+  display: block;
+  font-size: 35px;
+  height: 30px;
+  width: 30px;
+  top: 15px;
+  left: -45px;
+  font-family: FontAwesome;
+  font-style: normal;
+  /*@include laptop {
+	    	top: -4px;
+	    	}*/ }
 
 .popout-banner {
   position: relative;
@@ -803,6 +845,23 @@ blockquote p {
   .page-banner p {
     color: #fff; }
 
+.connect-banner {
+  padding: 50px;
+  text-align: center;
+  height: 200px;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("http://placehold.it/1600x250") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  @media (max-width: 480px) {
+    .connect-banner {
+      padding: 30px; } }
+  .connect-banner h1 {
+    color: #fff; }
+  .connect-banner p {
+    color: #fff; }
+
 .spreadsheet-wrapper {
   background: linear-gradient(#ffffff 50%, rgba(255, 255, 255, 0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255, 255, 255, 0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255, 255, 255, 0) 0) 55px 0 #d9eef9;
   background-size: 110px 200px;
@@ -825,53 +884,9 @@ blockquote p {
 		@include ipad {
 			padding-top: 15px;
 		}
-	}*/ }
+		}*/ }
   .tab-spreadsheet .fa {
     font-size: 180px; }
-  .tab-spreadsheet .panel {
-    transition: all 0.3s linear;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.22); }
-    .tab-spreadsheet .panel:hover {
-      transition: all 0.3s linear;
-      box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.22); }
-  .tab-spreadsheet .panel-heading {
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    text-align: center;
-    letter-spacing: 5px; }
-  .tab-spreadsheet .panel-body {
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px; }
-  .tab-spreadsheet .ss-collaboration {
-    border: 2px solid #249AD6;
-    border-radius: 10px; }
-    .tab-spreadsheet .ss-collaboration .panel-heading {
-      background-color: #fff;
-      border-bottom: none; }
-    .tab-spreadsheet .ss-collaboration .panel-body {
-      background-color: #fff; }
-      .tab-spreadsheet .ss-collaboration .panel-body .fa {
-        color: #249AD6; }
-  .tab-spreadsheet .ss-scalability {
-    border: 2px solid #F89C27;
-    border-radius: 10px; }
-    .tab-spreadsheet .ss-scalability .panel-heading {
-      background-color: #fff;
-      border-bottom: none; }
-    .tab-spreadsheet .ss-scalability .panel-body {
-      background-color: #fff; }
-      .tab-spreadsheet .ss-scalability .panel-body .fa {
-        color: #F89C27; }
-  .tab-spreadsheet .ss-visibility {
-    border: 2px solid #81BE41;
-    border-radius: 10px; }
-    .tab-spreadsheet .ss-visibility .panel-heading {
-      background-color: #fff;
-      border-bottom: none; }
-    .tab-spreadsheet .ss-visibility .panel-body {
-      background-color: #fff; }
-      .tab-spreadsheet .ss-visibility .panel-body .fa {
-        color: #81BE41; }
   .tab-spreadsheet .spreadsheet-graphic {
     text-align: center; }
     .tab-spreadsheet .spreadsheet-graphic i {
@@ -927,20 +942,12 @@ blockquote p {
   font-style: normal;
   /*@include laptop {
 	    	top: -4px;
-	    }*/ }
+	    	}*/ }
 
 /* CONSULTING */
 .consulting-banner {
   height: 275px;
   background-color: #F89C27; }
-
-.tab-consulting .container {
-  padding-top: 100px;
-  padding-bottom: 100px; }
-  @media (max-width: 768px) {
-    .tab-consulting .container {
-      padding-top: 30px;
-      padding-bottom: 30px; } }
 
 .tab-consulting .consulting-infographics1 {
   padding-top: 30px;
@@ -974,7 +981,7 @@ blockquote p {
   font-style: normal;
   /*	    @include laptop {
 	    	top: -4px;
-	    }*/ }
+	    	}*/ }
 
 /*--------------------*/
 /* ABOUT */
@@ -984,7 +991,7 @@ blockquote p {
   position: absolute;
   background-color: #fff;
   padding: 30px;
-  z-index: 2;
+  /*z-index: 2;*/
   max-width: 31.25rem;
   margin-top: -60px; }
   @media (max-width: 768px) {
@@ -1063,11 +1070,13 @@ blockquote p {
     color: #249AD6; }
   .solution-row .fa {
     font-size: 40px;
+    width: 40px;
     text-align: center;
     color: #81BE41; }
     @media (max-width: 768px) {
       .solution-row .fa {
-        font-size: 30px; } }
+        font-size: 30px;
+        width: 30px; } }
   .solution-row div {
     display: block; }
 
@@ -1224,13 +1233,8 @@ blockquote p {
   width: 100%; }
 
 .about-right {
-  display: inline;
-  float: left;
   padding-left: 85px;
   width: 100%; }
-  .about-right .about-title-field {
-    text-align: left;
-    padding: 0px; }
   .about-right .about-title {
     padding-bottom: 15px; }
   .about-right .about-title-line {
@@ -1276,24 +1280,76 @@ blockquote p {
       margin: 0px; } }
 
 .button {
-  /*	float: left;
-*/
   display: inline-block;
-  /*	margin: 1em;
-*/
   border: 2px solid #249AD6;
   background: #fff;
   color: #249AD6;
   vertical-align: middle;
   position: relative;
-  /*	z-index: 1;
-*/
+  text-align: center;
   -webkit-backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale; }
   .button:focus {
     outline: none; }
   .button > span {
     vertical-align: middle; }
+  .button:hover {
+    background-color: #249AD6;
+    border-color: #249AD6; }
+
+.button-red {
+  display: inline-block;
+  border: 2px solid #E51890;
+  background: #fff;
+  color: #E51890;
+  vertical-align: middle;
+  position: relative;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale; }
+  .button-red:focus {
+    outline: none; }
+  .button-red > span {
+    vertical-align: middle; }
+  .button-red:hover {
+    background-color: #E51890;
+    border-color: #E51890; }
+
+.button-green {
+  display: inline-block;
+  border: 2px solid #81BE41;
+  background: #fff;
+  color: #81BE41;
+  vertical-align: middle;
+  position: relative;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale; }
+  .button-green:focus {
+    outline: none; }
+  .button-green > span {
+    vertical-align: middle; }
+  .button-green:hover {
+    background-color: #81BE41;
+    border-color: #81BE41; }
+
+.button-orange {
+  display: inline-block;
+  border: 2px solid #F89C27;
+  background: #fff;
+  color: #F89C27;
+  vertical-align: middle;
+  position: relative;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale; }
+  .button-orange:focus {
+    outline: none; }
+  .button-orange > span {
+    vertical-align: middle; }
+  .button-orange:hover {
+    background-color: #F89C27;
+    border-color: #F89C27; }
 
 .button-default {
   text-decoration: none;
@@ -1330,8 +1386,8 @@ blockquote p {
   .button-default:after {
     color: #fff; }
   .button-default:hover {
-    background-color: #249AD6;
-    border-color: #249AD6;
+    /*background-color: $cirrus-blue;
+		border-color: $cirrus-blue;*/
     text-decoration: none;
     color: #fff; }
     .button-default:hover::after {
@@ -1346,12 +1402,14 @@ blockquote p {
     text-decoration: none;
     color: #249AD6; }
   @media (max-width: 768px) {
-    .button-default::after {
-      padding: 12px 8px;
-      font-size: 12px; }
-    .button-default > span {
-      padding: 12px 8px;
-      font-size: 12px; } }
+    .button-default {
+      width: 100%; }
+      .button-default::after {
+        padding: 12px 8px;
+        font-size: 12px; }
+      .button-default > span {
+        padding: 12px 8px;
+        font-size: 12px; } }
   @media (max-width: 480px) {
     .button-default::after {
       font-size: 10px; }
@@ -1367,10 +1425,7 @@ blockquote p {
 /* EMAIL SECTION */
 /*--------------------*/
 .email-section {
-  display: inline;
-  background: #7768ae;
-  float: left;
-  width: 100%; }
+  background: #7768ae; }
 
 .email-content {
   display: inline;
@@ -1421,7 +1476,9 @@ blockquote p {
   @media (max-width: 768px) {
     .section-email input {
       font-size: 12px;
-      height: 45px; } }
+      height: 45px; }
+    .section-email a {
+      width: 100px; } }
   @media (max-width: 480px) {
     .section-email {
       display: block; }
@@ -1444,10 +1501,7 @@ blockquote p {
 /*--------------------*/
 .clients {
   background-color: #fff;
-  float: left;
-  display: inline;
-  padding: 70px 0;
-  width: 100%; }
+  padding: 70px 0; }
 
 .clients .row {
   margin-left: 0px;
@@ -1731,6 +1785,11 @@ blockquote p {
 
 .footer-logo {
   display: inline-block; }
+  .footer-logo img {
+    margin-top: -45px; }
+  @media (max-width: 768px) {
+    .footer-logo img {
+      margin-top: -10px; } }
 
 .footer-social {
   display: inline;
