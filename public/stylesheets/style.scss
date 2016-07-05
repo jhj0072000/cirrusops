@@ -214,6 +214,13 @@ ul {
 .background-white {
 	background-color: $white;
 }
+.background-pattern1 {
+	background:
+	linear-gradient(135deg, $gray-pale 22px, $white 22px, $white 24px, transparent 24px, transparent 67px, $white 67px, $white 69px, transparent 69px),
+	linear-gradient(225deg, $gray-pale 22px, $white 22px, $white 24px, transparent 24px, transparent 67px, $white 67px, $white 69px, transparent 69px)0 64px;
+	background-color:$gray-pale;
+	background-size: 64px 128px;
+}
 .border-bottom-gray {
 	border-bottom: 1px solid $gray-pale;
 }
@@ -800,6 +807,7 @@ blockquote p {
 	#solution-menu {
 		li {
 			.active {
+				transition: all 0.5s;
 				background: $white;
 				color: $cirrus-blue;
 				border-radius: 0px;
