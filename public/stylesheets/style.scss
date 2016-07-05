@@ -55,6 +55,8 @@ $sourcesans: 'Source Sans Pro',sans-serif;
 $josefinsans: 'Josefin Sans', sans-serif;
 $poppin: 'Poppins', sans-serif;
 $muli: 'Muli', sans-serif;
+$lato: 'Lato', sans-serif;
+$slabo: 'Slabo 13px', serif;
 
 /* ----------------------------------------------------------- */
 /*  MEDIA QUERIES SETTINGS
@@ -106,7 +108,7 @@ html {
 	font-size: 100%;
 }
 body {
-	font-family: $poppin;
+	font-family: $lato;
 	font-size: 17px;
 	font-weight: 300;
 	overflow-x: hidden !important;
@@ -117,7 +119,8 @@ body {
 	}
 }
 h1,h2,h3 {
-	font-weight: 300;
+/*	font-family: $slabo;
+*/	font-weight: 300;
 	color: $blackish;
 }
 h1 {
@@ -768,6 +771,14 @@ blockquote p {
 .responsive-tabs.nav-tabs.open > li:last-of-type a {
   /*border-radius: 0 0 2px 2px;*/
 }
+.home-questions {
+	padding: 50px;
+	background:
+		linear-gradient(135deg, $gray-pale 22px, $white 22px, $white 24px, transparent 24px, transparent 67px, $white 67px, $white 69px, transparent 69px),
+		linear-gradient(225deg, $gray-pale 22px, $white 22px, $white 24px, transparent 24px, transparent 67px, $white 67px, $white 69px, transparent 69px)0 64px;
+	background-color:$gray-pale;
+	background-size: 64px 128px;
+}
 
 /*--------------------*/
 /* PAGES */
@@ -988,7 +999,7 @@ blockquote p {
 	linear-gradient(135deg, $gray-pale 22px, $white 22px, $white 24px, transparent 24px, transparent 67px, $white 67px, $white 69px, transparent 69px),
 	linear-gradient(225deg, $gray-pale 22px, $white 22px, $white 24px, transparent 24px, transparent 67px, $white 67px, $white 69px, transparent 69px)0 64px;
 	background-color:$gray-pale;
-	background-size: 64px 128px
+	background-size: 64px 128px;
 }
 .tab-spreadsheet {
 	/*.container {
@@ -1255,6 +1266,16 @@ blockquote p {
 		}
 	}
 }
+.about-story {
+	h3 {
+		color: $cirrus-blue;
+	}
+}
+.about-values {
+	h3 {
+		color: $cirrus-blue;
+	}
+}
 
 /* Crew */
 .crew-banner {
@@ -1301,6 +1322,7 @@ blockquote p {
 	width: 100%;*/
 }
 #whyCirrusOps {
+	padding-top: 70px;
 	padding-bottom: 70px;
 	background: $gray-pale;
 }
@@ -1462,7 +1484,6 @@ blockquote p {
 .about-field {
 	display: inline;
 	float: left;
-	margin-top: 45px;
 	margin-bottom: 25px;
 	width: 100%;
 }
@@ -1481,7 +1502,7 @@ blockquote p {
 		padding: 0px;
 	}
 	.about-title {
-		padding-bottom: 47px;
+		padding-bottom: 15px;
 	}
 	.about-title-line {
 		height: 2px;

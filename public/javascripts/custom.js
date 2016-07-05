@@ -44,39 +44,39 @@
       }
     });
     
-  // MENU HANDLER
-  var first = $(location).attr('pathname');
-  first.indexOf(1);
-  first.toLowerCase();
-  firstURL = first.split("/")[1];
-  secondURL = first.split("/")[2];
+    // MENU HANDLER
+    var first = $(location).attr('pathname');
+    first.indexOf(1);
+    first.toLowerCase();
+    firstURL = first.split("/")[1];
+    secondURL = first.split("/")[2];
 
-  if (firstURL == "solution") {
-    $("#solutionnav").addClass("active");
-  } else if (firstURL == "") {
-    $("#homenav").addClass("active");
-  } else if (firstURL == "about") {
-    $("#aboutnav").addClass("active");
-  } else if (firstURL == "connect") {
-    $("#connectnav").addClass("active");
-  }
-  // SUB MENU HANDLER
-  if (secondURL == "quickbase") {
-    $("#quickbasenav").addClass("active");
-  } else if (secondURL == undefined) {
-    $("#overviewnav").addClass("active");
-  } else if (secondURL == "custom-solutions") {
-    $("#customnav").addClass("active");
-  } else if (secondURL == "consulting") {
-    $("#consultingnav").addClass("active");
-  } else if (secondURL == "integrations") {
-    $("#integrationnav").addClass("active");
-  } else if (secondURL == "spreadsheet") {
-    $("#spreadsheetnav").addClass("active");
-  }
+    if (firstURL == "solution") {
+      $("#solutionnav").addClass("active");
+    } else if (firstURL == "") {
+      $("#homenav").addClass("active");
+    } else if (firstURL == "about") {
+      $("#aboutnav").addClass("active");
+    } else if (firstURL == "connect") {
+      $("#connectnav").addClass("active");
+    }
+    // SUB MENU HANDLER
+    if (secondURL == "quickbase") {
+      $("#quickbasenav").addClass("active");
+    } else if (secondURL == undefined) {
+      $("#overviewnav").addClass("active");
+    } else if (secondURL == "custom-solutions") {
+      $("#customnav").addClass("active");
+    } else if (secondURL == "consulting") {
+      $("#consultingnav").addClass("active");
+    } else if (secondURL == "integrations") {
+      $("#integrationnav").addClass("active");
+    } else if (secondURL == "spreadsheet") {
+      $("#spreadsheetnav").addClass("active");
+    }
 
-  var random = Math.floor(Math.random() * 2) + 1;
-  console.log(random);
+    var random = Math.floor(Math.random() * 2) + 1;
+    console.log(random);
 
 
 
@@ -113,7 +113,20 @@
     /* ----------------------------------------------------------- */
     /*  PAGES
     /* ----------------------------------------------------------- */
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+        || location.hostname == this.hostname) {
 
+        var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+       $('html,body').animate({
+        scrollTop: target.offset().top - 140
+      }, 1000);
+       return false;
+     }
+   }
+  });
 
 
   });
