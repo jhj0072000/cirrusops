@@ -24,6 +24,25 @@
       $('html, body').animate({scrollTop : 0},800);
       return false;
     });
+    
+    /* ----------------------------------------------------------- */
+    /*  SMOOTH SCROLLING
+    /* ----------------------------------------------------------- */
+    if (top.location.pathname != '/layouts'){
+      $(document).ready(function(){
+        $("a[href*=#]:not([href=#])").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top - 180
+            }, 800, function(){
+              window.location.hash = hash;
+            });
+          }
+        });
+      });
+    }
 
     /* ----------------------------------------------------------- */
     /*  NAVIGATION
@@ -75,22 +94,10 @@
       $("#spreadsheetnav").addClass("active");
     }
 
-    var random = Math.floor(Math.random() * 2) + 1;
-    console.log(random);
-
-
-
     // STICKY
     $(document).ready(function(){
       $("#sticker").sticky({topSpacing:0});
     });
-    // $(document).ready(function(){
-    //   if ($(window).width() < 769) {
-    //     $("#sub-sticker").sticky({topSpacing:110});
-    //   } else {
-    //     $("#sub-sticker").sticky({topSpacing:140});
-    //   }
-    // });
 
     // PAGE TABS
     $.fn.responsiveTabs = function() {
@@ -110,23 +117,6 @@
     $('.nav.nav-tabs').responsiveTabs();
 
 
-    /* ----------------------------------------------------------- */
-    /*  PAGES
-    /* ----------------------------------------------------------- */
-    $('a[href*=#]:not([href=#])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-          || location.hostname == this.hostname) {
-
-          var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-         $('html,body').animate({
-          scrollTop: target.offset().top - 140
-        }, 1000);
-         return false;
-       }
-     }
-    });
 
 
-  });
+});

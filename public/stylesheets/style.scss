@@ -783,9 +783,11 @@ blockquote p {
 /*--------------------*/
 /* PAGES */
 /*--------------------*/
-/*.page-banner-thin {
-	height: 275px;
-}*/
+.tab-subpages {
+	.fa {
+		font-size: 180px;
+	}
+}
 #first-nav {
 }
 .tab-pane {
@@ -812,6 +814,23 @@ blockquote p {
 	margin: 0 auto;
 	width: 100%;
 	max-width: 80rem;
+}
+.header-quickbase {
+	&:before {
+		content: "\f0c2";
+	    position: absolute;
+	    display: block;
+	    font-size: 35px;
+	    height: 30px;
+	    width: 30px;
+	    top: 15px;
+	    left: -45px;
+	    font-family: FontAwesome;
+	    font-style: normal;
+	    /*@include laptop {
+	    	top: -4px;
+	    }*/
+	}
 }
 .popout-banner {
 	position: relative;
@@ -980,6 +999,30 @@ blockquote p {
 		color: $white;
 	}
 }
+.connect-banner {
+	padding: 50px;
+	text-align: center;
+	height: 200px;
+	background: 
+		linear-gradient(
+	      rgba(0, 0, 0, 0.45), 
+	      rgba(0, 0, 0, 0.45)
+	    ), 
+	    url('http://placehold.it/1600x250') no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	@include note {
+		padding: 30px;
+	}
+	h1 {
+		color: $white;
+	}
+	p {
+		color: $white;
+	}
+}
 .spreadsheet-wrapper {
 	background: linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
 	radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0,
@@ -1010,66 +1053,6 @@ blockquote p {
 	}*/
 	.fa {
 		font-size: 180px;
-	}
-	.panel {
-		transition: all 0.3s linear;
-		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.22);
-		&:hover {
-			transition: all 0.3s linear;
-			box-shadow: 0 20px 40px 0 rgba(0,0,0,0.22);
-		}
-	}
-	.panel-heading {
-		border-top-right-radius: 10px;
-		border-top-left-radius: 10px;
-		text-align: center;
-		letter-spacing: 5px;
-	}
-	.panel-body {
-		border-bottom-right-radius: 10px;
-		border-bottom-left-radius: 10px;
-	}
-	.ss-collaboration {
-		border: 2px solid $cirrus-blue;
-		border-radius: 10px;
-		.panel-heading {
-			background-color: $white;
-			border-bottom: none;
-		}
-		.panel-body {
-			background-color: $white;
-			.fa {
-				color: $cirrus-blue;
-			}
-		}
-	}
-	.ss-scalability {
-		border: 2px solid $cirrus-orange;
-		border-radius: 10px;
-		.panel-heading {
-			background-color: $white;
-			border-bottom: none;
-		}
-		.panel-body {
-			background-color: $white;
-			.fa {
-				color: $cirrus-orange;
-			}
-		}
-	}
-	.ss-visibility {
-		border: 2px solid $cirrus-green;
-		border-radius: 10px;
-		.panel-heading {
-			background-color: $white;
-			border-bottom: none;
-		}
-		.panel-body {
-			background-color: $white;
-			.fa {
-				color: $cirrus-green;
-			}
-		}
 	}
 	.spreadsheet-graphic {
 		text-align: center;
@@ -1303,10 +1286,12 @@ blockquote p {
 	}
 	.fa {
 		font-size: 40px;
+		width: 40px;
 		text-align: center;
 		color: $cirrus-green;
 		@include ipad {
 			font-size: 30px;
+			width: 30px;
 		}
 	}
 	div {
@@ -1556,22 +1541,87 @@ blockquote p {
 	}
 }
 .button {
-/*	float: left;
-*/	display: inline-block;
-/*	margin: 1em;
-*/	border: 2px solid $cirrus-blue;
+	display: inline-block;
+	border: 2px solid $cirrus-blue;
 	background: $white;
 	color: $cirrus-blue;
 	vertical-align: middle;
 	position: relative;
-/*	z-index: 1;
-*/	-webkit-backface-visibility: hidden;
+	text-align: center;
+	-webkit-backface-visibility: hidden;
 	-moz-osx-font-smoothing: grayscale;
 	&:focus {
 		outline: none;
 	}
 	>span {
 		vertical-align: middle;
+	}
+	&:hover {
+		background-color: $cirrus-blue;
+		border-color: $cirrus-blue;
+	}
+}
+.button-red {
+	display: inline-block;
+	border: 2px solid $cirrus-red;
+	background: $white;
+	color: $cirrus-red;
+	vertical-align: middle;
+	position: relative;
+	text-align: center;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	&:focus {
+		outline: none;
+	}
+	>span {
+		vertical-align: middle;
+	}
+	&:hover {
+		background-color: $cirrus-red;
+		border-color: $cirrus-red;
+	}
+}
+.button-green {
+	display: inline-block;
+	border: 2px solid $cirrus-green;
+	background: $white;
+	color: $cirrus-green;
+	vertical-align: middle;
+	position: relative;
+	text-align: center;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	&:focus {
+		outline: none;
+	}
+	>span {
+		vertical-align: middle;
+	}
+	&:hover {
+		background-color: $cirrus-green;
+		border-color: $cirrus-green;
+	}
+}
+.button-orange {
+	display: inline-block;
+	border: 2px solid $cirrus-orange;
+	background: $white;
+	color: $cirrus-orange;
+	vertical-align: middle;
+	position: relative;
+	text-align: center;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	&:focus {
+		outline: none;
+	}
+	>span {
+		vertical-align: middle;
+	}
+	&:hover {
+		background-color: $cirrus-orange;
+		border-color: $cirrus-orange;
 	}
 }
 .button-default {
@@ -1612,8 +1662,8 @@ blockquote p {
 		color: $white;
 	}
 	&:hover {
-		background-color: $cirrus-blue;
-		border-color: $cirrus-blue;
+		/*background-color: $cirrus-blue;
+		border-color: $cirrus-blue;*/
 		text-decoration: none;
 		color: $white;
 		&::after {
@@ -1640,6 +1690,7 @@ blockquote p {
 			padding: 12px 8px;
 			font-size: 12px;
 		}
+		width: 100%;
 	}
 	@include note {
 		&::after {
@@ -1664,10 +1715,7 @@ blockquote p {
 /*--------------------*/
 
 .email-section {
-	display: inline;
 	background: $cirrus-purple;
-	float: left;
-	width: 100%;
 }
 .email-content {
 	display: inline;
@@ -1734,6 +1782,9 @@ blockquote p {
 			font-size: 12px;
 			height: 45px;
 		}
+		a {
+			width: 100px;
+		}
 	}
 	@include note {
 		input {
@@ -1762,10 +1813,7 @@ blockquote p {
 /*--------------------*/
 .clients {
   background-color: #fff;
-  float: left;
-  display: inline;
   padding: 70px 0;
-  width: 100%;
 }
 .clients .row {
   margin-left: 0px;
@@ -2086,6 +2134,14 @@ blockquote p {
 }
 .footer-logo {
 	display: inline-block;
+	img {
+		margin-top: -45px;
+	}
+	@include ipad {
+		img {
+			margin-top: -10px;
+		}
+	}
 }
 .footer-social {
 	display: inline;

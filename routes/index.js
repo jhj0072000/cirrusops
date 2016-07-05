@@ -14,6 +14,10 @@ router.get('/layouts', function (req, res, next) {
 	res.render('pages/layouts');
 });
 
+router.get('/about', function (req, res, next) {
+	res.render('pages/about');
+});
+
 router.get('/random', function (req, res, next) {
 	var random = Math.floor(Math.random() * 2) + 1;
   	if (random == 1) {
