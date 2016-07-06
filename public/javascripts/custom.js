@@ -144,7 +144,7 @@ $.fn.responsiveTabs = function() {
 $('.nav.nav-tabs').responsiveTabs();
 
 // ANIMATE.CSS
-$('section').addClass('animated fadeIn');
+// $('section').addClass('animated fadeIn');
 
 
 
