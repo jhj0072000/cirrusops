@@ -16,7 +16,7 @@ html {
   font-size: 100%; }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 17px;
   font-weight: 300;
   overflow-x: hidden !important;
@@ -26,9 +26,7 @@ body {
     body {
       font-size: 14px; } }
 
-h1, h2, h3 {
-  /*	font-family: $slabo;
-*/
+h1, h2, h3, h4 {
   font-weight: 300;
   color: #303442; }
 
@@ -146,6 +144,10 @@ ul {
 
 .list-square {
   list-style: square inside;
+  line-height: 30px; }
+
+.list-circle {
+  list-style: disc outside;
   line-height: 30px; }
 
 .vmid {
@@ -297,9 +299,11 @@ blockquote p {
   -o-background-size: cover;
   background-size: cover;
   padding: 5.625rem 0; }
+  @media (max-width: 1199px) {
+    #home-banner {
+      padding: 3.235rem; } }
   @media (max-width: 991px) {
     #home-banner {
-      height: 450px;
       padding: 2.8125rem;
       background-position: top center; } }
   @media (max-width: 768px) {
@@ -307,7 +311,9 @@ blockquote p {
       padding: 2.2125rem; } }
   @media (max-width: 480px) {
     #home-banner {
-      padding: 1.5125rem; } }
+      padding-top: 1.5125rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem; } }
 
 /*.banner-floater {
 	margin: 0 auto;
@@ -329,27 +335,27 @@ blockquote p {
 
 .banner-h1 {
   margin-bottom: 20px;
-  font-size: 2.9rem;
-  line-height: 2.9rem;
+  /*		font-size: 2.9rem;
+line-height: 2.9rem;*/
   text-transform: none;
   font-weight: 300;
   color: #303442; }
   @media (max-width: 991px) {
     .banner-h1 {
-      font-size: 2.8125rem;
-      line-height: 3rem; } }
+      /*font-size: 2.8125rem;
+		line-height: 3rem;*/ } }
   @media (max-width: 768px) {
     .banner-h1 {
-      font-size: 2.5rem;
-      line-height: 3rem; } }
+      /*font-size: 2.5rem;
+		line-height: 3rem;*/ } }
   @media (max-width: 480px) {
     .banner-h1 {
-      font-size: 1.8rem;
-      line-height: 2rem; } }
+      /*font-size: 1.8rem;
+		line-height: 2rem;*/ } }
   @media (max-width: 360px) {
     .banner-h1 {
-      font-size: 1rem;
-      line-height: 1.3rem; } }
+      /*font-size: 1rem;
+		line-height: 1.3rem;*/ } }
 
 .banner-h3 {
   text-transform: none;
@@ -661,7 +667,6 @@ blockquote p {
   /*border-radius: 0 0 2px 2px;*/ }
 
 .home-contact-us {
-  padding: 50px;
   background: linear-gradient(135deg, #f6f6f6 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px), linear-gradient(225deg, #f6f6f6 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px) 0 64px;
   background-color: #f6f6f6;
   background-size: 64px 128px; }
@@ -674,8 +679,20 @@ blockquote p {
   border: none; }
 
 /*--------------------*/
-/* PAGES */
+/* SOLUTIONS */
 /*--------------------*/
+#section-consulting a {
+  border: 2px solid #81BE41;
+  color: #81BE41; }
+  #section-consulting a:hover {
+    background: #81BE41; }
+
+#section-spreadsheets a {
+  border: 2px solid #E51890;
+  color: #E51890; }
+  #section-spreadsheets a:hover {
+    background: #E51890; }
+
 .tab-subpages .fa {
   font-size: 180px; }
 
@@ -695,6 +712,9 @@ blockquote p {
     margin-top: 0px; } }
 
 /* QUICKBASE */
+.features-container h4 {
+  font-weight: 500; }
+
 #quickbase {
   padding-top: 0px; }
 
@@ -715,8 +735,8 @@ blockquote p {
   font-family: FontAwesome;
   font-style: normal;
   /*@include laptop {
-	    	top: -4px;
-	    	}*/ }
+    	top: -4px;
+    	}*/ }
 
 .popout-banner {
   position: relative;
@@ -725,9 +745,7 @@ blockquote p {
   display: block; }
 
 .popout-banner-image {
-  /*margin-left: -20px;
-	margin-right: -20px;*/
-  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("http://placehold.it/1600x500") no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("http://placehold.it/1600x350") no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -818,17 +836,19 @@ blockquote p {
   background-color: #fff;
   background-image: linear-gradient(90deg, transparent 79px, #249AD6 79px, #249AD6 81px, transparent 81px), linear-gradient(#f6f6f6 0.1em, transparent 0.1em);
   background-size: 100% 1.2em; }
-  .whyquickbase-container p {
-    font-weight: 500; }
   .whyquickbase-container h1 {
     /*margin-bottom: 60px;*/ }
   .whyquickbase-container .icon-wrapper {
     margin-bottom: 30px; }
+    .whyquickbase-container .icon-wrapper p {
+      font-weight: 500; }
 
 .uses-container {
   background-color: #fff;
   background-image: linear-gradient(270deg, transparent 79px, #F89C27 79px, #F89C27 81px, transparent 81px), linear-gradient(#f6f6f6 0.1em, transparent 0.1em);
   background-size: 100% 1.2em; }
+  .uses-container h4 {
+    font-weight: 500; }
   .uses-container .uses-list {
     margin-bottom: 50px; }
 
@@ -885,11 +905,11 @@ blockquote p {
 
 .tab-spreadsheet {
   /*.container {
-		padding-top: 30px;
-		@include ipad {
-			padding-top: 15px;
-		}
-		}*/ }
+	padding-top: 30px;
+	@include ipad {
+		padding-top: 15px;
+	}
+	}*/ }
   .tab-spreadsheet .fa {
     font-size: 180px; }
   .tab-spreadsheet .spreadsheet-graphic {
@@ -946,8 +966,8 @@ blockquote p {
   font-family: FontAwesome;
   font-style: normal;
   /*@include laptop {
-	    	top: -4px;
-	    	}*/ }
+    	top: -4px;
+    	}*/ }
 
 /* CONSULTING */
 .consulting-banner {
@@ -978,8 +998,8 @@ blockquote p {
   font-family: FontAwesome;
   font-style: normal;
   /*	    @include laptop {
-	    	top: -4px;
-	    	}*/ }
+    	top: -4px;
+    	}*/ }
 
 /*--------------------*/
 /* ABOUT */
@@ -1067,10 +1087,10 @@ blockquote p {
     margin-bottom: 10px;
     color: #249AD6; }
   .solution-row .fa {
+    color: #7d7d7d;
     font-size: 40px;
     width: 40px;
-    text-align: center;
-    color: #81BE41; }
+    text-align: center; }
     @media (max-width: 768px) {
       .solution-row .fa {
         font-size: 30px;
@@ -1082,12 +1102,10 @@ blockquote p {
   /*background-color: #fff;*/
   padding: 70px 0;
   /*	float: left;
-	display: inline;
-	width: 100%;*/ }
+display: inline;
+width: 100%;*/ }
 
 #whyCirrusOps {
-  padding-top: 70px;
-  padding-bottom: 70px;
   background: #f6f6f6; }
 
 .welcome-field {
@@ -1281,6 +1299,7 @@ blockquote p {
   display: inline-block;
   border: 2px solid #249AD6;
   background: #fff;
+  margin-top: 10px;
   color: #249AD6;
   vertical-align: middle;
   position: relative;
@@ -1428,7 +1447,6 @@ blockquote p {
 .email-content {
   display: inline;
   float: left;
-  padding: 60px 0;
   text-align: center;
   width: 100%; }
   .email-content h2 {
@@ -1465,6 +1483,7 @@ blockquote p {
   justify-content: center;
   text-align: center; }
   .section-email input {
+    margin-top: 10px;
     width: 300px;
     height: 49px;
     padding: 10px; }
