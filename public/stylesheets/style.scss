@@ -711,7 +711,7 @@ blockquote p {
 			background-color: $cirrus-blue;
 			position: relative;
 			/*z-index: 10;*/
-			height: 40px;
+			height: 42px;
 			overflow: visible;
 			border-bottom: none;
 		}
@@ -825,7 +825,6 @@ blockquote p {
 		}
 	}
 	.tab-pane {
-		margin-bottom: 100px;
 		margin-top: 42px;
 	}
 	.page-wrapper {
@@ -886,7 +885,7 @@ blockquote p {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	height: 500px;
+	height: 350px;
 	@include ipad {
 		height: 250px;
 		margin-left: 0;
@@ -990,7 +989,7 @@ blockquote p {
 		font-weight: 500;
 	}
 	h1 {
-		margin-bottom: 60px;
+		/*margin-bottom: 60px;*/
 	}
 	.icon-wrapper {
 		margin-bottom: 30px;
@@ -1160,15 +1159,6 @@ blockquote p {
 		background-color: $cirrus-orange;
 	}
 	.tab-consulting {
-		.consulting-infographics1 {
-			padding-top: 30px;
-			padding-bottom: 30px;
-			.container {
-				padding-top: 30px;
-				padding-bottom: 30px;
-			}
-
-		}
 		.fa {
 			font-size: 180px;
 			color: $cirrus-blue-light;

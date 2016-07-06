@@ -579,7 +579,7 @@ blockquote p {
       background-color: #249AD6;
       position: relative;
       /*z-index: 10;*/
-      height: 40px;
+      height: 42px;
       overflow: visible;
       border-bottom: none; } }
 
@@ -680,7 +680,6 @@ blockquote p {
   font-size: 180px; }
 
 .tab-pane {
-  margin-bottom: 100px;
   margin-top: 42px; }
 
 .page-wrapper .container-fluid {
@@ -733,7 +732,7 @@ blockquote p {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 500px; }
+  height: 350px; }
   @media (max-width: 768px) {
     .popout-banner-image {
       height: 250px;
@@ -822,7 +821,7 @@ blockquote p {
   .whyquickbase-container p {
     font-weight: 500; }
   .whyquickbase-container h1 {
-    margin-bottom: 60px; }
+    /*margin-bottom: 60px;*/ }
   .whyquickbase-container .icon-wrapper {
     margin-bottom: 30px; }
 
@@ -954,13 +953,6 @@ blockquote p {
 .consulting-banner {
   height: 275px;
   background-color: #F89C27; }
-
-.tab-consulting .consulting-infographics1 {
-  padding-top: 30px;
-  padding-bottom: 30px; }
-  .tab-consulting .consulting-infographics1 .container {
-    padding-top: 30px;
-    padding-bottom: 30px; }
 
 .tab-consulting .fa {
   font-size: 180px;
