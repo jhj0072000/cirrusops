@@ -2,9 +2,11 @@
 /*  COLORS
 /* ----------------------------------------------------------- */
 $cirrus-blue: #249AD6;
+$cirrus-blue-tint: #4cafe1;
 $cirrus-blue-light: #d9eef9;
 $cirrus-blue-dark: #0780BA;
 $cirrus-green: #81BE41;
+$cirrus-green-tint: #9ecd6d;
 $cirrus-green-light: #67D6BA;
 $cirrus-green-dark: #007D5E;
 $cirrus-purple: #7768ae;
@@ -21,6 +23,7 @@ $pink-light: #fff7f7;
 $white: #fff;
 $blackish: #303442;
 $gray-pale: #f6f6f6;
+$gray-paler: #fbfbfb;
 $gray-light: #b8b8b8;
 $gray-medium: #7d7d7d;
 $gray-dark: #525252;
@@ -220,6 +223,14 @@ ul {
 	linear-gradient(225deg, $gray-pale 22px, $white 22px, $white 24px, transparent 24px, transparent 67px, $white 67px, $white 69px, transparent 69px)0 64px;
 	background-color:$gray-pale;
 	background-size: 64px 128px;
+}
+.background-pattern2 {
+	background:
+	linear-gradient(225deg, $gray-paler 45px, transparent 45px)64px 64px,
+	linear-gradient(225deg, $gray-paler 45px, transparent 45px,transparent 91px, $white 91px, $white 135px, transparent 135px),
+	linear-gradient(-225deg, $gray-paler 23px, transparent 23px, transparent 68px, $gray-paler 68px, $gray-paler 113px,transparent 113px,transparent 158px, $gray-paler 158px);
+	background-color: $white;
+	background-size: 128px 128px;
 }
 .border-bottom-gray {
 	border-bottom: 1px solid $gray-pale;
@@ -482,16 +493,14 @@ color: $blackish;
 }
 .home-cta-content {
 	text-align: center;
-	padding: 50px 0;
-	p {
+	padding: 25px 0;
+	h3 {
 		display: inline-block;
 		color: $white;
-		font-size: 30px;
 		margin: 0;
 		padding: 10px 20px 10px 0;
 		@include note {
 			padding: 10px 20px 10px 0;
-			font-size: 0.925rem;
 		}
 	}
 	button {
@@ -656,7 +665,7 @@ color: $blackish;
 	position: fixed;
 	width: 100%;
 	z-index: 1;
-	height: 42px;
+	height: 40px;
 	background: $cirrus-blue;
 	@include ipad {
 		background: $white;
@@ -707,8 +716,12 @@ color: $blackish;
 }
 #nav-hover {
 	position: absolute;
+	text-align: center;
 	z-index: 100;
-	height: 42px;
+	height: 40px;
+	padding-top: 12px;
+	color: white;
+	font-family: $worksans;
 	top: 0;
 	right: 0;
 	background-color: transparent;
@@ -719,7 +732,7 @@ color: $blackish;
 		background-color: $cirrus-blue;
 		position: relative;
 		/*z-index: 10;*/
-		height: 42px;
+		height: 40px;
 		overflow: visible;
 		border-bottom: none;
 	}
@@ -743,7 +756,7 @@ color: $blackish;
 }
 .responsive-tabs.nav-tabs > li > a {
 	margin-right: 4px;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 300;
 	@include laptop {
 		font-size: 12px;
@@ -819,6 +832,10 @@ color: $blackish;
 			color: $cirrus-blue;
 			border-radius: 0px;
 			border: none;
+			@include ipad {
+				background: $cirrus-blue-dark;
+				color: $white;
+			}
 		}
 	}
 }
@@ -826,24 +843,6 @@ color: $blackish;
 /*--------------------*/
 /* SOLUTIONS */
 /*--------------------*/
-#section-consulting {
-	a {
-		border: 2px solid $cirrus-green;
-		color: $cirrus-green;
-		&:hover{
-			background: $cirrus-green;
-		}
-	}
-}
-#section-spreadsheets {
-	a {
-		border: 2px solid $cirrus-red;
-		color: $cirrus-red;
-		&:hover{
-			background: $cirrus-red;
-		}
-	}
-}
 
 
 
@@ -855,7 +854,7 @@ color: $blackish;
 	}
 }
 .tab-pane {
-	margin-top: 42px;
+	margin-top: 40px;
 }
 .page-wrapper {
 	.container-fluid {
@@ -1048,13 +1047,13 @@ color: $blackish;
 .page-banner {
 	padding: 50px;
 	text-align: center;
-	height: 350px;
+	height: 250px;
 	background: 
 	linear-gradient(
 		rgba(0, 0, 0, 0.45), 
 		rgba(0, 0, 0, 0.45)
 		), 
-	url('http://placehold.it/1600x350') no-repeat center;
+	url('http://placehold.it/1600x250') no-repeat center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -1067,6 +1066,12 @@ color: $blackish;
 	}
 	p {
 		color: $white;
+	}
+}
+.connect-details {
+	.fa {
+		font-size: 100px;
+		color: $cirrus-blue;
 	}
 }
 .connect-banner {
@@ -1200,7 +1205,7 @@ color: $blackish;
 		color: $cirrus-blue-light;
 	}
 	ul {
-		list-style: square inside;
+		list-style: disc outside;
 		line-height: 30px;
 	}
 }
@@ -1338,7 +1343,7 @@ color: $blackish;
 		color: $cirrus-blue;
 	}
 	.fa {
-		color: $gray-medium;
+		color: $cirrus-purple;
 		font-size: 40px;
 		width: 40px;
 		text-align: center;
@@ -1531,30 +1536,8 @@ width: 100%;*/
 .about-right {
 	padding-left: 85px;
 	width: 100%;
-	.about-title {
-		padding-bottom: 15px;
-	}
-	.about-title-line {
-		height: 2px;
-		margin-bottom: 35px;
-		width: 100px;
-	}
-	p {
-		margin-bottom: 32px;
-	}
 	@include laptop {
 		padding-left: 30px;
-		.about-title {
-			padding-bottom: 10px;
-			font-size: 28px;
-		}
-		.about-title-line {
-			margin-bottom: 15px;
-		}
-		p {
-			font-size: 14px;
-			margin-bottom: 6px;
-		}
 	}
 	@include ipad {
 		margin-top: 35px;
@@ -1562,27 +1545,43 @@ width: 100%;*/
 	}
 	@include galaxy {
 		margin-top: 45px;
-		.about-title {
-			font-size: 20px;
-			padding-bottom: 5px;
-		}
-		.about-title-line {
-			width: 60px;
-		}
 	}
 }
-.about-btn-field {
-	float: left;
-	display: inline;
-	margin-top: 14px;
-	width: 100%;
-	@include laptop {
-		margin-top: 0;
+.cirrus-button {
+	display: inline-block;
+	text-align: center;
+    position: relative;
+    font-size: 14px;
+    line-height: 14px;
+    text-decoration: none;
+    border: 1px solid $cirrus-green;
+    border-radius: 3px;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    padding: 15px 25px;
+    margin-top: 15px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $cirrus-green;
+    border-color: $cirrus-green;
+	&:hover{
+		text-decoration: none;
+		background-color: $cirrus-green-tint;
+	    color: $white;
+	    border-color: $cirrus-green-tint;
+	    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.29),0 6px 8px 0 rgba(0,0,0,0.13);
+	}
+	&:focus{
+		background: $cirrus-green-tint;
+		border: none;
+		text-decoration: none;
+		color: $white;
 	}
 	@include ipad {
-		a {
-			margin: 0px;
-		}
+		font-size: 12px;
+		width: 100%;
 	}
 }
 .button {

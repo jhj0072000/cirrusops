@@ -125,6 +125,11 @@ ul {
   background-color: #f6f6f6;
   background-size: 64px 128px; }
 
+.background-pattern2 {
+  background: linear-gradient(225deg, #fbfbfb 45px, transparent 45px) 64px 64px, linear-gradient(225deg, #fbfbfb 45px, transparent 45px, transparent 91px, #fff 91px, #fff 135px, transparent 135px), linear-gradient(-225deg, #fbfbfb 23px, transparent 23px, transparent 68px, #fbfbfb 68px, #fbfbfb 113px, transparent 113px, transparent 158px, #fbfbfb 158px);
+  background-color: #fff;
+  background-size: 128px 128px; }
+
 .border-bottom-gray {
   border-bottom: 1px solid #f6f6f6; }
 
@@ -379,17 +384,15 @@ line-height: 2.9rem;*/
 
 .home-cta-content {
   text-align: center;
-  padding: 50px 0; }
-  .home-cta-content p {
+  padding: 25px 0; }
+  .home-cta-content h3 {
     display: inline-block;
     color: #fff;
-    font-size: 30px;
     margin: 0;
     padding: 10px 20px 10px 0; }
     @media (max-width: 480px) {
-      .home-cta-content p {
-        padding: 10px 20px 10px 0;
-        font-size: 0.925rem; } }
+      .home-cta-content h3 {
+        padding: 10px 20px 10px 0; } }
   .home-cta-content button {
     display: inline-block;
     float: none;
@@ -528,7 +531,7 @@ line-height: 2.9rem;*/
   position: fixed;
   width: 100%;
   z-index: 1;
-  height: 42px;
+  height: 40px;
   background: #249AD6; }
   @media (max-width: 768px) {
     .page-navbar {
@@ -572,8 +575,12 @@ line-height: 2.9rem;*/
 
 #nav-hover {
   position: absolute;
+  text-align: center;
   z-index: 100;
-  height: 42px;
+  height: 40px;
+  padding-top: 12px;
+  color: white;
+  font-family: "Work Sans", sans-serif;
   top: 0;
   right: 0;
   background-color: transparent; }
@@ -585,7 +592,7 @@ line-height: 2.9rem;*/
       background-color: #249AD6;
       position: relative;
       /*z-index: 10;*/
-      height: 42px;
+      height: 40px;
       overflow: visible;
       border-bottom: none; } }
 
@@ -608,7 +615,7 @@ line-height: 2.9rem;*/
 
 .responsive-tabs.nav-tabs > li > a {
   margin-right: 4px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300; }
   @media (max-width: 991px) {
     .responsive-tabs.nav-tabs > li > a {
@@ -677,27 +684,19 @@ line-height: 2.9rem;*/
   color: #249AD6;
   border-radius: 0px;
   border: none; }
+  @media (max-width: 768px) {
+    #solution-menu li .active {
+      background: #0780BA;
+      color: #fff; } }
 
 /*--------------------*/
 /* SOLUTIONS */
 /*--------------------*/
-#section-consulting a {
-  border: 2px solid #81BE41;
-  color: #81BE41; }
-  #section-consulting a:hover {
-    background: #81BE41; }
-
-#section-spreadsheets a {
-  border: 2px solid #E51890;
-  color: #E51890; }
-  #section-spreadsheets a:hover {
-    background: #E51890; }
-
 .tab-subpages .fa {
   font-size: 180px; }
 
 .tab-pane {
-  margin-top: 42px; }
+  margin-top: 40px; }
 
 .page-wrapper .container-fluid {
   padding-left: 0px;
@@ -856,8 +855,8 @@ line-height: 2.9rem;*/
 .page-banner {
   padding: 50px;
   text-align: center;
-  height: 350px;
-  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("http://placehold.it/1600x350") no-repeat center;
+  height: 250px;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("http://placehold.it/1600x250") no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -869,6 +868,10 @@ line-height: 2.9rem;*/
     color: #fff; }
   .page-banner p {
     color: #fff; }
+
+.connect-details .fa {
+  font-size: 100px;
+  color: #249AD6; }
 
 .connect-banner {
   padding: 50px;
@@ -979,7 +982,7 @@ line-height: 2.9rem;*/
   color: #d9eef9; }
 
 .tab-consulting ul {
-  list-style: square inside;
+  list-style: disc outside;
   line-height: 30px; }
 
 @media (max-width: 768px) {
@@ -1087,7 +1090,7 @@ line-height: 2.9rem;*/
     margin-bottom: 10px;
     color: #249AD6; }
   .solution-row .fa {
-    color: #7d7d7d;
+    color: #7768ae;
     font-size: 40px;
     width: 40px;
     text-align: center; }
@@ -1251,49 +1254,51 @@ width: 100%;*/ }
 .about-right {
   padding-left: 85px;
   width: 100%; }
-  .about-right .about-title {
-    padding-bottom: 15px; }
-  .about-right .about-title-line {
-    height: 2px;
-    margin-bottom: 35px;
-    width: 100px; }
-  .about-right p {
-    margin-bottom: 32px; }
   @media (max-width: 991px) {
     .about-right {
-      padding-left: 30px; }
-      .about-right .about-title {
-        padding-bottom: 10px;
-        font-size: 28px; }
-      .about-right .about-title-line {
-        margin-bottom: 15px; }
-      .about-right p {
-        font-size: 14px;
-        margin-bottom: 6px; } }
+      padding-left: 30px; } }
   @media (max-width: 768px) {
     .about-right {
       margin-top: 35px;
       padding-left: 0; } }
   @media (max-width: 360px) {
     .about-right {
-      margin-top: 45px; }
-      .about-right .about-title {
-        font-size: 20px;
-        padding-bottom: 5px; }
-      .about-right .about-title-line {
-        width: 60px; } }
+      margin-top: 45px; } }
 
-.about-btn-field {
-  float: left;
-  display: inline;
-  margin-top: 14px;
-  width: 100%; }
-  @media (max-width: 991px) {
-    .about-btn-field {
-      margin-top: 0; } }
+.cirrus-button {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  font-size: 14px;
+  line-height: 14px;
+  text-decoration: none;
+  border: 1px solid #81BE41;
+  border-radius: 3px;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  padding: 15px 25px;
+  margin-top: 15px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #81BE41;
+  border-color: #81BE41; }
+  .cirrus-button:hover {
+    text-decoration: none;
+    background-color: #9ecd6d;
+    color: #fff;
+    border-color: #9ecd6d;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.29), 0 6px 8px 0 rgba(0, 0, 0, 0.13); }
+  .cirrus-button:focus {
+    background: #9ecd6d;
+    border: none;
+    text-decoration: none;
+    color: #fff; }
   @media (max-width: 768px) {
-    .about-btn-field a {
-      margin: 0px; } }
+    .cirrus-button {
+      font-size: 12px;
+      width: 100%; } }
 
 .button {
   display: inline-block;
