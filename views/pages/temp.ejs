@@ -1,0 +1,48 @@
+<% include ../../partials/head %>
+<% include ../../partials/header %>
+
+<div class="page-wrapper">
+
+	<div class='container-fluid'>
+		<div class='row page-navbar'>
+			<div class='container'>
+				<ul class="nav nav-tabs" role="tablist" id="solutionTab">
+					<li class="active"><a data-target="#quickbase" data-toggle="tab">QuickBase®</a></li>
+					<li><a href="/" data-toggle="tab">Spreadsheet</a></li>
+					<li><a data-target="#consulting" data-toggle="tab">App Software Consulting</a></li>
+					<li><a data-target="#custom" data-toggle="tab">Custom Solutions</a></li>
+					<li><a data-target="#integration" data-toggle="tab">Integrations</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="page-content">
+			<div class="tab-content">
+
+				<!-- Start quickbase content -->
+				<% include ../partials/solutions/quickbase %>
+				<!-- End quickbase content -->
+
+				<!-- Start spreadsheet content -->
+				<% include ../partials/solutions/spreadsheet %>
+				<!-- End spreadsheet content -->
+
+				<!-- Start consulting content -->
+				<% include ../partials/solutions/consulting %>
+				<!-- End consulting content -->
+
+				<!-- Start custom content -->
+				<% include ../partials/solutions/custom-solutions %>
+				<!-- End custom content -->
+
+				<!-- Start integration content -->
+				<% include ../partials/solutions/integrations %>
+				<!-- End integration content -->
+
+			</div>
+			
+		</div>
+	</div>
+
+</div>
+
+<% include ../partials/footer %>

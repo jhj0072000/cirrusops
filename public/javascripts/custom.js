@@ -45,7 +45,7 @@ $(document).ready(function() {
   sync2.owlCarousel({
     touchDrag: false,
     mouseDrag: false,
-    items : 4,
+    items: 4,
     pagination:false,
     responsiveRefreshRate : 100,
     afterInit : function(el){
@@ -83,7 +83,7 @@ $(document).ready(function() {
  
     if(found===false){
       if(num>sync2visible[sync2visible.length-1]){
-        sync2.trigger("owl.goTo", num - sync2visible.length+2)
+        sync2.trigger("owl.goTo", num - sync2visible.length+1)
       }else{
         if(num - 1 === -1){
           num = 0;
@@ -126,83 +126,78 @@ first.toLowerCase();
 firstURL = first.split("/")[1];
 secondURL = first.split("/")[2];
 // MENU HANDLER FOR MAIN NAVBAR
-// if (firstURL == "solution") {
-//   $("#solutionnav").addClass("active");
-// } else if (firstURL == "") {
-//   $("#homenav").addClass("active");
-// } else if (firstURL == "about") {
-//   $("#aboutnav").addClass("active");
-// } else if (firstURL == "connect") {
-//   $("#connectnav").addClass("active");
-// }
-// // SUB MENU HANDLER FOR SOLUTION PAGE
-// if (secondURL == "quickbase") {
-//   $("#quickbasenav").addClass("active");
-// } else if (secondURL == "consulting") {
-//   $("#consultingnav").addClass("active");
-// } else if (secondURL == "spreadsheet") {
-//   $("#spreadsheetnav").addClass("active");
-// }
+if (firstURL == "solution") {
+  $("#solutionnav").addClass("active");
+} else if (firstURL == "") {
+  $("#homenav").addClass("active");
+} else if (firstURL == "about") {
+  $("#aboutnav").addClass("active");
+} else if (firstURL == "connect") {
+  $("#connectnav").addClass("active");
+}
+// SUB MENU HANDLER FOR SOLUTION PAGE
+if (secondURL == "quickbase") {
+  $("#quickbasenav").addClass("active");
+} else if (secondURL == "consulting") {
+  $("#consultingnav").addClass("active");
+} else if (secondURL == "spreadsheet") {
+  $("#spreadsheetnav").addClass("active");
+}
 // SUB MENU HANDLER FOR DETAIL PAGES
-// $(document).ready(function () {
-//     $(document).on("scroll", onScroll);
-//     $('a[href^="#"]').on('click', function (e) {
-//         e.preventDefault();
-//         $(document).off("scroll");
-//         $('a').each(function () {
-//             $(this).removeClass('active');
-//         })
-//         $(this).addClass('active');
-//         var target = this.hash,
-//             menu = target;
-//         $target = $(target);
-//         $('html, body').stop().animate({
-//             'scrollTop': $target.offset().top - 180
-//         }, 500, 'swing', function () {
-//             window.location.hash = target;
-//             $(document).on("scroll", onScroll);
-//         });
-//     });
-// });
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top - 180
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
 
-// function onScroll(event){
-//     var scrollPos = $(document).scrollTop() + 180;
-//     $('#solution-menu a').each(function () {
-//         var currLink = $(this);
-//         var refElement = $(currLink.attr("href"));
-//         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-//             $('#solution-menu ul li a').removeClass("active");
-//             currLink.addClass("active");
-//         }
-//         else{
-//             currLink.removeClass("active");
-//         }
-//     });
-// }
+function onScroll(event){
+    var scrollPos = $(document).scrollTop() + 180;
+    $('#solution-menu a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('#solution-menu ul li a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}
 
 
 
 
 
 // PAGE TABS
-// $.fn.responsiveTabs = function() {
-//   this.addClass('responsive-tabs');
-//   this.append($('<span class="glyphicon glyphicon-triangle-bottom"></span>'));
-//   this.append($('<span class="glyphicon glyphicon-triangle-top"></span>'));
+$.fn.responsiveTabs = function() {
+  this.addClass('responsive-tabs');
+  this.append($('<span class="glyphicon glyphicon-triangle-bottom"></span>'));
+  this.append($('<span class="glyphicon glyphicon-triangle-top"></span>'));
 
-//   this.on('click', 'li.active > a, span.glyphicon', function() {
-//     this.toggleClass('open');
-//   }.bind(this));
+  this.on('click', 'li.active > a, span.glyphicon', function() {
+    this.toggleClass('open');
+  }.bind(this));
 
-//   this.on('click', 'li:not(.active) > a', function() {
-//     this.removeClass('open');
-//   }.bind(this));
-// };
+  this.on('click', 'li:not(.active) > a', function() {
+    this.removeClass('open');
+  }.bind(this));
+};
 
-// $('.nav.nav-tabs').responsiveTabs();
-
-// ANIMATE.CSS
-// $('section').addClass('animated fadeIn');
-
-
+$('.nav.nav-tabs').responsiveTabs();
 

@@ -622,7 +622,7 @@ line-height: 2.9rem;*/
   background-color: transparent; }
 
 .responsive-tabs.nav-tabs {
-  border: none; }
+  border-bottom: none; }
   @media (max-width: 768px) {
     .responsive-tabs.nav-tabs {
       background-color: #249AD6;

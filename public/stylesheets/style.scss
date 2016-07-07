@@ -766,7 +766,7 @@ color: $blackish;
 	background-color: transparent;
 }
 .responsive-tabs.nav-tabs {
-	border: none;
+	border-bottom: none;
 	@include ipad {
 		background-color: $cirrus-blue;
 		position: relative;
