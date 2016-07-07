@@ -768,6 +768,7 @@ color: $blackish;
 	}
 }
 .responsive-tabs.nav-tabs {
+	height: 100%;
 	border-bottom: none;
 	@include ipad {
 		background-color: $cirrus-blue;
@@ -824,6 +825,7 @@ color: $blackish;
 	}
 }
 .responsive-tabs.nav-tabs > li {
+	margin-bottom: 0px;
 	display: block;
 	float: left;
 	@include ipad {
@@ -893,7 +895,7 @@ color: $blackish;
 	}
 }
 .tab-pane {
-	margin-top: 40px;
+	margin-top: 37px;
 }
 .page-wrapper {
 	.container-fluid {
