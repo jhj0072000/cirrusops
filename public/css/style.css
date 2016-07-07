@@ -154,6 +154,9 @@ ul {
 .list-circle {
   list-style: disc outside;
   line-height: 30px; }
+  @media (max-width: 768px) {
+    .list-circle {
+      list-style: disc inside; } }
 
 .vmid {
   vertical-align: middle; }
@@ -524,6 +527,38 @@ line-height: 2.9rem;*/
     .navbar-brand {
       height: 70px; } }
 
+/* Owl carousel */
+#sync1 .item {
+  background: transparent;
+  margin: 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+  #sync1 .item p {
+    font-size: 18px;
+    line-height: 35px;
+    font-style: italic; }
+
+#sync2 {
+  display: flex;
+  align-items: center; }
+  #sync2 .item {
+    background: transparent;
+    padding: 20px;
+    margin: 5px;
+    color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer; }
+
+#sync2 .item {
+  opacity: 0.3; }
+
+#sync2 .synced .item {
+  opacity: 1; }
+
 /*--------------------*/
 /* CONTENT SECTION */
 /*--------------------*/
@@ -560,6 +595,7 @@ line-height: 2.9rem;*/
   color: #fff;
   border: none; }
   .nav-tabs li a:hover {
+    transition: all 0.3s;
     border-radius: 0px;
     cursor: pointer;
     background: #fff;
