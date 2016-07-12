@@ -576,89 +576,89 @@ blockquote p {
 	/*.navbar-header > a {
 		padding-top: 0px;
 		padding-bottom: 0px;
-	}*/
-	.navbar-nav {
-		margin-top: 35px;
-		.active a {
-			background: $white;
-			color: $cirrus-blue;
-			&:hover {
+		}*/
+		.navbar-nav {
+			margin-top: 35px;
+			.active a {
 				background: $white;
 				color: $cirrus-blue;
-			}
-		}
-		li a {
-			line-height: 35px;
-			font-weight: 600;
-			padding-top: 0px;
-			padding-bottom: 0px;
-			letter-spacing: 1.8px;
-			color: $blackish;
-			&:hover {
-				border-bottom: 2px solid $cirrus-blue;
-				background: $white;
-				color: $cirrus-blue;
-			}
-			@include ipad {
-				line-height: 50px;
 				&:hover {
-					border: none;
+					background: $white;
+					color: $cirrus-blue;
+				}
+			}
+			li a {
+				line-height: 35px;
+				font-weight: 600;
+				padding-top: 0px;
+				padding-bottom: 0px;
+				letter-spacing: 1.8px;
+				color: $blackish;
+				&:hover {
+					border-bottom: 2px solid $cirrus-blue;
+					background: $white;
+					color: $cirrus-blue;
+				}
+				@include ipad {
+					line-height: 50px;
+					&:hover {
+						border: none;
+					}
 				}
 			}
 		}
-	}
-	.navbar-toggle {
-		margin-bottom: 0px;
-		margin-top: 15px;
-		border-color: $cirrus-blue;
-		color: $cirrus-blue;
-		&:hover {
-			background-color: $cirrus-blue;
-			color: white;
-		}
-		&:focus {
-			background-color: $cirrus-blue;
-			color: $white;
-		}
-	}
-}
-.navbar-side { 
-	@include ipad {
-		.side-collapse {
-			height: 100vh;
-			left: 0;
-			width: 400px;
-			position: absolute;
-			overflow: auto;
-			z-index: 999;
-			transition: all 0.5s;
-			&:-webkit-scrollbar {
-				display: none;
-			}		
-		}
-		.side-collapse.open {
-			width: 0;
+		.navbar-toggle {
+			margin-bottom: 0px;
+			margin-top: 15px;
+			border-color: $cirrus-blue;
+			color: $cirrus-blue;
+			&:hover {
+				background-color: $cirrus-blue;
+				color: white;
+			}
+			&:focus {
+				background-color: $cirrus-blue;
+				color: $white;
+			}
 		}
 	}
-	@include note {
-		.side-collapse {
-			width: 100%;
+	.navbar-side { 
+		@include ipad {
+			.side-collapse {
+				height: 100vh;
+				left: 0;
+				width: 400px;
+				position: absolute;
+				overflow: auto;
+				z-index: 999;
+				transition: all 0.5s;
+				&:-webkit-scrollbar {
+					display: none;
+				}		
+			}
+			.side-collapse.open {
+				width: 0;
+			}
+		}
+		@include note {
+			.side-collapse {
+				width: 100%;
+			}
 		}
 	}
-}
-.navbar-brand {
-	height: 100px;
-	display: flex;
-	align-items: center;
-	img {
-		height: 50px;
+	.navbar-brand {
+		height: 100px;
+		display: flex;
+		align-items: center;
+		img {
+			height: 50px;
+		}
+		@include ipad {
+			height: 70px;
+		}
 	}
-	@include ipad {
-		height: 70px;
-	}
-}
 
-/* ----------------------------------------------------------- */
+	/* ----------------------------------------------------------- */
 /*  OWN CAROUSEL 
 /* ----------------------------------------------------------- */
 #sync1 .item{
@@ -2210,13 +2210,25 @@ body.down .page-navbar-landing.clone {
 		color: $white;
 	}
 }
-.landing-banner-utah {
+.landing-banner-utah1 {
 	background: 
 	linear-gradient(
 		rgba(0, 0, 0, 0.45), 
 		rgba(0, 0, 0, 0.45)
 		), 
 	url('/images/utah-banner.jpg') no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.landing-banner-utah2 {
+	background: 
+	linear-gradient(
+		rgba(0, 0, 0, 0.45), 
+		rgba(0, 0, 0, 0.45)
+		), 
+	url('/images/utah-banner2.jpg') no-repeat center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -2231,6 +2243,12 @@ body.down .page-navbar-landing.clone {
 		align-items: center;
 	}
 	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.landing-logo {
+	@include ipad {
+		text-align: center;
+		margin-bottom: 10px;
+	}
 }
 
 /* ----------------------------------------------------------- */
