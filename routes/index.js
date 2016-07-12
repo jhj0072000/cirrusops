@@ -18,12 +18,13 @@ router.get('/about', function (req, res, next) {
 	res.render('pages/about');
 });
 
-router.get('/random', function (req, res, next) {
+router.get('/utah', function (req, res, next) {
 	var random = Math.floor(Math.random() * 2) + 1;
+	console.log('hello');
   	if (random == 1) {
-		res.render('pages/1');
+		res.render('landings/utah/utah1');
 	} else {
-		res.render('pages/2');
+		res.render('landings/utah/utah2');
 	}
 });
 
