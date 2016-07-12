@@ -65,7 +65,30 @@ ul {
     .page-wrap {
       margin-top: 110px; } }
 
-/* Color Classes */
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "“" "”" "‘" "’"; }
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em; }
+
+blockquote p {
+  display: inline; }
+
+/* ----------------------------------------------------------- */
+/*  PRESETS
+/* ----------------------------------------------------------- */
+/*--------------------*/
+/* COLORS */
+/*--------------------*/
 #txt-white {
   color: #fff; }
 
@@ -130,13 +153,20 @@ ul {
   background-color: #fff;
   background-size: 128px 128px; }
 
+.background-pattern3 {
+  background: linear-gradient(#ffffff 50%, rgba(255, 255, 255, 0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255, 255, 255, 0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255, 255, 255, 0) 0) 55px 0 #d9eef9;
+  background-size: 110px 200px;
+  background-repeat: repeat-x; }
+
+/*--------------------*/
+/* POSITIONS */
+/*--------------------*/
 .border-bottom-gray {
   border-bottom: 1px solid #f6f6f6; }
 
 .header-margin-bottom {
   margin-bottom: 30px; }
 
-/* Position Presets */
 .no-margin {
   margin: 0px; }
 
@@ -147,22 +177,8 @@ ul {
       padding-right: 15px;
       padding-left: 15px; } }
 
-.list-square {
-  list-style: square inside;
-  line-height: 30px; }
-
-.list-circle {
-  list-style: disc outside;
-  line-height: 30px; }
-  @media (max-width: 768px) {
-    .list-circle {
-      list-style: disc inside; } }
-
 .vmid {
   vertical-align: middle; }
-
-.fw-600 {
-  font-weight: 600; }
 
 .no-abs-padding {
   padding: 0px; }
@@ -232,21 +248,29 @@ ul {
 .begone {
   display: none; }
 
-.underconstruction {
-  top: 50%;
-  left: 50%;
-  width: 30em;
-  margin-top: -9em;
-  /*set to a negative number 1/2 of your height*/
-  margin-left: -15em;
-  /*set to a negative number 1/2 of your width*/
-  border: 1px solid #ccc;
-  background-color: #f3f3f3;
-  position: fixed; }
+/*--------------------*/
+/* ETC */
+/*--------------------*/
+.list-square {
+  list-style: square inside;
+  line-height: 30px; }
 
-/* Scroll to top */
+.list-circle {
+  list-style: disc outside;
+  line-height: 30px; }
+  @media (max-width: 768px) {
+    .list-circle {
+      list-style: disc inside; } }
+
+.fw-600 {
+  font-weight: 600; }
+
+/* ----------------------------------------------------------- */
+/*  SCROLL TO TOP
+/* ----------------------------------------------------------- */
 .scrollToTop {
-  background: #f9f9f9 none repeat scroll 0 0;
+  background: #f6f6f6 none repeat scroll 0 0;
+  opacity: 0.8;
   border-radius: 50%;
   bottom: 60px;
   display: none;
@@ -273,32 +297,9 @@ ul {
     text-decoration: none;
     outline: none; }
 
-blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  quotes: "“" "”" "‘" "’"; }
-
-blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em; }
-
-blockquote p {
-  display: inline; }
-
-/*--------------------*/
-/* HOME HEADER */
-/*--------------------*/
-#header {
-  /*float: left;
-  display: inline;
-  width: 100%;*/ }
-
+/* ----------------------------------------------------------- */
+/*  HEADER 
+/* ----------------------------------------------------------- */
 #home-banner {
   height: 500px;
   background: url("../images/banner_test.jpg") no-repeat left 45% bottom;
@@ -323,11 +324,6 @@ blockquote p {
       padding-left: 0.5rem;
       padding-right: 0.5rem; } }
 
-/*.banner-floater {
-	margin: 0 auto;
-	max-width: 80rem;
-	width: 100%;
-	}*/
 .banner-content {
   font-size: 1.0625rem;
   line-height: 1.6875rem;
@@ -343,27 +339,9 @@ blockquote p {
 
 .banner-h1 {
   margin-bottom: 20px;
-  /*		font-size: 2.9rem;
-  line-height: 2.9rem;*/
   text-transform: none;
   font-weight: 300;
   color: #303442; }
-  @media (max-width: 991px) {
-    .banner-h1 {
-      /*font-size: 2.8125rem;
-      line-height: 3rem;*/ } }
-  @media (max-width: 768px) {
-    .banner-h1 {
-      /*font-size: 2.5rem;
-      line-height: 3rem;*/ } }
-  @media (max-width: 480px) {
-    .banner-h1 {
-      /*font-size: 1.8rem;
-      line-height: 2rem;*/ } }
-  @media (max-width: 360px) {
-    .banner-h1 {
-      /*font-size: 1rem;
-      line-height: 1.3rem;*/ } }
 
 .banner-h3 {
   text-transform: none;
@@ -380,6 +358,17 @@ blockquote p {
       font-size: 1rem;
       line-height: 1.25rem; } }
 
+/* ----------------------------------------------------------- */
+/*  HOMEPAGE 
+/* ----------------------------------------------------------- */
+.home-contact-us {
+  background: linear-gradient(135deg, #f6f6f6 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px), linear-gradient(225deg, #f6f6f6 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px) 0 64px;
+  background-color: #f6f6f6;
+  background-size: 64px 128px; }
+
+/* ----------------------------------------------------------- */
+/*  SUB FOOTER 
+/* ----------------------------------------------------------- */
 .home-cta {
   background: #249AD6; }
   .home-cta .row {
@@ -408,9 +397,9 @@ blockquote p {
   #home-cta-btn:hover {
     background-color: #249AD6; }
 
-/*--------------------*/
-/* NAVIGATION */
-/*--------------------*/
+/* ----------------------------------------------------------- */
+/*  MAIN NAVIGATION 
+/* ----------------------------------------------------------- */
 .nav-wrapper {
   z-index: 999;
   position: fixed;
@@ -455,13 +444,14 @@ blockquote p {
   height: 100px;
   background: #fff;
   border: none;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  /*.navbar-header > a {
+  	padding-top: 0px;
+  	padding-bottom: 0px;
+  }*/ }
   @media (max-width: 768px) {
     .navbar-default {
       height: 70px; } }
-  .navbar-default .navbar-header > a {
-    padding-top: 0px;
-    padding-bottom: 0px; }
   .navbar-default .navbar-nav {
     margin-top: 35px; }
     .navbar-default .navbar-nav .active a {
@@ -525,7 +515,9 @@ blockquote p {
     .navbar-brand {
       height: 70px; } }
 
-/* Owl carousel */
+/* ----------------------------------------------------------- */
+/*  OWN CAROUSEL 
+/* ----------------------------------------------------------- */
 #sync1 .item {
   background: transparent;
   margin: 5px;
@@ -557,11 +549,12 @@ blockquote p {
 #sync2 .synced .item {
   opacity: 1; }
 
-/*--------------------*/
-/* CONTENT SECTION */
-/*--------------------*/
+/* ----------------------------------------------------------- */
+/*  SUB NAVIGATION 
+/* ----------------------------------------------------------- */
 .page-navbar {
   position: fixed;
+  -webkit-transform: translate3d(0, 0, 0);
   width: 100%;
   z-index: 1;
   background: #249AD6; }
@@ -601,7 +594,6 @@ blockquote p {
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus {
   border: none; }
 
-/* PAGE TABS */
 .tab-pane {
   padding: 0px 5px; }
 
@@ -649,8 +641,6 @@ blockquote p {
 
 .responsive-tabs.nav-tabs > li > a {
   margin-right: 4px;
-  /*	font-size: 14px;
-  */
   font-weight: 300; }
   @media (max-width: 991px) {
     .responsive-tabs.nav-tabs > li > a {
@@ -709,11 +699,9 @@ blockquote p {
 .responsive-tabs.nav-tabs.open > li:last-of-type a {
   /*border-radius: 0 0 2px 2px;*/ }
 
-.home-contact-us {
-  background: linear-gradient(135deg, #f6f6f6 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px), linear-gradient(225deg, #f6f6f6 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px) 0 64px;
-  background-color: #f6f6f6;
-  background-size: 64px 128px; }
-
+/* ----------------------------------------------------------- */
+/*  SOLUTIONS 
+/* ----------------------------------------------------------- */
 #solution-menu li .active {
   transition: all 0.5s;
   background: #fff;
@@ -725,9 +713,6 @@ blockquote p {
       background: #0780BA;
       color: #fff; } }
 
-/*--------------------*/
-/* SOLUTIONS */
-/*--------------------*/
 .tab-subpages .fa {
   font-size: 180px; }
 
@@ -744,7 +729,9 @@ blockquote p {
   .page-wrapper {
     margin-top: 0px; } }
 
+/*--------------------*/
 /* QUICKBASE */
+/*--------------------*/
 .features-container h4 {
   font-weight: 500; }
 
@@ -766,10 +753,7 @@ blockquote p {
   top: 15px;
   left: -45px;
   font-family: FontAwesome;
-  font-style: normal;
-  /*@include laptop {
-  	top: -4px;
-  	}*/ }
+  font-style: normal; }
 
 .popout-banner {
   position: relative;
@@ -869,8 +853,6 @@ blockquote p {
   background-color: #fff;
   background-image: linear-gradient(90deg, transparent 79px, #249AD6 79px, #249AD6 81px, transparent 81px), linear-gradient(#f6f6f6 0.1em, transparent 0.1em);
   background-size: 100% 1.2em; }
-  .whyquickbase-container h1 {
-    /*margin-bottom: 60px;*/ }
   .whyquickbase-container .icon-wrapper {
     margin-bottom: 30px; }
     .whyquickbase-container .icon-wrapper p {
@@ -885,7 +867,9 @@ blockquote p {
   .uses-container .uses-list {
     margin-bottom: 50px; }
 
+/*--------------------*/
 /* SPREADSHEETS */
+/*--------------------*/
 .page-banner {
   padding: 50px;
   text-align: center;
@@ -903,32 +887,6 @@ blockquote p {
   .page-banner p {
     color: #fff; }
 
-.connect-details .fa {
-  font-size: 100px;
-  color: #249AD6; }
-
-.connect-banner {
-  padding: 50px;
-  text-align: center;
-  height: 200px;
-  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("http://placehold.it/1600x250") no-repeat center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  @media (max-width: 480px) {
-    .connect-banner {
-      padding: 30px; } }
-  .connect-banner h1 {
-    color: #fff; }
-  .connect-banner p {
-    color: #fff; }
-
-.spreadsheet-wrapper {
-  background: linear-gradient(#ffffff 50%, rgba(255, 255, 255, 0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255, 255, 255, 0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255, 255, 255, 0) 0) 55px 0 #d9eef9;
-  background-size: 110px 200px;
-  background-repeat: repeat-x; }
-
 .spreadsheet-list {
   list-style-image: url("/images/orange_bullet.png");
   list-style-position: inside; }
@@ -940,34 +898,27 @@ blockquote p {
   background-color: #f6f6f6;
   background-size: 64px 128px; }
 
-.tab-spreadsheet {
-  /*.container {
-  	padding-top: 30px;
-  	@include ipad {
-  		padding-top: 15px;
-  	}
-  	}*/ }
-  .tab-spreadsheet .fa {
-    font-size: 180px; }
-  .tab-spreadsheet .spreadsheet-graphic {
-    text-align: center; }
-    .tab-spreadsheet .spreadsheet-graphic i {
-      font-size: 150px;
-      padding: 30px; }
-    .tab-spreadsheet .spreadsheet-graphic .fa {
-      width: 100%; }
-  .tab-spreadsheet blockquote {
-    padding: 50px; }
-    .tab-spreadsheet blockquote p {
-      color: #7d7d7d;
-      font-size: 25px;
-      font-style: italic; }
-      @media (max-width: 480px) {
-        .tab-spreadsheet blockquote p {
-          font-size: 16px; } }
+.tab-spreadsheet .fa {
+  font-size: 180px; }
+.tab-spreadsheet .spreadsheet-graphic {
+  text-align: center; }
+  .tab-spreadsheet .spreadsheet-graphic i {
+    font-size: 150px;
+    padding: 30px; }
+  .tab-spreadsheet .spreadsheet-graphic .fa {
+    width: 100%; }
+.tab-spreadsheet blockquote {
+  padding: 50px; }
+  .tab-spreadsheet blockquote p {
+    color: #7d7d7d;
+    font-size: 25px;
+    font-style: italic; }
     @media (max-width: 480px) {
-      .tab-spreadsheet blockquote {
-        padding: 18px; } }
+      .tab-spreadsheet blockquote p {
+        font-size: 16px; } }
+  @media (max-width: 480px) {
+    .tab-spreadsheet blockquote {
+      padding: 18px; } }
 
 #underline {
   border-bottom: 2px solid #f6f6f6;
@@ -1006,7 +957,9 @@ blockquote p {
   	top: -4px;
   	}*/ }
 
+/*--------------------*/
 /* CONSULTING */
+/*--------------------*/
 .consulting-banner {
   height: 275px;
   background-color: #F89C27; }
@@ -1032,14 +985,11 @@ blockquote p {
   top: 15px;
   left: -45px;
   font-family: FontAwesome;
-  font-style: normal;
-  /*	    @include laptop {
-      	top: -4px;
-      	}*/ }
+  font-style: normal; }
 
-/*--------------------*/
-/* ABOUT */
-/*--------------------*/
+/* ----------------------------------------------------------- */
+/*  ABOUT 
+/* ----------------------------------------------------------- */
 .about-text-box {
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.22);
   position: absolute;
@@ -1811,6 +1761,87 @@ blockquote p {
       font-size: 16px; }
     .crew-address span {
       font-size: 14px; } }
+
+/* ----------------------------------------------------------- */
+/*  CONNECT 
+/* ----------------------------------------------------------- */
+.connect-details .fa {
+  font-size: 100px;
+  color: #249AD6; }
+
+.connect-banner {
+  padding: 50px;
+  text-align: center;
+  height: 200px;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("http://placehold.it/1600x250") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  @media (max-width: 480px) {
+    .connect-banner {
+      padding: 30px; } }
+  .connect-banner h1 {
+    color: #fff; }
+  .connect-banner p {
+    color: #fff; }
+
+/* ----------------------------------------------------------- */
+/* LANDING PAGES
+/* ----------------------------------------------------------- */
+.page-navbar-landing {
+  -webkit-transform: translate3d(0, 0, 0);
+  width: 100%;
+  z-index: 5;
+  background: #249AD6; }
+  @media (max-width: 768px) {
+    .page-navbar-landing {
+      background: #fff;
+      border: none;
+      margin: 0; } }
+  @media (max-width: 768px) {
+    .page-navbar-landing .container {
+      padding: 0; } }
+
+.page-navbar-landing.clone {
+  position: fixed;
+  top: -65px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  transition: all 0.4s ease 0s; }
+
+body.down .page-navbar-landing.clone {
+  top: 40px; }
+
+.landing-banner {
+  margin-top: 70px;
+  padding: 50px;
+  text-align: center;
+  height: 350px; }
+  @media (max-width: 480px) {
+    .landing-banner {
+      padding: 30px; } }
+  .landing-banner h1 {
+    color: #fff; }
+  .landing-banner p {
+    color: #fff; }
+
+.landing-banner-utah {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/utah-banner.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.landing-navbar {
+  background: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2); }
+  .landing-navbar .row {
+    display: flex;
+    align-items: center; }
 
 /* ----------------------------------------------------------- */
 /*  FOOTER

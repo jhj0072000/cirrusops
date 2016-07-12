@@ -18,9 +18,17 @@ router.get('/about', function (req, res, next) {
 	res.render('pages/about');
 });
 
+router.get('/utah1', function (req, res, next) {
+	res.render('landings/utah/utah1');
+});
+router.get('/utah2', function (req, res, next) {
+	res.render('landings/utah/utah2');
+});
+
+
+// UTAH LANDING PAGE //
 router.get('/utah', function (req, res, next) {
 	var random = Math.floor(Math.random() * 2) + 1;
-	console.log('hello');
   	if (random == 1) {
 		res.render('landings/utah/utah1');
 	} else {

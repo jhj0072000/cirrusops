@@ -84,4 +84,3 @@ $.fn.responsiveTabs = function() {
 };
 
 $('.nav.nav-tabs').responsiveTabs();
-

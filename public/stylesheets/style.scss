@@ -161,8 +161,31 @@ ul {
 		margin-top: 110px;
 	}
 }
+blockquote {
+	background: #f9f9f9;
+	border-left: 10px solid #ccc;
+	margin: 1.5em 10px;
+	padding: 0.5em 10px;
+	quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+	color: #ccc;
+	content: open-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: 0.25em;
+	vertical-align: -0.4em;
+}
+blockquote p {
+	display: inline;
+}
 
-/* Color Classes */
+/* ----------------------------------------------------------- */
+/*  PRESETS
+/* ----------------------------------------------------------- */
+/*--------------------*/
+/* COLORS */
+/*--------------------*/
 #txt-white {
 	color: $white;
 }
@@ -232,14 +255,23 @@ ul {
 	background-color: $white;
 	background-size: 128px 128px;
 }
+.background-pattern3 {
+	background: linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
+	radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0,
+	radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 55px 0 $cirrus-blue-light;
+	background-size:110px 200px;
+	background-repeat:repeat-x;
+}
+
+/*--------------------*/
+/* POSITIONS */
+/*--------------------*/
 .border-bottom-gray {
 	border-bottom: 1px solid $gray-pale;
 }
 .header-margin-bottom {
 	margin-bottom: 30px;
 }
-
-/* Position Presets */
 .no-margin {
 	margin: 0px;
 }
@@ -250,22 +282,8 @@ ul {
 		padding-left: 15px;
 	}
 }
-.list-square {
-	list-style: square inside;
-	line-height: 30px;
-}
-.list-circle {
-	list-style: disc outside;
-	line-height: 30px;
-	@include ipad {
-		list-style: disc inside;
-	}
-}
 .vmid {
 	vertical-align: middle;
-}
-.fw-600 {
-	font-weight: 600;
 }
 .no-abs-padding {
 	padding: 0px;
@@ -335,20 +353,31 @@ ul {
 .begone {
 	display: none;
 }
-.underconstruction {
-	top: 50%;
-	left: 50%;
-	width:30em;
-	margin-top: -9em; /*set to a negative number 1/2 of your height*/
-	margin-left: -15em; /*set to a negative number 1/2 of your width*/
-	border: 1px solid #ccc;
-	background-color: #f3f3f3;
-	position:fixed;
+
+/*--------------------*/
+/* ETC */
+/*--------------------*/
+.list-square {
+	list-style: square inside;
+	line-height: 30px;
+}
+.list-circle {
+	list-style: disc outside;
+	line-height: 30px;
+	@include ipad {
+		list-style: disc inside;
+	}
+}
+.fw-600 {
+	font-weight: 600;
 }
 
-/* Scroll to top */
+/* ----------------------------------------------------------- */
+/*  SCROLL TO TOP
+/* ----------------------------------------------------------- */
 .scrollToTop {
-	background: #f9f9f9 none repeat scroll 0 0;
+	background: $gray-pale none repeat scroll 0 0;
+	opacity: 0.8;
 	border-radius: 50%;
 	bottom: 60px;
 	display: none;
@@ -378,33 +407,10 @@ ul {
 		outline: none;
 	}
 }
-blockquote {
-	background: #f9f9f9;
-	border-left: 10px solid #ccc;
-	margin: 1.5em 10px;
-	padding: 0.5em 10px;
-	quotes: "\201C""\201D""\2018""\2019";
-}
-blockquote:before {
-	color: #ccc;
-	content: open-quote;
-	font-size: 4em;
-	line-height: 0.1em;
-	margin-right: 0.25em;
-	vertical-align: -0.4em;
-}
-blockquote p {
-	display: inline;
-}
 
-/*--------------------*/
-/* HOME HEADER */
-/*--------------------*/
-#header {
-	/*float: left;
-	display: inline;
-	width: 100%;*/
-}
+/* ----------------------------------------------------------- */
+/*  HEADER 
+/* ----------------------------------------------------------- */
 #home-banner {
 	height: 500px;
 	background: url("../images/banner_test.jpg") no-repeat left 45% bottom;
@@ -429,11 +435,6 @@ blockquote p {
 		padding-right: 0.5rem;
 	}
 }
-/*.banner-floater {
-	margin: 0 auto;
-	max-width: 80rem;
-	width: 100%;
-	}*/
 .banner-content {
 	font-size: 1.0625rem;
 	line-height: 1.6875rem;
@@ -451,27 +452,9 @@ blockquote p {
 }
 .banner-h1 {
 	margin-bottom: 20px;
-/*		font-size: 2.9rem;
-line-height: 2.9rem;*/
-text-transform: none;
-font-weight: 300;
-color: $blackish;
-@include laptop {
-		/*font-size: 2.8125rem;
-		line-height: 3rem;*/
-	}
-	@include ipad {
-		/*font-size: 2.5rem;
-		line-height: 3rem;*/
-	}
-	@include note {
-		/*font-size: 1.8rem;
-		line-height: 2rem;*/
-	}
-	@include galaxy {
-		/*font-size: 1rem;
-		line-height: 1.3rem;*/
-	}
+	text-transform: none;
+	font-weight: 300;
+	color: $blackish;
 }
 .banner-h3 {
 	text-transform: none;
@@ -488,6 +471,19 @@ color: $blackish;
 		line-height: 1.25rem;
 	}
 }
+/* ----------------------------------------------------------- */
+/*  HOMEPAGE 
+/* ----------------------------------------------------------- */
+.home-contact-us {
+	background:
+	linear-gradient(135deg, $gray-pale 22px, $white 22px, $white 24px, transparent 24px, transparent 67px, $white 67px, $white 69px, transparent 69px),
+	linear-gradient(225deg, $gray-pale 22px, $white 22px, $white 24px, transparent 24px, transparent 67px, $white 67px, $white 69px, transparent 69px)0 64px;
+	background-color:$gray-pale;
+	background-size: 64px 128px;
+}
+/* ----------------------------------------------------------- */
+/*  SUB FOOTER 
+/* ----------------------------------------------------------- */
 .home-cta {
 	background: $cirrus-blue;
 	.row {
@@ -520,9 +516,10 @@ color: $blackish;
 		background-color: $cirrus-blue;
 	}
 }
-/*--------------------*/
-/* NAVIGATION */
-/*--------------------*/
+
+/* ----------------------------------------------------------- */
+/*  MAIN NAVIGATION 
+/* ----------------------------------------------------------- */
 .nav-wrapper {
 	z-index: 999;
 	position: fixed;
@@ -576,10 +573,10 @@ color: $blackish;
 	@include ipad {
 		height: 70px;
 	}
-	.navbar-header > a {
+	/*.navbar-header > a {
 		padding-top: 0px;
 		padding-bottom: 0px;
-	}
+	}*/
 	.navbar-nav {
 		margin-top: 35px;
 		.active a {
@@ -660,47 +657,50 @@ color: $blackish;
 		height: 70px;
 	}
 }
-/* Owl carousel */
+
+/* ----------------------------------------------------------- */
+/*  OWN CAROUSEL 
+/* ----------------------------------------------------------- */
 #sync1 .item{
-    background: transparent;
-    margin: 5px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    p {
-	  	font-size: 18px;
-	  	line-height: 35px;
-	  	font-style: italic;
-	  }
+	background: transparent;
+	margin: 5px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	p {
+		font-size: 18px;
+		line-height: 35px;
+		font-style: italic;
+	}
 }
 #sync2 {
 	display: flex;
 	align-items: center;
 	.item{
-	    background: transparent;
-	    padding: 20px;
-	    margin: 5px;
-	    color: #FFF;
-	    -webkit-border-radius: 3px;
-	    -moz-border-radius: 3px;
-	    border-radius: 3px;
-	    text-align: center;
-	    cursor: pointer;
+		background: transparent;
+		padding: 20px;
+		margin: 5px;
+		color: #FFF;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		text-align: center;
+		cursor: pointer;
 	}
 }
 #sync2 .item {
-  opacity: 0.3;
+	opacity: 0.3;
 }
 #sync2 .synced .item{
 	opacity: 1;
 }
- 
 
-/*--------------------*/
-/* CONTENT SECTION */
-/*--------------------*/
+/* ----------------------------------------------------------- */
+/*  SUB NAVIGATION 
+/* ----------------------------------------------------------- */
 .page-navbar {
 	position: fixed;
+	-webkit-transform: translate3d(0,0,0);
 	width: 100%;
 	z-index: 1;
 	background: $cirrus-blue;
@@ -747,8 +747,6 @@ color: $blackish;
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus {
 	border: none;
 }
-
-/* PAGE TABS */
 .tab-pane {
 	padding: 0px 5px;
 }
@@ -796,8 +794,7 @@ color: $blackish;
 }
 .responsive-tabs.nav-tabs > li > a {
 	margin-right: 4px;
-/*	font-size: 14px;
-*/	font-weight: 300;
+	font-weight: 300;
 	@include laptop {
 		font-size: 12px;
 	}
@@ -858,13 +855,10 @@ color: $blackish;
 .responsive-tabs.nav-tabs.open > li:last-of-type a {
 	/*border-radius: 0 0 2px 2px;*/
 }
-.home-contact-us {
-	background:
-	linear-gradient(135deg, $gray-pale 22px, $white 22px, $white 24px, transparent 24px, transparent 67px, $white 67px, $white 69px, transparent 69px),
-	linear-gradient(225deg, $gray-pale 22px, $white 22px, $white 24px, transparent 24px, transparent 67px, $white 67px, $white 69px, transparent 69px)0 64px;
-	background-color:$gray-pale;
-	background-size: 64px 128px;
-}
+
+/* ----------------------------------------------------------- */
+/*  SOLUTIONS 
+/* ----------------------------------------------------------- */
 #solution-menu {
 	li {
 		.active {
@@ -880,15 +874,6 @@ color: $blackish;
 		}
 	}
 }
-
-/*--------------------*/
-/* SOLUTIONS */
-/*--------------------*/
-
-
-
-
-
 .tab-subpages {
 	.fa {
 		font-size: 180px;
@@ -910,7 +895,10 @@ color: $blackish;
 		margin-top: 0px;
 	}
 }
+
+/*--------------------*/
 /* QUICKBASE */
+/*--------------------*/
 .features-container {
 	h4 {
 		font-weight: 500;
@@ -936,10 +924,7 @@ color: $blackish;
 		left: -45px;
 		font-family: FontAwesome;
 		font-style: normal;
-    /*@include laptop {
-    	top: -4px;
-    	}*/
-    }
+	}
 }
 .popout-banner {
 	position: relative;
@@ -1058,9 +1043,6 @@ color: $blackish;
 	linear-gradient(90deg, transparent 79px, $cirrus-blue 79px, $cirrus-blue 81px, transparent 81px),
 	linear-gradient($gray-pale .1em, transparent .1em);
 	background-size: 100% 1.2em;
-	h1 {
-		/*margin-bottom: 60px;*/
-	}
 	.icon-wrapper {
 		margin-bottom: 30px;
 		p {
@@ -1084,7 +1066,9 @@ color: $blackish;
 
 
 
+/*--------------------*/
 /* SPREADSHEETS */
+/*--------------------*/
 .page-banner {
 	padding: 50px;
 	text-align: center;
@@ -1109,43 +1093,9 @@ color: $blackish;
 		color: $white;
 	}
 }
-.connect-details {
-	.fa {
-		font-size: 100px;
-		color: $cirrus-blue;
-	}
-}
-.connect-banner {
-	padding: 50px;
-	text-align: center;
-	height: 200px;
-	background: 
-	linear-gradient(
-		rgba(0, 0, 0, 0.45), 
-		rgba(0, 0, 0, 0.45)
-		), 
-	url('http://placehold.it/1600x250') no-repeat center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	@include note {
-		padding: 30px;
-	}
-	h1 {
-		color: $white;
-	}
-	p {
-		color: $white;
-	}
-}
-.spreadsheet-wrapper {
-	background: linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
-	radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0,
-	radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 55px 0 $cirrus-blue-light;
-	background-size:110px 200px;
-	background-repeat:repeat-x;
-}
+
+
+
 .spreadsheet-list {
 	list-style-image: url('/images/orange_bullet.png');
 	list-style-position: inside;
@@ -1161,12 +1111,6 @@ color: $blackish;
 	background-size: 64px 128px;
 }
 .tab-spreadsheet {
-/*.container {
-	padding-top: 30px;
-	@include ipad {
-		padding-top: 15px;
-	}
-	}*/
 	.fa {
 		font-size: 180px;
 	}
@@ -1235,7 +1179,9 @@ color: $blackish;
     }
 }
 
+/*--------------------*/
 /* CONSULTING */
+/*--------------------*/
 .consulting-banner {
 	height: 275px;
 	background-color: $cirrus-orange;
@@ -1267,17 +1213,14 @@ color: $blackish;
 		left: -45px;
 		font-family: FontAwesome;
 		font-style: normal;
-/*	    @include laptop {
-    	top: -4px;
-    	}*/
-    }
+	}
 }
 
 
 
-/*--------------------*/
-/* ABOUT */
-/*--------------------*/
+/* ----------------------------------------------------------- */
+/*  ABOUT 
+/* ----------------------------------------------------------- */
 .about-text-box {
 	box-shadow: 0 20px 40px 0 rgba(0,0,0,0.22);
 	position: absolute;
@@ -1591,28 +1534,28 @@ width: 100%;*/
 .cirrus-button {
 	display: inline-block;
 	text-align: center;
-    position: relative;
-    font-size: 14px;
-    line-height: 14px;
-    text-decoration: none;
-    border: 1px solid $cirrus-green;
-    border-radius: 3px;
-    transition: all 0.3s ease-out;
-    cursor: pointer;
-    padding: 15px 25px;
-    margin-top: 15px;
-    font-weight: 500;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: $white;
-    background-color: $cirrus-green;
-    border-color: $cirrus-green;
+	position: relative;
+	font-size: 14px;
+	line-height: 14px;
+	text-decoration: none;
+	border: 1px solid $cirrus-green;
+	border-radius: 3px;
+	transition: all 0.3s ease-out;
+	cursor: pointer;
+	padding: 15px 25px;
+	margin-top: 15px;
+	font-weight: 500;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	color: $white;
+	background-color: $cirrus-green;
+	border-color: $cirrus-green;
 	&:hover{
 		text-decoration: none;
 		background-color: $cirrus-green-tint;
-	    color: $white;
-	    border-color: $cirrus-green-tint;
-	    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.29),0 6px 8px 0 rgba(0,0,0,0.13);
+		color: $white;
+		border-color: $cirrus-green-tint;
+		box-shadow: 0 2px 3px 0 rgba(0,0,0,0.29),0 6px 8px 0 rgba(0,0,0,0.13);
 	}
 	&:focus{
 		background: $cirrus-green-tint;
@@ -2189,6 +2132,106 @@ li {
 	}
 }
 
+/* ----------------------------------------------------------- */
+/*  CONNECT 
+/* ----------------------------------------------------------- */
+.connect-details {
+	.fa {
+		font-size: 100px;
+		color: $cirrus-blue;
+	}
+}
+.connect-banner {
+	padding: 50px;
+	text-align: center;
+	height: 200px;
+	background: 
+	linear-gradient(
+		rgba(0, 0, 0, 0.45), 
+		rgba(0, 0, 0, 0.45)
+		), 
+	url('http://placehold.it/1600x250') no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	@include note {
+		padding: 30px;
+	}
+	h1 {
+		color: $white;
+	}
+	p {
+		color: $white;
+	}
+}
+/* ----------------------------------------------------------- */
+/* LANDING PAGES
+/* ----------------------------------------------------------- */
+.page-navbar-landing {
+	-webkit-transform: translate3d(0,0,0);
+	width: 100%;
+	z-index: 5;
+	background: $cirrus-blue;
+	@include ipad {
+		background: $white;
+		border: none;
+		margin: 0;
+	}
+	.container {
+		@include ipad {
+			padding: 0;
+		}
+	}
+}
+.page-navbar-landing.clone {
+	position:fixed;
+	top:-65px;
+	left: 0;
+	right: 0;
+	z-index:999;
+	transition: all 0.4s ease 0s;
+}
+body.down .page-navbar-landing.clone {
+	top: 40px;
+}
+.landing-banner {
+	margin-top: 70px;
+	padding: 50px;
+	text-align: center;
+	height: 350px;
+	@include note {
+		padding: 30px;
+	}
+	h1 {
+		color: $white;
+	}
+	p {
+		color: $white;
+	}
+}
+.landing-banner-utah {
+	background: 
+	linear-gradient(
+		rgba(0, 0, 0, 0.45), 
+		rgba(0, 0, 0, 0.45)
+		), 
+	url('/images/utah-banner.jpg') no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.landing-navbar {
+	background: $white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	.row {
+		display: flex;
+		align-items: center;
+	}
+	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+}
 
 /* ----------------------------------------------------------- */
 /*  FOOTER
