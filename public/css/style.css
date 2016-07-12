@@ -897,6 +897,12 @@ blockquote p {
   background: linear-gradient(135deg, #f6f6f6 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px), linear-gradient(225deg, #f6f6f6 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px) 0 64px;
   background-color: #f6f6f6;
   background-size: 64px 128px; }
+  @media (max-width: 768px) {
+    .request-wrapper {
+      margin-left: -30px;
+      margin-right: -30px;
+      padding-right: 35px;
+      padding-left: 35px; } }
 
 .tab-spreadsheet .fa {
   font-size: 180px; }
@@ -1819,6 +1825,9 @@ body.down .page-navbar-landing.clone {
   padding: 50px;
   text-align: center;
   height: 350px; }
+  @media (max-width: 768px) {
+    .landing-banner {
+      margin-top: 126px; } }
   @media (max-width: 480px) {
     .landing-banner {
       padding: 30px; } }
@@ -1854,6 +1863,13 @@ body.down .page-navbar-landing.clone {
   .landing-logo {
     text-align: center;
     margin-bottom: 10px; } }
+
+.landing-quote p {
+  font-size: 25px;
+  font-style: italic; }
+  @media (max-width: 768px) {
+    .landing-quote p {
+      font-size: 17px; } }
 
 /* ----------------------------------------------------------- */
 /*  FOOTER

@@ -18,21 +18,21 @@ router.get('/about', function (req, res, next) {
 	res.render('pages/about');
 });
 
+// UTAH LANDING PAGE //
 router.get('/utah1', function (req, res, next) {
 	res.render('landings/utah/utah1');
 });
+
 router.get('/utah2', function (req, res, next) {
 	res.render('landings/utah/utah2');
 });
 
-
-// UTAH LANDING PAGE //
 router.get('/utah', function (req, res, next) {
 	var random = Math.floor(Math.random() * 2) + 1;
   	if (random == 1) {
-		res.render('landings/utah/utah1');
+		res.redirect('/utah1');
 	} else {
-		res.render('landings/utah/utah2');
+		res.redirect('/utah2');
 	}
 });
 
