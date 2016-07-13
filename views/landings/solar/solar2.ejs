@@ -10,7 +10,7 @@
 				<div class="col-md-6 col-sm-6 col-xs-12 landing-logo">
 					<a href="/solar"><img src="/images/logo_v2.png" style="height:50px"></a>
 				</div>
-				<div class="col-md-6 col-sm-6 col-xs-12 txt-right">
+				<div class="col-md-6 col-sm-6 col-xs-12 txt-right landing-cta">
 					<a class="cirrus-button" style="margin-top:0px;">demo</a>
 				</div>
 			</div>
@@ -22,72 +22,18 @@
 			<h1>Capture What Makes Your Business Great</h1>
 			<div id="underline"></div>
 			<h4 id="txt-white">With customized applications you can easily integrate your business data and processes.</h4>
+			<div class="landing-banner-cta">
+				<a href="#request-demo" class="cirrus-button">Request a Demo</a>
+			</div>
 		</div>
 	</div>
 	<div class="container-fluid padding-50 no-padding-side">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5">
-					<h3>Turn your data and processes into valuable tools again with CirrusOps. Discover how our custom application solutions can get you more meaningful progress reports, centralized workflows, and automated processes. Begin now with a free consultation.</h3>
+					<h4>Turn your data and processes into valuable tools again with CirrusOps. Discover how our custom application solutions can get you more meaningful progress reports, centralized workflows, and automated processes. Begin now with a free consultation.</h4>
 				</div>
 				<div class="col-md-1">
-				</div>
-				<div class="col-md-6 padding-30 request-wrapper">
-					<h2 id="txt-red" class="header-margin-bottom">Request a Demo</h2>
-					<form role="form" id="contact-form" class="contact-form">
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<input type="text" class="form-control" name="FirstName" autocomplete="off" id="firstName" placeholder="First Name*">
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<input type="text" class="form-control" name="LastName" autocomplete="off" id="lastName" placeholder="Last Name*">
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="form-group">
-									<input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="E-mail*">
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<input id="phoneNumber" type="text" class="form-control" name="phoneNumber" placeholder="Phone Number">
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<div class="input-group bootstrap-timepicker timepicker">
-										<input id="contactTime" type="text" name="contactTime" class="form-control input-small" placeholder="What time should we call?">
-										<span class="input-group-addon">
-											<i class="glyphicon glyphicon-time"></i>
-										</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="form-group">
-									<textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="How can we help?*"></textarea>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12 txt-center">
-								<a class="cirrus-button" href="#">
-									submit
-								</a>
-							</div>
-						</div>
-					</form>
 				</div>
 			</div>
 		</div>
@@ -100,7 +46,69 @@
 			</blockquote>
 		</div>
 	</div>
-
+	<div class="container-fluid" id="request-demo" ng-controller="ScrollController2">
+		<div class="row">
+			<div class="col-md-6 col-md-push-6 padding-50 background-blackish">
+				<h2 id="txt-white" class="header-margin-bottom txt-center">Request a Demo</h2>
+				<form role="form" id="contact-form" class="contact-form">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" class="form-control" name="FirstName" autocomplete="off" id="firstName" placeholder="First Name*">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" class="form-control" name="LastName" autocomplete="off" id="lastName" placeholder="Last Name*">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="E-mail*">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<input id="phoneNumber" type="text" class="form-control" name="phoneNumber" placeholder="Phone Number">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<div class="input-group bootstrap-timepicker timepicker">
+									<input id="contactTime" type="text" name="contactTime" class="form-control input-small" placeholder="What time should we call you?">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-time"></i>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="How can we help?*"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 txt-center">
+							<a class="landing-button" href="#">
+								submit
+							</a>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-6 col-md-pull-6 landing-image-right">
+			</div>
+		</div>
+	</div>
 
 
 

@@ -21,7 +21,10 @@
 		<div class="container">
 			<div class="col-md-6 vcenter">
 				<h1>Discover Customized Solutions for Your Business</h1>
-				<h3 id="txt-white">With customized applications you can easily integrate your business data and processes.</h3>
+				<h4 id="txt-white">With customized applications you can easily integrate your business data and processes.</h4>
+				<div class="landing-banner-cta">
+					<a href="#request-demo" class="landing-button">Request a Demo</a>
+				</div>
 			</div>
 			<div class="col-md-1">
 			</div>
@@ -102,65 +105,67 @@
 			</div>
 		</div>
 	</div>
-	<div class="container-fluid no-padding">
-		<div class="col-md-6 landing-image-right">
-		</div>
-		<div class="col-md-6 padding-50 background-blackish">
-			<h2 id="txt-white" class="header-margin-bottom txt-center">Request a Demo</h2>
-			<form role="form" id="contact-form" class="contact-form">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="form-group">
-							<input type="text" class="form-control" name="FirstName" autocomplete="off" id="firstName" placeholder="First Name*">
+	<div class="container-fluid" id="request-demo" ng-controller="ScrollController2">
+		<div class="row">
+			<div class="col-md-6 col-md-push-6 padding-50 background-blackish">
+				<h2 id="txt-white" class="header-margin-bottom txt-center">Request a Demo</h2>
+				<form role="form" id="contact-form" class="contact-form">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" class="form-control" name="FirstName" autocomplete="off" id="firstName" placeholder="First Name*">
+							</div>
 						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="form-group">
-							<input type="text" class="form-control" name="LastName" autocomplete="off" id="lastName" placeholder="Last Name*">
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="form-group">
-							<input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="E-mail*">
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6">
-						<div class="form-group">
-							<input id="phoneNumber" type="text" class="form-control" name="phoneNumber" placeholder="Phone Number">
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6">
-						<div class="form-group">
-							<div class="input-group bootstrap-timepicker timepicker">
-								<input id="contactTime" type="text" name="contactTime" class="form-control input-small" placeholder="What time should we call you?">
-								<span class="input-group-addon">
-									<i class="glyphicon glyphicon-time"></i>
-								</span>
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" class="form-control" name="LastName" autocomplete="off" id="lastName" placeholder="Last Name*">
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="form-group">
-							<textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="How can we help?*"></textarea>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="E-mail*">
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 txt-center">
-						<a class="landing-button" href="#">
-							submit
-						</a>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<input id="phoneNumber" type="text" class="form-control" name="phoneNumber" placeholder="Phone Number">
+							</div>
+						</div>
 					</div>
-				</div>
-			</form>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<div class="input-group bootstrap-timepicker timepicker">
+									<input id="contactTime" type="text" name="contactTime" class="form-control input-small" placeholder="What time should we call you?">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-time"></i>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="How can we help?*"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 txt-center">
+							<a class="landing-button" href="#">
+								submit
+							</a>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-6 col-md-pull-6 landing-image-right">
+			</div>
 		</div>
 	</div>
 	<div class="container-fluid padding-50 background-gray-pale">
