@@ -36,4 +36,30 @@ router.get('/utah', function (req, res, next) {
 	}
 });
 
+// SOLAR //
+router.get('/solar1', function (req, res, next) {
+	res.render('landings/solar/solar1');
+});
+
+router.get('/solar2', function (req, res, next) {
+	res.render('landings/solar/solar2');
+});
+
+router.get('/solar', function (req, res, next) {
+	var random = Math.floor(Math.random() * 2) + 1;
+  	if (random == 1) {
+		res.redirect('/solar1');
+	} else {
+		res.redirect('/solar2');
+	}
+});
+
+
+
+
+
+
+
+
+
 module.exports = router;

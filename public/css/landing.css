@@ -1,0 +1,104 @@
+/* ----------------------------------------------------------- */
+/*  COLORS
+/* ----------------------------------------------------------- */
+/* Theme Colors */
+/* ----------------------------------------------------------- */
+/*  FONTS
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+/*  MEDIA QUERIES SETTINGS
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+/* LANDING PAGES
+/* ----------------------------------------------------------- */
+.page-navbar-landing {
+  -webkit-transform: translate3d(0, 0, 0);
+  width: 100%;
+  z-index: 5;
+  background: #249AD6; }
+  @media (max-width: 768px) {
+    .page-navbar-landing {
+      background: #fff;
+      border: none;
+      margin: 0; } }
+  @media (max-width: 768px) {
+    .page-navbar-landing .container {
+      padding: 0; } }
+
+.page-navbar-landing.clone {
+  position: fixed;
+  top: -65px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  transition: all 0.4s ease 0s; }
+
+body.down .page-navbar-landing.clone {
+  top: 40px; }
+
+.landing-banner {
+  margin-top: 70px;
+  padding: 50px;
+  text-align: center;
+  height: 350px; }
+  @media (max-width: 768px) {
+    .landing-banner {
+      margin-top: 126px; } }
+  @media (max-width: 480px) {
+    .landing-banner {
+      padding: 30px; } }
+  .landing-banner h1 {
+    color: #fff; }
+  .landing-banner p {
+    color: #fff; }
+
+.landing-banner-utah1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/utah-banner.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.landing-banner-utah2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/utah-banner2.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.landing-banner-solar1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/solar-banner1.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.landing-banner-solar2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/solar-banner2.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.landing-navbar {
+  background: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2); }
+  .landing-navbar .row {
+    display: flex;
+    align-items: center; }
+
+@media (max-width: 768px) {
+  .landing-logo {
+    text-align: center;
+    margin-bottom: 10px; } }
+
+.landing-quote p {
+  font-size: 25px;
+  font-style: italic; }
+  @media (max-width: 768px) {
+    .landing-quote p {
+      font-size: 17px; } }
+
+/*# sourceMappingURL=landing.css.map */

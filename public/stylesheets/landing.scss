@@ -1,0 +1,226 @@
+/* ----------------------------------------------------------- */
+/*  COLORS
+/* ----------------------------------------------------------- */
+$cirrus-blue: #249AD6;
+$cirrus-blue-tint: #4cafe1;
+$cirrus-blue-light: #d9eef9;
+$cirrus-blue-dark: #0780BA;
+$cirrus-green: #81BE41;
+$cirrus-green-tint: #9ecd6d;
+$cirrus-green-light: #67D6BA;
+$cirrus-green-dark: #007D5E;
+$cirrus-purple: #7768ae;
+$cirrus-purple-light: #E1D1F6;
+$cirrus-purple-dark: #5F349C;
+$cirrus-red: #E51890;
+$cirrus-red-light: #FF6186;
+$cirrus-red-dark: #F00038;
+$cirrus-orange: #F89C27;
+$cirrus-orange-light: #FFAE89;
+$cirrus-orange-dark: #B63B03;
+$red-pale: #fffefe;
+$pink-light: #fff7f7;
+$white: #fff;
+$blackish: #303442;
+$gray-pale: #f6f6f6;
+$gray-paler: #fbfbfb;
+$gray-light: #b8b8b8;
+$gray-medium: #7d7d7d;
+$gray-dark: #525252;
+
+/* Theme Colors */
+$theme-green: #1CB891;
+$theme-green-light: #67D6BA;
+$theme-green-dark: #007D5E;
+$theme-blue: #46A9D9;
+$theme-blue-light: #9CD5F1;
+$theme-blue-dark: #0780BA;
+$theme-purple: #9974CE;
+$theme-purple-light: #E1D1F6;
+$theme-purple-dark: #5F349C;
+$theme-red: #FF003B;
+$theme-red-light: #FF6186;
+$theme-red-dark: #F00038;
+$theme-orange: #FF783B;
+$theme-orange-light: #FFAE89;
+$theme-orange-dark: #B63B03;
+$theme-yellow: #F1C40F;
+
+
+/* ----------------------------------------------------------- */
+/*  FONTS
+/* ----------------------------------------------------------- */
+$opensans: 'Open Sans', sans-serif;
+$raleway: 'Raleway', sans-serif;
+$mainfont: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+$titillium: 'Titillium Web', sans-serif;
+$sourcesans: 'Source Sans Pro',sans-serif;
+$josefinsans: 'Josefin Sans', sans-serif;
+$poppin: 'Poppins', sans-serif;
+$muli: 'Muli', sans-serif;
+$lato: 'Lato', sans-serif;
+$slabo: 'Slabo 13px', serif;
+$worksans: 'Work Sans', sans-serif;
+
+/* ----------------------------------------------------------- */
+/*  MEDIA QUERIES SETTINGS
+/* ----------------------------------------------------------- */
+$desktop-width: 1199px;
+$laptop-width: 991px;
+$ipad-width: 768px;
+$note-width: 480px;
+$galaxy-width: 360px;
+$iphone-width: 320px;
+
+@mixin desktop {
+	@media (max-width: #{$desktop-width}) {
+		@content;
+	}
+}
+@mixin laptop {
+	@media (max-width: #{$laptop-width}) {
+		@content;
+	}
+}
+@mixin ipad {
+	@media (max-width: #{$ipad-width}) {
+		@content;
+	}
+}
+@mixin note {
+	@media (max-width: #{$note-width}) {
+		@content;
+	}
+}
+@mixin galaxy {
+	@media (max-width: #{$galaxy-width}) {
+		@content;
+	}
+}
+@mixin iphone {
+	@media (max-width: #{$iphone-width}) {
+		@content;
+	}
+}
+
+/* ----------------------------------------------------------- */
+/* LANDING PAGES
+/* ----------------------------------------------------------- */
+.page-navbar-landing {
+	-webkit-transform: translate3d(0,0,0);
+	width: 100%;
+	z-index: 5;
+	background: $cirrus-blue;
+	@include ipad {
+		background: $white;
+		border: none;
+		margin: 0;
+	}
+	.container {
+		@include ipad {
+			padding: 0;
+		}
+	}
+}
+.page-navbar-landing.clone {
+	position:fixed;
+	top:-65px;
+	left: 0;
+	right: 0;
+	z-index:999;
+	transition: all 0.4s ease 0s;
+}
+body.down .page-navbar-landing.clone {
+	top: 40px;
+}
+.landing-banner {
+	margin-top: 70px;
+	padding: 50px;
+	text-align: center;
+	height: 350px;
+	@include ipad {
+		margin-top: 126px;
+	}
+	@include note {
+		padding: 30px;
+	}
+	h1 {
+		color: $white;
+	}
+	p {
+		color: $white;
+	}
+}
+.landing-banner-utah1 {
+	background: 
+	linear-gradient(
+		rgba(0, 0, 0, 0.45), 
+		rgba(0, 0, 0, 0.45)
+		), 
+	url('/images/utah-banner.jpg') no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.landing-banner-utah2 {
+	background: 
+	linear-gradient(
+		rgba(0, 0, 0, 0.45), 
+		rgba(0, 0, 0, 0.45)
+		), 
+	url('/images/utah-banner2.jpg') no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.landing-banner-solar1 {
+	background: 
+	linear-gradient(
+		rgba(0, 0, 0, 0.45), 
+		rgba(0, 0, 0, 0.45)
+		), 
+	url('/images/solar-banner1.jpg') no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.landing-banner-solar2 {
+	background: 
+	linear-gradient(
+		rgba(0, 0, 0, 0.45), 
+		rgba(0, 0, 0, 0.45)
+		), 
+	url('/images/solar-banner2.jpg') no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.landing-navbar {
+	background: $white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	.row {
+		display: flex;
+		align-items: center;
+	}
+	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.landing-logo {
+	@include ipad {
+		text-align: center;
+		margin-bottom: 10px;
+	}
+}
+.landing-quote {
+	p {
+		font-size: 25px;
+		font-style: italic;
+		@include ipad {
+			font-size: 17px;
+		}
+	}
+}
