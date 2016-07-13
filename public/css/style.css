@@ -116,6 +116,9 @@ blockquote p {
 #txt-black {
   color: #303442; }
 
+#txt-yellow {
+  color: #F1C40F; }
+
 #txt-gray-pale {
   color: #f6f6f6; }
 
@@ -176,6 +179,10 @@ blockquote p {
     .no-padding {
       padding-right: 15px;
       padding-left: 15px; } }
+
+.no-padding-side {
+  padding-left: 0px;
+  padding-right: 0px; }
 
 .vmid {
   vertical-align: middle; }

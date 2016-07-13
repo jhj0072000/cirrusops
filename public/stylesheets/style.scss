@@ -18,6 +18,8 @@ $cirrus-red-dark: #F00038;
 $cirrus-orange: #F89C27;
 $cirrus-orange-light: #FFAE89;
 $cirrus-orange-dark: #B63B03;
+$cirrus-yellow: #F1C40F;
+$cirrus-yellow-tint: #f5d659;
 $red-pale: #fffefe;
 $pink-light: #fff7f7;
 $white: #fff;
@@ -213,6 +215,9 @@ blockquote p {
 #txt-black {
 	color: $blackish;
 }
+#txt-yellow {
+	color: $cirrus-yellow;
+}
 #txt-gray-pale {
 	color: $gray-pale;
 }
@@ -281,6 +286,10 @@ blockquote p {
 		padding-right: 15px;
 		padding-left: 15px;
 	}
+}
+.no-padding-side {
+	padding-left: 0px;
+	padding-right: 0px;
 }
 .vmid {
 	vertical-align: middle;

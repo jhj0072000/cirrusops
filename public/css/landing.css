@@ -25,6 +25,9 @@
     .page-navbar-landing .container {
       padding: 0; } }
 
+.nav-wrapper {
+  position: fixed; }
+
 .page-navbar-landing.clone {
   position: fixed;
   top: -65px;
@@ -36,21 +39,9 @@
 body.down .page-navbar-landing.clone {
   top: 40px; }
 
-.landing-banner {
-  margin-top: 70px;
-  padding: 50px;
-  text-align: center;
-  height: 350px; }
-  @media (max-width: 768px) {
-    .landing-banner {
-      margin-top: 126px; } }
-  @media (max-width: 480px) {
-    .landing-banner {
-      padding: 30px; } }
-  .landing-banner h1 {
-    color: #fff; }
-  .landing-banner p {
-    color: #fff; }
+@media (max-width: 768px) {
+  .landing-cta {
+    display: none; } }
 
 .landing-banner-utah1 {
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/utah-banner.jpg") no-repeat center;
@@ -67,23 +58,52 @@ body.down .page-navbar-landing.clone {
   background-size: cover; }
 
 .landing-banner-solar1 {
+  margin-top: 90px;
+  height: 600px;
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/solar-banner1.jpg") no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+  .landing-banner-solar1 .container {
+    height: 100%; }
+  @media (max-width: 991px) {
+    .landing-banner-solar1 {
+      height: 450px; } }
+  @media (max-width: 480px) {
+    .landing-banner-solar1 {
+      padding: 30px; } }
+  .landing-banner-solar1 h1 {
+    color: #fff; }
+  .landing-banner-solar1 p {
+    color: #fff; }
 
 .landing-banner-solar2 {
+  margin-top: 90px;
+  text-align: center;
+  height: 600px;
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/images/solar-banner2.jpg") no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+  .landing-banner-solar2 .container {
+    height: 100%; }
+  @media (max-width: 991px) {
+    .landing-banner-solar2 {
+      height: 450px; } }
+  @media (max-width: 480px) {
+    .landing-banner-solar2 {
+      padding: 30px; } }
+  .landing-banner-solar2 h1 {
+    color: #fff; }
+  .landing-banner-solar2 p {
+    color: #fff; }
 
 .landing-navbar {
   background: #fff;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2); }
   .landing-navbar .row {
     display: flex;
@@ -94,11 +114,57 @@ body.down .page-navbar-landing.clone {
     text-align: center;
     margin-bottom: 10px; } }
 
+.landing-banner-form1 {
+  padding: 30px;
+  padding-top: 50px;
+  background: #303442;
+  height: 100%; }
+  .landing-banner-form1 h2 {
+    color: #fff; }
+  @media (max-width: 991px) {
+    .landing-banner-form1 {
+      display: none; } }
+
 .landing-quote p {
   font-size: 25px;
   font-style: italic; }
   @media (max-width: 768px) {
     .landing-quote p {
       font-size: 17px; } }
+
+.landing-button {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  font-size: 14px;
+  line-height: 14px;
+  text-decoration: none;
+  border: 1px solid #F1C40F;
+  border-radius: 3px;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  padding: 15px 25px;
+  margin-top: 15px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #F1C40F;
+  border-color: #F1C40F; }
+  .landing-button:hover {
+    text-decoration: none;
+    background-color: #f5d659;
+    color: #fff;
+    border-color: #f5d659;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.29), 0 6px 8px 0 rgba(0, 0, 0, 0.13); }
+  .landing-button:focus {
+    background: #f5d659;
+    border: none;
+    text-decoration: none;
+    color: #fff; }
+  @media (max-width: 768px) {
+    .landing-button {
+      font-size: 12px;
+      width: 100%; } }
 
 /*# sourceMappingURL=landing.css.map */

@@ -18,6 +18,8 @@ $cirrus-red-dark: #F00038;
 $cirrus-orange: #F89C27;
 $cirrus-orange-light: #FFAE89;
 $cirrus-orange-dark: #B63B03;
+$cirrus-yellow: #F1C40F;
+$cirrus-yellow-tint: #f5d659;
 $red-pale: #fffefe;
 $pink-light: #fff7f7;
 $white: #fff;
@@ -122,6 +124,9 @@ $iphone-width: 320px;
 		}
 	}
 }
+.nav-wrapper {
+	position: fixed;
+}
 .page-navbar-landing.clone {
 	position:fixed;
 	top:-65px;
@@ -133,22 +138,9 @@ $iphone-width: 320px;
 body.down .page-navbar-landing.clone {
 	top: 40px;
 }
-.landing-banner {
-	margin-top: 70px;
-	padding: 50px;
-	text-align: center;
-	height: 350px;
+.landing-cta {
 	@include ipad {
-		margin-top: 126px;
-	}
-	@include note {
-		padding: 30px;
-	}
-	h1 {
-		color: $white;
-	}
-	p {
-		color: $white;
+		display: none;
 	}
 }
 .landing-banner-utah1 {
@@ -176,6 +168,23 @@ body.down .page-navbar-landing.clone {
 	background-size: cover;
 }
 .landing-banner-solar1 {
+	margin-top: 90px;
+	height: 600px;
+	.container {
+		height: 100%;
+	}
+	@include laptop {
+		height: 450px;
+	}
+	@include note {
+		padding: 30px;
+	}
+	h1 {
+		color: $white;
+	}
+	p {
+		color: $white;
+	}
 	background: 
 	linear-gradient(
 		rgba(0, 0, 0, 0.45), 
@@ -188,6 +197,24 @@ body.down .page-navbar-landing.clone {
 	background-size: cover;
 }
 .landing-banner-solar2 {
+	margin-top: 90px;
+	text-align: center;
+	height: 600px;
+	.container {
+		height: 100%;
+	}
+	@include laptop {
+		height: 450px;
+	}
+	@include note {
+		padding: 30px;
+	}
+	h1 {
+		color: $white;
+	}
+	p {
+		color: $white;
+	}
 	background: 
 	linear-gradient(
 		rgba(0, 0, 0, 0.45), 
@@ -201,8 +228,8 @@ body.down .page-navbar-landing.clone {
 }
 .landing-navbar {
 	background: $white;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	.row {
 		display: flex;
 		align-items: center;
@@ -215,6 +242,18 @@ body.down .page-navbar-landing.clone {
 		margin-bottom: 10px;
 	}
 }
+.landing-banner-form1 {
+	h2 {
+		color: $white;
+	}
+	padding: 30px;
+	padding-top: 50px;
+	background: $blackish;
+	height: 100%;
+	@include laptop {
+		display: none;
+	}
+}
 .landing-quote {
 	p {
 		font-size: 25px;
@@ -222,5 +261,42 @@ body.down .page-navbar-landing.clone {
 		@include ipad {
 			font-size: 17px;
 		}
+	}
+}
+.landing-button {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	font-size: 14px;
+	line-height: 14px;
+	text-decoration: none;
+	border: 1px solid $cirrus-yellow;
+	border-radius: 3px;
+	transition: all 0.3s ease-out;
+	cursor: pointer;
+	padding: 15px 25px;
+	margin-top: 15px;
+	font-weight: 500;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	color: $white;
+	background-color: $cirrus-yellow;
+	border-color: $cirrus-yellow;
+	&:hover{
+		text-decoration: none;
+		background-color: $cirrus-yellow-tint;
+		color: $white;
+		border-color: $cirrus-yellow-tint;
+		box-shadow: 0 2px 3px 0 rgba(0,0,0,0.29),0 6px 8px 0 rgba(0,0,0,0.13);
+	}
+	&:focus{
+		background: $cirrus-yellow-tint;
+		border: none;
+		text-decoration: none;
+		color: $white;
+	}
+	@include ipad {
+		font-size: 12px;
+		width: 100%;
 	}
 }
