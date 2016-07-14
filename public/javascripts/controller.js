@@ -45,17 +45,17 @@ cirrusOps.controller('ScrollController', ['$scope', function($scope) {
 /* ----------------------------------------------------------- */
 cirrusOps.controller('ScrollController2', ['$scope', function($scope) {
 	$('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top - 80
-        }, 1000);
-        return false;
-      }
-    }
-  });
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				$('html, body').animate({
+					scrollTop: target.offset().top - 80
+				}, 1000);
+				return false;
+			}
+		}
+	});
 }]);
 
 /* ----------------------------------------------------------- */
@@ -133,6 +133,47 @@ cirrusOps.controller('OwlController', ['$scope', function($scope) {
 		}
 	});
 }]);
+
+/* ----------------------------------------------------------- */
+/*  FORM VALIDATION
+/* ----------------------------------------------------------- */
+cirrusOps.controller('FormController', ['$scope', function($scope) {
+	$(".demo-form").validate({
+		rules: {
+			firstName: {required: true},
+			lastName: {required: true},
+			email: {email: true, required: true},
+			phoneNumber: {number: true},
+			message: {required: true}
+		},
+		messages: {
+			firstName: 'First name is required.',
+			lastName: 'Last name is required.',
+			email: {
+				required: 'Email address is required.',
+				email: 'Invalid email format.',
+			},
+			phoneNumber: {
+				number: 'Invalid phone number.'
+			},
+			message: 'This field is required.',
+		},
+		tooltip_options: {
+			firstName: {trigger:'focus'},
+			lastName: {trigger:'focus'},
+			email: {trigger:'focus'},
+			phoneNumber: {trigger:'focus'},
+			contactTime: {trigger:'focus'},
+			message: {trigger:'focus'},
+		},
+	});
+
+}]);
+
+
+
+
+
 
 
 

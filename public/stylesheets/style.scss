@@ -156,6 +156,9 @@ h4 {
 ul {
 	list-style: none;
 	padding-left: 0px;
+	h4 {
+		font-weight: 500;
+	}
 }
 .page-wrap {
 	margin-top: 140px;
@@ -181,7 +184,15 @@ blockquote:before {
 blockquote p {
 	display: inline;
 }
-
+.tooltip-inner {
+	color: $cirrus-yellow;
+	border: 1px solid $cirrus-yellow;
+	background: $white;
+	padding: 5px;
+}
+.tooltip.top .tooltip-arrow {
+	border-top-color: $cirrus-yellow;
+}
 /* ----------------------------------------------------------- */
 /*  PRESETS
 /* ----------------------------------------------------------- */
@@ -347,6 +358,14 @@ blockquote p {
 	@include ipad {
 		padding-top: 25px;
 		padding-bottom: 25px;
+	}
+}
+.padding-side-30 {
+	padding-left: 30px;
+	padding-right: 30px;
+	@include ipad {
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }
 .padding-30 {
@@ -1087,7 +1106,7 @@ blockquote p {
 		rgba(0, 0, 0, 0.45), 
 		rgba(0, 0, 0, 0.45)
 		), 
-	url('http://placehold.it/1600x250') no-repeat center;
+	url('/images/solutions.jpeg') no-repeat center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;

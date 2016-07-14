@@ -108,7 +108,7 @@ body.down .page-navbar-landing.clone {
       height: 400px; } }
   @media (max-width: 480px) {
     .landing-banner-solar1 {
-      padding: 30px; } }
+      padding: 0px; } }
   .landing-banner-solar1 h1 {
     color: #fff; }
   .landing-banner-solar1 p {
@@ -173,7 +173,7 @@ body.down .page-navbar-landing.clone {
       font-size: 17px; } }
 
 .landing-image-right {
-  background: url("https://placehold.it/800x600") no-repeat center;
+  background: url("https://placehold.it/800x700") no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
