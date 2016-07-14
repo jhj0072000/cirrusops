@@ -134,6 +134,20 @@ cirrusOps.controller('OwlController', ['$scope', function($scope) {
 	});
 }]);
 
+cirrusOps.controller('MainHeaderController', ['$scope', function($scope) {
+	$(document).ready(function() {
+
+		var owl = $("#owl-header");
+
+		owl.owlCarousel({
+			singleItem : true,
+			transitionStyle : "fade",
+			autoPlay: 5000
+		});
+
+	});
+}]);
+
 /* ----------------------------------------------------------- */
 /*  FORM VALIDATION
 /* ----------------------------------------------------------- */
@@ -159,12 +173,12 @@ cirrusOps.controller('FormController', ['$scope', function($scope) {
 			message: 'This field is required.',
 		},
 		tooltip_options: {
-			firstName: {trigger:'focus'},
-			lastName: {trigger:'focus'},
-			email: {trigger:'focus'},
-			phoneNumber: {trigger:'focus'},
-			contactTime: {trigger:'focus'},
-			message: {trigger:'focus'},
+			// firstName: {trigger:'focus'},
+			// lastName: {trigger:'focus'},
+			// email: {trigger:'focus'},
+			// phoneNumber: {trigger:'focus'},
+			// contactTime: {trigger:'focus'},
+			// message: {trigger:'focus'},
 		},
 	});
 
