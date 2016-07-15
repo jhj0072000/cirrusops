@@ -140,8 +140,8 @@ cirrusOps.controller('MainHeaderController', ['$scope', function($scope) {
 		var owl = $("#owl-header");
 
 		owl.owlCarousel({
-			singleItem : true,
-			transitionStyle : "fade",
+			singleItem: true,
+			transitionStyle: "fade",
 			autoPlay: 5000
 		});
 

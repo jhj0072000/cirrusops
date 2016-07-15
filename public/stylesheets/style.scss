@@ -105,18 +105,6 @@ $iphone-width: 320px;
 	}
 }
 
-#owl-header .item img{
-	display: block;
-	width: 100%;
-	height: auto;
-}
-
-.owl-controls.clickable {
-	position: absolute;
-	right: 0;
-	left: 0;
-	margin-top: -40px;
-}
 /* ----------------------------------------------------------- */
 /*  GLOBAL 
 /* ----------------------------------------------------------- */
@@ -204,6 +192,18 @@ blockquote p {
 }
 .tooltip.top .tooltip-arrow {
 	border-top-color: $cirrus-yellow;
+}
+#owl-header .item img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.owl-controls.clickable {
+	position: absolute;
+	right: 0;
+	left: 0;
+	margin-top: -40px;
 }
 /* ----------------------------------------------------------- */
 /*  PRESETS
